@@ -1,0 +1,38 @@
+@import 'partials/base';
+
+header{
+    padding: 50px 0;
+}
+
+.logo{
+    width: 250px;
+
+    a{
+        display: block;
+    }
+}
+
+ul#nav-root{
+    width: 725px;
+
+    li:not(.destaque):hover a{
+        color: $cor-secundaria;
+    }
+
+    a{
+        display: block;
+        font-size: em(14);
+        font-weight: 700;
+        color: #fff;
+    }
+
+    li.destaque a{
+        background: $cor-secundaria;
+        border-radius: 5px;
+        padding: 10px 45px;
+
+        &:hover{
+            background: darken($cor-secundaria, 10);
+        }
+    }
+}

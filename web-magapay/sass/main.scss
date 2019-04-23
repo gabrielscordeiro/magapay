@@ -4,14 +4,8 @@
 //COMPONENTES
 @import 'partials/base';
 
-@import 'partials/owl-carousel';
-@import 'partials/button';
-@import 'partials/input';
-
 @import 'partials/header';
-@import 'partials/footer';
-
-$icon: sprite-map('common-icons/*.png');
+@import 'partials/footer'; 
 
 @include border-box-sizing;
 
@@ -27,7 +21,7 @@ html{
 
 body {
     line-height: 1.5;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
@@ -62,4 +56,54 @@ img {
 
 strong{
     font-weight: bold;
+}
+
+.flex{
+    display: flex;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.nowrap{
+    flex-wrap: nowrap;
+}
+
+.space-between{
+    justify-content: space-between
+}
+
+.space-around{
+    justify-content: space-around;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-flex-end{
+    justify-content: flex-end;
+}
+
+.center{
+    align-items: center;
+}
+
+.row-reverse{
+    flex-direction: row-reverse;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.direction-row{
+    flex-direction: row;
+}
+
+h2.title-default{
+    font-size: em(18);
+    font-weight: 700;
+    text-align: center;
 }

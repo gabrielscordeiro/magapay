@@ -1,0 +1,53 @@
+@import 'partials/base';
+
+body{
+    background: url('../image/home/background-magapay.jpg')repeat-x;
+}
+
+.descricao-topo{
+    padding-top: 30px;
+
+    .desc{
+        width: 525px;
+
+        img{ 
+            margin-top: 20px;
+        }
+    }
+
+    h2{
+        font-size: em(56);
+        color: #fff;
+        font-weight: 700;
+
+        span{
+            display: block;
+        }
+    }
+}
+
+.vantagens{
+    padding-top: 315px;
+
+    h2{
+        color: #d2310f;
+    }
+
+    .vantagem{
+        width: 232px;
+        height: 222px;
+        text-align: center;
+        background: #fff;
+        border-radius: 30px;
+        @include box-shadow(0px 0px 17px 0px #edada0);
+        padding: 40px 30px;
+        margin-top: 30px;
+
+        h3{
+            font-size: em(18);
+            font-weight: 700;
+            color: #d2310f;
+            margin-top: 25px;
+        }
+    }
+}
