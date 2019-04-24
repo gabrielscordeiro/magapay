@@ -1,7 +1,13 @@
 @import 'partials/base';
+@import 'partials/jquery-ui';
+
+$cor-calculadora: #1cc9ed;
 
 body{
-    background: url('../image/home/background-magapay.jpg')repeat-x;
+    background: url(../image/home/background-magapay.jpg);
+    background-size: 100%;
+    background-position: right top;
+    background-repeat: no-repeat;
 }
 
 .descricao-topo{
@@ -50,4 +56,79 @@ body{
             margin-top: 25px;
         }
     }
+}
+
+.calculadora{
+    padding-top: 150px;
+
+    h2{
+        color: $cor-calculadora;
+    }
+}
+
+.navegacao{
+    width: 590px;
+    margin: 25px 0;
+
+    .nav-item{
+        font-size: em(12);
+        background: #fff;
+        padding: 15px 60px;
+        cursor: pointer;
+        border-radius: 50px;
+        @include box-shadow(0px 0px 17px 0px #d7d7d7);
+        color: $cor-calculadora;
+
+        &.selected, &:hover{
+            background: $cor-calculadora;
+            color: #fff;
+            @include box-shadow(0px 0px 17px 0px $cor-calculadora);
+        }
+    }
+}
+
+.calculo-area{
+    width: 430px;
+    @include box-shadow(0px 0px 17px 0px $cor-calculadora);
+    padding: 70px 0;
+    border-radius: 50px;
+    margin-top: 25px;
+    
+    h3{
+        font-size: em(22);
+        font-weight: 700;
+        color: #085c6e;
+        text-align: center;
+    }
+    
+    .simulacao{
+        margin-top: 30px;
+    }
+    
+    .simular{
+        width: 340px;
+        font-size: em(36);
+        color: $cor-calculadora;
+        font-weight: 700;
+        border-bottom: 2px solid #8ad40f; 
+        
+        .prefix{
+            margin-right: 10px;
+        }
+        
+        input.valor-simulacao{
+            width: 285px;
+            border: 0;
+            outline: 0 none;
+        }
+    }
+    
+    #slider{
+        width: 335px;
+        margin-top: 30px;
+    }
+}
+
+.controle-vendas{
+    background: url('../image/home/background-controle-vendas.jpg')repeat-x;
 }

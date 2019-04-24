@@ -3,10 +3,10 @@
     <head>        
         <title>Magapay - A solução perfeita para o seu negócio</title>
 
-        <base href="http://127.0.0.1/magapay/">
+        <base href="172.31.80.166">
 
-        <link href="image/favicon.png" type="image/x-icon" rel="icon" />
-        <link href="image/favicon.png" type="image/x-icon" rel="shortcut icon" />
+        <link href="web-magapay/image/favicon.png" type="image/x-icon" rel="icon" />
+        <link href="web-magapay/favicon.png" type="image/x-icon" rel="shortcut icon" />
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,6 +32,10 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="web-magapay/css/main.css"/>
         <link rel="stylesheet" type="text/css" href="web-magapay/css/home.css"/>
+
+        <script type="text/javascript" src="web-magapay/js/jquery-3.4.0.min.js"></script>
+        <script type="text/javascript" src="web-magapay/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="web-magapay/js/jquery.mask.js"></script>
     </head>
 
     <body>
@@ -40,7 +44,7 @@
                 <div class="flex space-between">
                     <h1 title="Magapay" class="logo">
                         <a href="#">
-                            <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" />
+                            <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false"/>
                         </a>
                     </h1>
 
@@ -86,48 +90,173 @@
                     <h2>
                         <span>MagaPay,</span><span>a solução perfeita</span> para o seu negócio.
                     </h2>
-                    <img src="web-magapay/image/home/handshake.svg" alt="Aperto de mãos" title="Aperto de mãos"/>
+                    <img src="web-magapay/image/home/handshake.svg" alt="Aperto de mãos" title="Aperto de mãos" draggable="false"/>
                 </div>
-                
+
                 <div class="maquininha-magapay">
-                    <img src="web-magapay/image/home/maquina-magapay.png" alt="Maquininha Magapay" title="Maquininha Magapay"/>
+                    <img src="web-magapay/image/home/maquina-magapay.png" draggable="false" alt="Maquininha Magapay" title="Maquininha Magapay"/>
                 </div>
             </div>
-            
+
             <div class="vantagens">
                 <h2 class="title-default">
                     Vantagens
                 </h2>
-                
+
                 <div class="flex space-between center">
                     <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-aluguel.svg" alt="Aluguel Zero" title="Aluguel Zero"/>
+                        <img src="web-magapay/image/home/icon-aluguel.svg" alt="Aluguel Zero" title="Aluguel Zero" draggable="false"/>
                         <h3>
                             Aluguel ZERO.
                         </h3>
                     </div>
                     <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-suporte.svg" alt="Suporte local perto de você." title="Suporte local perto de você."/>
+                        <img src="web-magapay/image/home/icon-suporte.svg" alt="Suporte local perto de você." title="Suporte local perto de você." draggable="false"/>
                         <h3>
                             Suporte local perto de você.
                         </h3>
                     </div>
                     <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-calendar.svg" alt="Receba tudo em até 24 horas." title="Receba tudo em até 24 horas."/>
+                        <img src="web-magapay/image/home/icon-calendar.svg" alt="Receba tudo em até 24 horas." title="Receba tudo em até 24 horas." draggable="false"/>
                         <h3>
                             Receba tudo em até 24 horas.
                         </h3>
                     </div>
                     <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-taxas.svg" alt="Taxas acessíveis" title="Taxas acessíveis"/>
+                        <img src="web-magapay/image/home/icon-taxas.svg" alt="Taxas acessíveis" title="Taxas acessíveis" draggable="false"/>
                         <h3>
                             Taxas acessíveis
                         </h3>
                     </div>
                 </div>
             </div>
-            
         </div>
+
+        <div class="calculadora flex center column">
+            <h2 class="title-default">
+                Calculadora
+            </h2>
+
+            <div class="navegacao flex space-between">
+                <div class="nav-item selected" data-id="antecipacao">
+                    Com Antecipação
+                </div>
+                <div class="nav-item" data-id="sem-antecipacao">
+                    Sem Antecipação
+                </div>
+            </div>
+
+            <div class="calculo-area">
+                <h3>
+                    Quanto você espera vender?
+                </h3>
+                <div class="simulacao flex justify-center center column">
+                    <div class="flex justify-center simular">
+                        <div class="prefix">
+                            R$
+                        </div>
+                        <input type="text" class="valor-simulacao" value="500,00" data-value-price="500"/>
+                    </div>
+                    <div id="slider"></div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(function () {
+                'use strict';
+
+                $('.valor-simulacao').mask('0.000,00', {
+                    reverse: true
+                });
+
+                $("#slider").slider({
+                    orientation: "horizontal",
+                    value: 500,
+                    min: 1,
+                    max: 1000,
+                    slide: function (e, ui) {
+                        var valueSlider = numberFormat(ui.value, 2, ',', '.');
+                        $('.valor-simulacao').val(valueSlider);
+                        $('.valor-simulacao').attr('data-value-price', valueSlider);
+                    }
+                });
+
+                $('.valor-simulacao').on('focus', function () {
+                    $(this).val('');
+                });
+
+                $('.valor-simulacao').on('blur', function () {
+                    var $this = $(this);
+                    var valueCurrent = $this.data('value-price');
+                    var valueModified = parseInt($this.val().split(',')[0].replace('.', ''));
+
+                    if (valueCurrent !== valueModified) {
+                        $this.val(numberFormat(valueModified, 2, ',', '.'));
+                    } else {
+                        $this.val(numberFormat(valueCurrent, 2, ',', '.'));
+                    }
+                });
+
+                $('.valor-simulacao').on('keyup', function () {
+                    var $this = $(this);
+                    var valueInput = $this.val().split(',')[0].replace('.', '');
+
+                    if (valueInput <= 0) {
+                        $(this).val(numberFormat(1, 2, ',', '.'));
+                    } else if (valueInput > 1000) {
+                        $(this).val(numberFormat(1000, 2, ',', '.'));
+                    }
+
+                    if (parseInt(valueInput) >= 1) {
+                        $("#slider").slider({
+                            value: valueInput
+                        });
+                    }
+                });
+
+                function numberFormat(number, decimals, dec_point, thousands_sep) {
+                    number = (number + '')
+                            .replace(/[^0-9+\-Ee.]/g, '');
+                    var n = !isFinite(+number) ? 0 : +number,
+                            prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+                            sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+                            dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+                            s = '',
+                            toFixedFix = function (n, prec) {
+                                var k = Math.pow(10, prec);
+                                return '' + (Math.round(n * k) / k)
+                                        .toFixed(prec);
+                            };
+                    // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+                    s = (prec ? toFixedFix(n, prec) : '' + Math.round(n))
+                            .split('.');
+                    if (s[0].length > 3) {
+                        s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+                    }
+                    if ((s[1] || '')
+                            .length < prec) {
+                        s[1] = s[1] || '';
+                        s[1] += new Array(prec - s[1].length + 1)
+                                .join('0');
+                    }
+                    return s.join(dec);
+                }
+
+                $('.nav-item').on('click', function (e) {
+                    var $this = $(this);
+                    $('.nav-item').removeClass('selected');
+                    $this.addClass('selected');
+                });
+            });
+        </script>
+
+        <!--        <div class="controle-vendas">
+                    <div class="container">
+                        <img src="web-magapay/image/home/maquininhas-magapay.png" alt="" title=""/>
+                    </div>
+                </div>-->
+
 
         <footer itemscope itemtype="http://schema.org/Organization">
             <meta itemprop="name" content="Magapay"/>
