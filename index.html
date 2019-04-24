@@ -159,6 +159,44 @@
                     </div>
                     <div id="slider"></div>
                 </div>
+
+                <div class="selecao-pagamento flex justify-center">
+                    <select id="select-payment">
+                        <option value="credito">Crédito</option>
+                        <option value="debito">Débito</option>
+                    </select>
+                </div>
+
+                <div class="info-taxas">
+                    <div class="taxas flex space-between center">
+                        <div class="percent-taxa">
+                            Taxa 1,99%
+                        </div>
+                        <div class="valor-cobrado">
+                            <span class="prefix">R$</span>
+                            <span class="value">
+                                19,90
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="cliente-recebe">
+                        <p>
+                            Você recebe em conta:
+                        </p>
+
+                        <div class="valor-cliente">
+                            <span class="prefix">
+                                R$
+                            </span>
+                            <span class="valor-total-cliente">
+                                980,10
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
@@ -174,11 +212,20 @@
                     orientation: "horizontal",
                     value: 500,
                     min: 1,
-                    max: 1000,
+                    max: 5000,
                     slide: function (e, ui) {
                         var valueSlider = numberFormat(ui.value, 2, ',', '.');
                         $('.valor-simulacao').val(valueSlider);
                         $('.valor-simulacao').attr('data-value-price', valueSlider);
+
+                        var taxa = 0.0359;
+                        var calculoTaxa = (valorInt(valueSlider) * taxa).toFixed(2);
+
+                        $('.valor-cobrado .value').html(numberFormat(calculoTaxa, 2, ',', '.'));
+
+                        var valorCliente = (valorInt(valueSlider) - calculoTaxa).toFixed(2);
+
+                        $('.valor-total-cliente').html(numberFormat(valorCliente, 2, ',', '.'));
                     }
                 });
 
@@ -188,10 +235,13 @@
 
                 $('.valor-simulacao').on('blur', function () {
                     var $this = $(this);
-                    var valueCurrent = $this.data('value-price');
-                    var valueModified = parseInt($this.val().split(',')[0].replace('.', ''));
+                    var valueCurrent = valorInt($this.attr('data-value-price'));
+                    var valueModified = valorInt($this.val());
+                    
+                    console.log(valueCurrent);
+                    console.log(valueModified);
 
-                    if (valueCurrent !== valueModified) {
+                    if ((valueCurrent !== valueModified) && !isNaN(valueModified)) {
                         $this.val(numberFormat(valueModified, 2, ',', '.'));
                     } else {
                         $this.val(numberFormat(valueCurrent, 2, ',', '.'));
@@ -200,12 +250,12 @@
 
                 $('.valor-simulacao').on('keyup', function () {
                     var $this = $(this);
-                    var valueInput = $this.val().split(',')[0].replace('.', '');
+                    var valueInput = valorInt($this.val());
 
                     if (valueInput <= 0) {
                         $(this).val(numberFormat(1, 2, ',', '.'));
-                    } else if (valueInput > 1000) {
-                        $(this).val(numberFormat(1000, 2, ',', '.'));
+                    } else if (valueInput > 5000) {
+                        $(this).val(numberFormat(5000, 2, ',', '.'));
                     }
 
                     if (parseInt(valueInput) >= 1) {
@@ -214,6 +264,10 @@
                         });
                     }
                 });
+
+                function valorInt(valor) {
+                    return parseInt(valor.split(',')[0].replace('.', ''));
+                }
 
                 function numberFormat(number, decimals, dec_point, thousands_sep) {
                     number = (number + '')

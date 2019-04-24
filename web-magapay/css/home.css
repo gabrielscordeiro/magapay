@@ -122,12 +122,23 @@ body { background: url(../image/home/background-magapay.jpg); background-size: 1
 .navegacao .nav-item { font-size: 0.75em; background: #fff; padding: 15px 60px; cursor: pointer; border-radius: 50px; -moz-box-shadow: 0px 0px 17px 0px #d7d7d7; -webkit-box-shadow: 0px 0px 17px 0px #d7d7d7; box-shadow: 0px 0px 17px 0px #d7d7d7; color: #1cc9ed; }
 .navegacao .nav-item.selected, .navegacao .nav-item:hover { background: #1cc9ed; color: #fff; -moz-box-shadow: 0px 0px 17px 0px #1cc9ed; -webkit-box-shadow: 0px 0px 17px 0px #1cc9ed; box-shadow: 0px 0px 17px 0px #1cc9ed; }
 
-.calculo-area { width: 430px; -moz-box-shadow: 0px 0px 17px 0px #1cc9ed; -webkit-box-shadow: 0px 0px 17px 0px #1cc9ed; box-shadow: 0px 0px 17px 0px #1cc9ed; padding: 70px 0; border-radius: 50px; margin-top: 25px; }
+.calculo-area { width: 430px; -moz-box-shadow: 0px 0px 17px 0px #c1dde2; -webkit-box-shadow: 0px 0px 17px 0px #c1dde2; box-shadow: 0px 0px 17px 0px #c1dde2; padding: 50px 0 20px 0; border-radius: 50px; margin-top: 25px; }
 .calculo-area h3 { font-size: 1.375em; font-weight: 700; color: #085c6e; text-align: center; }
 .calculo-area .simulacao { margin-top: 30px; }
 .calculo-area .simular { width: 340px; font-size: 2.25em; color: #1cc9ed; font-weight: 700; border-bottom: 2px solid #8ad40f; }
 .calculo-area .simular .prefix { margin-right: 10px; }
 .calculo-area .simular input.valor-simulacao { width: 285px; border: 0; outline: 0 none; }
 .calculo-area #slider { width: 335px; margin-top: 30px; }
+.calculo-area #select-payment { width: 250px; height: 32px; margin-top: 30px; border: 1px solid #e1e1e1; border-radius: 2px; font-size: 0.875em; padding-left: 10px; border-radius: 5px; }
+.calculo-area .info-taxas { width: 340px; margin: 0 auto; }
+.calculo-area .taxas { margin-top: 60px; padding-bottom: 35px; border-bottom: 2px solid #8ad40f; }
+.calculo-area .percent-taxa, .calculo-area p { font-size: 1.125em; font-weight: 700; color: #085c6e; }
+.calculo-area .valor-cobrado { color: #1cc9ed; font-weight: 700; }
+.calculo-area .valor-cobrado .prefix { font-size: 0.875em; }
+.calculo-area .valor-cobrado .value { font-size: 1.5em; }
+.calculo-area .cliente-recebe { text-align: center; font-weight: 700; margin-top: 40px; }
+.calculo-area .cliente-recebe .valor-cliente { color: #1cc9ed; }
+.calculo-area .cliente-recebe .prefix { font-size: 1.25em; }
+.calculo-area .cliente-recebe .valor-total-cliente { font-size: 2.3125em; }
 
 .controle-vendas { background: url("../image/home/background-controle-vendas.jpg") repeat-x; }

@@ -89,43 +89,102 @@ body{
 
 .calculo-area{
     width: 430px;
-    @include box-shadow(0px 0px 17px 0px $cor-calculadora);
-    padding: 70px 0;
+    @include box-shadow(0px 0px 17px 0px #c1dde2);
+    padding: 50px 0 20px 0;
     border-radius: 50px;
     margin-top: 25px;
-    
+
     h3{
         font-size: em(22);
         font-weight: 700;
         color: #085c6e;
         text-align: center;
     }
-    
+
     .simulacao{
         margin-top: 30px;
     }
-    
+
     .simular{
         width: 340px;
         font-size: em(36);
         color: $cor-calculadora;
         font-weight: 700;
         border-bottom: 2px solid #8ad40f; 
-        
+
         .prefix{
             margin-right: 10px;
         }
-        
+
         input.valor-simulacao{
             width: 285px;
             border: 0;
             outline: 0 none;
         }
     }
-    
+
     #slider{
         width: 335px;
         margin-top: 30px;
+    }
+
+    #select-payment{
+        width: 250px;
+        height: 32px;
+        margin-top: 30px;
+        border: 1px solid $cor-bordas;
+        border-radius: 2px;
+        font-size: em(14);
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+
+    .info-taxas{
+        width: 340px; 
+        margin: 0 auto;
+    }
+
+    .taxas{
+        margin-top: 60px;
+        padding-bottom: 35px;
+        border-bottom: 2px solid #8ad40f; 
+    }
+
+    .percent-taxa, p{
+        font-size: em(18);
+        font-weight: 700;
+        color: #085c6e;
+    }
+
+    .valor-cobrado{
+        color: $cor-calculadora;
+        font-weight: 700;
+
+        .prefix{
+            font-size: em(14);
+        }
+
+        .value{
+            font-size: em(24);
+        }
+    }
+
+    .cliente-recebe{
+        text-align: center; 
+        font-weight: 700;
+        margin-top: 40px;
+
+        .valor-cliente{
+            color: $cor-calculadora;
+        }
+
+        .prefix{
+            font-size: em(20);
+        }
+
+        .valor-total-cliente{
+            font-size: em(37);
+        }
     }
 }
 
