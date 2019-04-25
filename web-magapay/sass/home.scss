@@ -4,10 +4,12 @@
 $cor-calculadora: #1cc9ed;
 
 body{
-    background: url(../image/home/background-magapay.jpg);
+    background: url(../image/home/bg-magapay.jpg);
     background-size: 100%;
     background-position: right top;
     background-repeat: no-repeat;
+
+    padding-bottom: 100px;
 }
 
 .descricao-topo{
@@ -93,6 +95,7 @@ body{
     padding: 50px 0 20px 0;
     border-radius: 50px;
     margin-top: 25px;
+    background: #fff;
 
     h3{
         font-size: em(22);
@@ -189,5 +192,72 @@ body{
 }
 
 .controle-vendas{
-    background: url('../image/home/background-controle-vendas.jpg')repeat-x;
+    margin-top: 20px;
+
+    > img{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    /*
+        .container-vendas{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0 auto;
+            width: 1240px;
+            display: flex;
+        }
+    
+        .imagem-maquinha{
+            margin-left: 70px;
+        }
+        
+        .conteudo-similacao{
+            margin-top: 70px;
+        }
+    
+        .btn-simular{
+            display: block;
+            width: 270px;
+            margin: 0 auto;
+            padding: 10px 0;
+            color: $cor-base;
+            background: #fff;
+            font-size: em(19);
+            text-align: center;
+            border-radius: 50px;
+            float: right;
+            
+            &:hover{
+                background: $cor-secundaria;
+                color: $cor-primaria;
+            }
+        }*/
+}
+
+.duvidas-frequentes{
+    background: #f0f0f0;
+    margin-top: 75px;
+    padding-top: 45px;
+
+    h2{
+        color: $cor-base;
+    }
+
+    .ui-accordion .ui-accordion-header{
+        padding: 15px 10px;
+        background: #f0f0f0;
+        border: 0;
+        border-bottom: 2px solid #c5c3c3;
+        border-radius: 0;   
+        font-size: em(14);
+        color: $cor-texto;
+        
+        &[aria-expanded="true"]{
+            background: $cor-base;
+            color: #fff;
+        }
+    }
 }

@@ -85,9 +85,10 @@
     }
 
     .ui-accordion-content {
-        padding: em(16) 2.2em;
+        padding: 20px 10px;
         border-top: 0;
-        overflow: auto
+        overflow: auto;
+        border-radius: 0;
     }
 }
 
@@ -107,8 +108,8 @@
     .ui-slider-handle {
         position: absolute;
         z-index: 2;
-        width: 1.2em;
-        height: 1.2em;
+        width: 14px;
+        height: 20px;
         cursor: default;
         -ms-touch-action: none;
         touch-action: none;
@@ -126,11 +127,11 @@
 
 
 .ui-slider-horizontal {
-    height: 0.8em;
+    height: 8px;
 
     .ui-slider-handle {
-        top: -4px;
-        margin-left: -0.6em
+        top: -7px;
+        margin-left: -0.6em;
     }
 
     .ui-slider-range {
@@ -206,12 +207,15 @@ body .ui-tooltip {
 
 
 .ui-widget-content {
-    border: 1px solid #ddd;
-    background: #fff;
-    color: #333;
+    border-bottom: 2px solid #c5c3c3;
 
     a {
         color: #333
+    }
+
+    p{
+        font-size: em(14);
+        color: $cor-texto;
     }
 }
 
@@ -250,11 +254,8 @@ a:visited.ui-button,
 }
 
 .ui-state-hover,
-.ui-widget-content .ui-state-hover,
 .ui-widget-header .ui-state-hover,
 .ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
     border: 1px solid #1998b3;
