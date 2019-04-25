@@ -6,7 +6,7 @@
         <base href="172.31.80.166">
 
         <link href="web-magapay/image/favicon.png" type="image/x-icon" rel="icon" />
-        <link href="web-magapay/favicon.png" type="image/x-icon" rel="shortcut icon" />
+        <link href="web-magapay/image/favicon.png" type="image/x-icon" rel="shortcut icon" />
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -155,7 +155,7 @@
                         <div class="prefix">
                             R$
                         </div>
-                        <input type="text" class="valor-simulacao" value="500,00" data-value-price="500"/>
+                        <input type="text" class="valor-simulacao" value="1000,00" data-value-price="1000"/>
                     </div>
                     <div id="slider"></div>
                 </div>
@@ -170,7 +170,7 @@
                 <div class="info-taxas">
                     <div class="taxas flex space-between center">
                         <div class="percent-taxa">
-                            Taxa 1,99%
+                            Taxa <span class="percent">1,99</span>%
                         </div>
                         <div class="valor-cobrado">
                             <span class="prefix">R$</span>
@@ -204,13 +204,15 @@
             $(function () {
                 'use strict';
 
+                calculaValorVendas();
+
                 $('.valor-simulacao').mask('0.000,00', {
                     reverse: true
                 });
 
                 $("#slider").slider({
                     orientation: "horizontal",
-                    value: 500,
+                    value: 1000,
                     min: 1,
                     max: 5000,
                     slide: function (e, ui) {
@@ -218,14 +220,7 @@
                         $('.valor-simulacao').val(valueSlider);
                         $('.valor-simulacao').attr('data-value-price', valueSlider);
 
-                        var taxa = 0.0359;
-                        var calculoTaxa = (valorInt(valueSlider) * taxa).toFixed(2);
-
-                        $('.valor-cobrado .value').html(numberFormat(calculoTaxa, 2, ',', '.'));
-
-                        var valorCliente = (valorInt(valueSlider) - calculoTaxa).toFixed(2);
-
-                        $('.valor-total-cliente').html(numberFormat(valorCliente, 2, ',', '.'));
+                        calculaValorVendas();
                     }
                 });
 
@@ -237,15 +232,14 @@
                     var $this = $(this);
                     var valueCurrent = valorInt($this.attr('data-value-price'));
                     var valueModified = valorInt($this.val());
-                    
-                    console.log(valueCurrent);
-                    console.log(valueModified);
 
                     if ((valueCurrent !== valueModified) && !isNaN(valueModified)) {
                         $this.val(numberFormat(valueModified, 2, ',', '.'));
                     } else {
                         $this.val(numberFormat(valueCurrent, 2, ',', '.'));
                     }
+
+                    calculaValorVendas();
                 });
 
                 $('.valor-simulacao').on('keyup', function () {
@@ -263,6 +257,12 @@
                             value: valueInput
                         });
                     }
+
+                    calculaValorVendas();
+                });
+
+                $('select#select-payment').change(function () {
+                    calculaValorVendas();
                 });
 
                 function valorInt(valor) {
@@ -297,24 +297,177 @@
                     return s.join(dec);
                 }
 
-                $('.nav-item').on('click', function (e) {
+                $('.nav-item').on('click', function () {
                     var $this = $(this);
                     $('.nav-item').removeClass('selected');
                     $this.addClass('selected');
+
+                    calculaValorVendas();
                 });
+
+                function calculaValorVendas() {
+                    var tipoCalc = $('.nav-item.selected').data('id');
+                    var tipoPagto = $('#select-payment option:selected').val();
+                    var valor = $('.valor-simulacao').val();
+
+                    var taxas = {
+                        'antecipacao': {
+                            'credito': {
+                                'taxa': 0.0359
+                            },
+                            'debito': {
+                                'taxa': 0.0169
+                            }
+                        },
+                        'sem-antecipacao': {
+                            'credito': {
+                                'taxa': 0.0215
+                            },
+                            'debito': {
+                                'taxa': 0.0159
+                            }
+                        }
+                    };
+
+                    var calculoTaxa = (valorInt(valor) * taxas[tipoCalc][tipoPagto]['taxa']).toFixed(2);
+                    var valorCliente = (valorInt(valor) - calculoTaxa).toFixed(2);
+
+                    $('.percent-taxa .percent').html((taxas[tipoCalc][tipoPagto]['taxa'] * 100).toFixed(2));
+                    $('.valor-cobrado .value').html(numberFormat(calculoTaxa, 2, ',', '.'));
+                    $('.valor-total-cliente').html(numberFormat(valorCliente, 2, ',', '.'));
+                }
             });
         </script>
 
-        <!--        <div class="controle-vendas">
-                    <div class="container">
-                        <img src="web-magapay/image/home/maquininhas-magapay.png" alt="" title=""/>
+        <div class="controle-vendas">
+            <img src="web-magapay/image/home/banner-alternativo.jpg" alt="Background" title="Backhround" draggable="false"/>
+            <!--            <div class="container-vendas">
+                            <div class="imagem-maquinha">
+                                <img src="web-magapay/image/home/maquininhas-magapay.png" alt="Maquininhas Magapay" title="Maquininhas Magapay" draggable="false"/>
+                            </div>
+                            <div class="conteudo-similacao">
+                                <h2 title="O controle de suas vendas na palma da mão">
+                                    <img src="web-magapay/image/home/titulo-controle-vendas.png" alt="O controle de suas vendas na palma da mão" title="O controle de suas vendas na palma da mão" draggable="false"/>
+                                </h2>
+                                <a href="#" class="btn-simular">
+                                    Faça uma simulação!
+                                </a>
+                            </div>
+                            
+                        </div>-->
+        </div>
+
+        <div class="duvidas-frequentes">
+            <h2 class="title-default">
+                Dúvidas frequentes
+            </h2>
+            <div class="container">
+
+                <div id="accordion">
+                    <h3>Como funciona o Magapay?</h3>
+                    <div>
+                        <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
                     </div>
-                </div>-->
+
+                    <h3>Qual maquinha ideial para o meu negócio?</h3>
+                    <div>
+                        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                    </div>
+
+                    <h3>Por que escolher o Magapay?</h3>
+                    <div>
+                        <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+                    </div>
+
+                    <h3>Qual é o prazo de entrega?</h3>
+                    <div>
+                        <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                    </div>
+                </div>
+
+                <script>
+                    $(function () {
+                        $("#accordion").accordion({
+                            active: false,
+                            collapsible: true,
+                            multiple: true,
+                            heightStyle: "content"
+                        });
+                    });
+
+                    (function (factory) {
+                        if (typeof define === 'function' && define.amd) {
+                            define(['jquery'], factory);
+                        } else if (typeof module === 'object' && module.exports) {
+                            module.exports = function (root, jQuery) {
+                                if (jQuery === undefined) {
+                                    if (typeof window !== 'undefined') {
+                                        jQuery = require('jquery');
+                                    } else {
+                                        jQuery = require('jquery')(root);
+                                    }
+                                }
+                                factory(jQuery);
+                                return jQuery;
+                            };
+                        } else {
+                            factory(jQuery);
+                        }
+                    }(function ($) {
+
+                        var originalToggle = $.ui.accordion.prototype._toggle;
+
+                        $.extend($.ui.accordion.prototype, {
+                            multiple: false,
+                            _toggle: function (data) {
+                                if (this.options.multiple && data.newPanel.length) {
+                                    data.oldPanel = data.oldHeader = this.prevShow = $('');
+
+                                    if (this.options.collapsible && data.newPanel.is(':visible')) {
+                                        data.oldPanel = data.newPanel;
+                                        data.newPanel = $('');
+                                    }
+                                }
+                                originalToggle.apply(this, arguments);
+                            }
+                        });
+
+                    }));
+                </script>
+            </div>
+        </div>
+
+
 
 
         <footer itemscope itemtype="http://schema.org/Organization">
             <meta itemprop="name" content="Magapay"/>
             <meta itemprop="url" content="/"/>
+            
+            <div class="container flex">
+                <div class="dados-loja">
+                    <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false"/>
+                    <p>
+                        Estrada da Madeira, 1875 - Barragem, Rio do Sul - SC - CEP: 89165-063
+                    </p>
+                </div>
+                <div class="conteudo-geral">                   
+                </div>
+            </div>
+            
+            <div class="formas-pagto">
+                <div class="container flex center space-between">
+                    <img src="web-magapay/image/payment-vector/cartao-american-express.svg" alt="American Express" title="American Express" draggable="false"/>
+                    <img src="web-magapay/image/payment-vector/cartao-aura.svg" alt="Aura" title="Aura" draggable="false"/>
+                    <img src="web-magapay/image/payment-vector/cartao-diners.svg" alt="Dinners" title="Dinners" draggable="false"/>
+                    <img src="web-magapay/image/payment-vector/cartao-discover.svg" alt="Discover" title="Discover" draggable="false"/>
+                    <img src="web-magapay/image/payment-vector/cartao-elo.svg" alt="Elo" title="Elo" draggable="false"/>
+                    <img src="web-magapay/image/payment-vector/cartao-hipercard.svg" alt="Hipercard" title="Hipercard" draggable="false"/>
+                    <img src="web-magapay/image/payment-vector/cartao-mastercard.svg" alt="Mastercard" title="Mastercard" draggable="false"/>
+                    <img src="web-magapay/image/payment-vector/cartao-visa.svg" alt="Visa" title="Visa" draggable="false"/>
+                </div>
+            </div>
+
             <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <meta itemprop="streetAddress" content="Estrada da Madeira, 1875, bairro Barragem"/> 
                 <meta itemprop="postalCode" content="891650-063">

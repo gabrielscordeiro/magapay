@@ -217,7 +217,7 @@ body{
         .conteudo-similacao{
             margin-top: 70px;
         }
-    
+     
         .btn-simular{
             display: block;
             width: 270px;
@@ -238,26 +238,43 @@ body{
 }
 
 .duvidas-frequentes{
-    background: #f0f0f0;
-    margin-top: 75px;
-    padding-top: 45px;
+    background: $cor-background;
+    margin-top: 75px; 
+    padding: 45px 0;
 
     h2{
         color: $cor-base;
     }
 
+    #accordion{
+        margin-top: 50px;
+    }
+
     .ui-accordion .ui-accordion-header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
         padding: 15px 10px;
-        background: #f0f0f0;
+        background: $cor-background;
         border: 0;
         border-bottom: 2px solid #c5c3c3;
         border-radius: 0;   
         font-size: em(14);
         color: $cor-texto;
-        
+        outline: 0 none;
+
         &[aria-expanded="true"]{
             background: $cor-base;
             color: #fff;
+
+            .ui-accordion-header-icon{
+                @include seta(10px, #fff, 'top');
+            }
+        }
+
+        .ui-accordion-header-icon{
+            @include seta(10px, #c5c3c3, 'bottom');
         }
     }
 }

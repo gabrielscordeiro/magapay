@@ -115,6 +115,12 @@ ul#nav-root a { display: block; font-size: 0.875em; font-weight: 700; color: #ff
 ul#nav-root li.destaque a { background: #8ad40f; border-radius: 5px; padding: 10px 45px; }
 ul#nav-root li.destaque a:hover { background: #6ba40c; }
 
+footer { background: url(../image/footer/bg-footer.jpg); background-size: 100%; background-position: right top; background-repeat: no-repeat; padding-top: 201px; margin-top: 115px; }
+footer .container { padding-top: 75px; }
+footer .container > div { width: 50%; }
+
+.dados-loja p { width: 280px; font-size: 0.875em; color: #666; line-height: 27px; margin-top: 35px; }
+
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 html.menu-active, body.menu-active { overflow: hidden; }
