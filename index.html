@@ -36,6 +36,7 @@
         <script type="text/javascript" src="web-magapay/js/jquery-3.4.0.min.js"></script>
         <script type="text/javascript" src="web-magapay/js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="web-magapay/js/jquery.mask.js"></script>
+        <script type="text/javascript" src="web-magapay/js/owl.carousel.js"></script>
     </head>
 
     <body>
@@ -159,13 +160,74 @@
                     </div>
                     <div id="slider"></div>
                 </div>
-
-                <div class="selecao-pagamento flex justify-center">
-                    <select id="select-payment">
-                        <option value="credito">Crédito</option>
-                        <option value="debito">Débito</option>
-                    </select>
+                <div class="lista-opcoes-pagamento">
+                    <div class="selecao-pagamento flex owl-carousel">
+                        <div class="tipo-pagto" data-type-pagto="debito">
+                            Débito
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="1x">
+                            Crédito à vista
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="2x">
+                            2X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="3x">
+                            3X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="4x">
+                            4X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="5x">
+                            5X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="6x">
+                            6X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="7x">
+                            7X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="8x">
+                            8X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="9x">
+                            9X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="10x">
+                            10X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="11x">
+                            11X
+                        </div>
+                        <div class="tipo-pagto" data-type-pagto="12x">
+                            12X
+                        </div>
+                    </div>
                 </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        'use strict';
+
+                        $('.selecao-pagamento').owlCarousel({
+                            margin: 10,
+                            autoWidth: true,
+                            startPosition: 1,
+                            nav: true,
+                            navText: [
+                                '<div class="arrow prev"><div class="icon-arrow"></div></div>',
+                                '<div class="arrow next"><div class="icon-arrow"></div></div>'
+                            ],
+                            onInitialize: selectItemOnInit
+                        });
+
+                        function selectItemOnInit() {
+                            setTimeout(function () {
+                                $('.owl-item.active .tipo-pagto').eq(0).addClass('selected');
+                            }, 1);
+                        }
+                    }
+                    );
+                </script>
 
                 <div class="info-taxas">
                     <div class="taxas flex space-between center">
@@ -204,7 +266,9 @@
             $(function () {
                 'use strict';
 
-                calculaValorVendas();
+                setTimeout(function () {
+                    calculaValorVendas();
+                }, 2);
 
                 $('.valor-simulacao').mask('0.000,00', {
                     reverse: true
@@ -261,7 +325,9 @@
                     calculaValorVendas();
                 });
 
-                $('select#select-payment').change(function () {
+                $('.selecao-pagamento .tipo-pagto').on('click', function () {
+                    $('.tipo-pagto').removeClass('selected');
+                    $(this).addClass('selected');
                     calculaValorVendas();
                 });
 
@@ -307,21 +373,87 @@
 
                 function calculaValorVendas() {
                     var tipoCalc = $('.nav-item.selected').data('id');
-                    var tipoPagto = $('#select-payment option:selected').val();
+                    var tipoPagto = $('.tipo-pagto.selected').data('type-pagto');
                     var valor = $('.valor-simulacao').val();
 
                     var taxas = {
                         'antecipacao': {
-                            'credito': {
+                            '1x': {
                                 'taxa': 0.0359
                             },
+                            '2x': {
+                                'taxa': 0.0455
+                            },
+                            '3x': {
+                                'taxa': 0.0519
+                            },
+                            '4x': {
+                                'taxa': 0.0583
+                            },
+                            '5x': {
+                                'taxa': 0.0546
+                            },
+                            '6x': {
+                                'taxa': 0.0710
+                            },
+                            '7x': {
+                                'taxa': 0.0799
+                            },
+                            '8x': {
+                                'taxa': 0.0862
+                            },
+                            '9x': {
+                                'taxa': 0.0926
+                            },
+                            '10x': {
+                                'taxa': 0.0990
+                            },
+                            '11x': {
+                                'taxa': 0.1053
+                            },
+                            '12x': {
+                                'taxa': 0.1117
+                            },
                             'debito': {
-                                'taxa': 0.0169
+                                'taxa': 0.0159
                             }
                         },
                         'sem-antecipacao': {
-                            'credito': {
-                                'taxa': 0.0215
+                            '1x': {
+                                'taxa': 0.0239
+                            },
+                            '2x': {
+                                'taxa': 0.0278
+                            },
+                            '3x': {
+                                'taxa': 0.0278
+                            },
+                            '4x': {
+                                'taxa': 0.0278
+                            },
+                            '5x': {
+                                'taxa': 0.0278
+                            },
+                            '6x': {
+                                'taxa': 0.0278
+                            },
+                            '7x': {
+                                'taxa': 0.0314
+                            },
+                            '8x': {
+                                'taxa': 0.0314
+                            },
+                            '9x': {
+                                'taxa': 0.0314
+                            },
+                            '10x': {
+                                'taxa': 0.0314
+                            },
+                            '11x': {
+                                'taxa': 0.0314
+                            },
+                            '12x': {
+                                'taxa': 0.0314
                             },
                             'debito': {
                                 'taxa': 0.0159
@@ -443,7 +575,7 @@
         <footer itemscope itemtype="http://schema.org/Organization">
             <meta itemprop="name" content="Magapay"/>
             <meta itemprop="url" content="/"/>
-            
+
             <div class="container flex">
                 <div class="dados-loja">
                     <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false"/>
@@ -454,7 +586,7 @@
                 <div class="conteudo-geral">                   
                 </div>
             </div>
-            
+
             <div class="formas-pagto">
                 <div class="container flex center space-between">
                     <img src="web-magapay/image/payment-vector/cartao-american-express.svg" alt="American Express" title="American Express" draggable="false"/>

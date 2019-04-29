@@ -1,5 +1,6 @@
 @import 'partials/base';
 @import 'partials/jquery-ui';
+@import 'partials/owl-carousel';
 
 $cor-calculadora: #1cc9ed;
 
@@ -90,7 +91,7 @@ body{
 }
 
 .calculo-area{
-    width: 430px;
+    width: 585px;
     @include box-shadow(0px 0px 17px 0px #c1dde2);
     padding: 50px 0 20px 0;
     border-radius: 50px;
@@ -131,15 +132,53 @@ body{
         margin-top: 30px;
     }
 
-    #select-payment{
-        width: 250px;
-        height: 32px;
-        margin-top: 30px;
-        border: 1px solid $cor-bordas;
-        border-radius: 2px;
-        font-size: em(14);
-        padding-left: 10px;
-        border-radius: 5px;
+    .lista-opcoes-pagamento{
+        width: 500px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .selecao-pagamento{
+        position: relative;
+        margin-top: 50px;
+
+        .tipo-pagto{
+            width: max-content;
+            border: 2px solid $cor-calculadora;
+            font-size: em(14);
+            font-weight: 700;
+            padding: 5px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+
+            &:hover, &.selected{
+                background: $cor-calculadora;
+                color: #fff;
+            }
+        }
+
+        .owl-nav{
+            button{
+                position: absolute;
+                top: 12px;
+
+                &.owl-prev{
+                    left: -20px;
+                }
+
+                &.owl-next{
+                    right: -20px;
+                }
+            }
+
+            .prev{
+                @include seta(10px, #adadad, 'left');
+            }
+
+            .next{
+                @include seta(10px, #adadad, 'right');
+            }
+        }
     }
 
     .info-taxas{
