@@ -9,16 +9,33 @@ body{
     background-size: 100%;
     background-position: right top;
     background-repeat: no-repeat;
+
+    @include breakpoint($break-medium-big){
+        background: #fff;
+    }
 }
 
 .descricao-topo{
     padding-top: 30px;
 
+    @include breakpoint($break-small){
+        flex-direction: column-reverse;
+    }
+
     .desc{
         width: 525px;
 
+        @include breakpoint($break-small){
+            width: 100%;
+            text-align: center;
+        }
+
         img{ 
+            
             margin-top: 20px;
+            @include breakpoint($break-medium-big){
+                display: none;
+            }
         }
     }
 
@@ -27,14 +44,47 @@ body{
         color: #fff;
         font-weight: 700;
 
+        @include breakpoint($break-medium-big){
+            color: $cor-base;
+            font-size: em(32);
+            padding-left: 20px;
+        }
+        
+        @include breakpoint($break-small){
+            font-size: em(25);
+            margin-top: 30px;
+            padding-left: 0;
+        }
+
         span{
             display: block;
+        }
+    }
+
+    .maquininha-magapay img{
+        @include breakpoint($break-small){
+            margin: 0 auto;
         }
     }
 }
 
 .vantagens{
     padding-top: 315px;
+
+    @include breakpoint($break-medium-big){
+        padding-top: 80px;
+    }
+
+    @include breakpoint($break-small){
+        padding-top: 50px;
+    }
+
+    .flex{
+        @include breakpoint($break-medium-big){    
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+    }
 
     h2{
         color: #d2310f;
@@ -50,6 +100,14 @@ body{
         padding: 40px 30px;
         margin-top: 30px;
 
+        @include breakpoint($break-medium-big){
+            width: 48%
+        }
+
+        @include breakpoint($break-small){
+            width: 100%
+        }
+
         h3{
             font-size: em(18);
             font-weight: 700;
@@ -62,6 +120,10 @@ body{
 .calculadora{
     padding-top: 150px;
 
+    @include breakpoint($break-medium-big){
+        padding-top: 70px;
+    }
+
     h2{
         color: $cor-calculadora;
     }
@@ -71,6 +133,10 @@ body{
     width: 590px;
     margin: 25px 0;
 
+    @include breakpoint($break-small){
+        width: 100%;
+    }
+
     .nav-item{
         font-size: em(12);
         background: #fff;
@@ -79,6 +145,10 @@ body{
         border-radius: 50px;
         @include box-shadow(0px 0px 17px 0px #d7d7d7);
         color: $cor-calculadora;
+
+        @include breakpoint($break-small){
+            padding: 15px 40px;
+        }
 
         &.selected, &:hover{
             background: $cor-calculadora;
@@ -95,6 +165,10 @@ body{
     border-radius: 50px;
     margin-top: 25px;
     background: #fff;
+    
+    @include breakpoint($break-small){
+        width: 95%;
+    }
 
     h3{
         font-size: em(22);
@@ -113,6 +187,10 @@ body{
         color: $cor-calculadora;
         font-weight: 700;
         border-bottom: 2px solid #8ad40f; 
+        
+        @include breakpoint($break-small){
+            width: 95%;
+        }
 
         .prefix{
             margin-right: 10px;
@@ -122,18 +200,31 @@ body{
             width: 445px;
             border: 0;
             outline: 0 none;
+            
+            @include breakpoint($break-small){
+                width: 90%;
+            }            
+
         }
     }
 
     #slider{
         width: 500px;
         margin-top: 30px;
+        
+        @include breakpoint($break-small){
+            width: 95%;
+        }
     }
 
     .lista-opcoes-pagamento{
         width: 500px;
         margin: 0 auto;
         position: relative;
+        
+        @include breakpoint($break-small){
+            width: 80%;
+        }
     }
 
     .selecao-pagamento{
@@ -182,6 +273,10 @@ body{
     .info-taxas{
         width: 500px; 
         margin: 0 auto;
+        
+        @include breakpoint($break-small){
+            width: 95%;
+        }
     }
 
     .taxas{
@@ -278,6 +373,10 @@ body{
     background: $cor-background;
     margin-top: 75px; 
     padding: 45px 0;
+
+    @include breakpoint($break-medium-big){
+        padding: 45px 0 0 0;
+    }
 
     h2{
         color: $cor-base;

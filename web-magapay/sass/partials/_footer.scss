@@ -8,59 +8,96 @@ footer{
     padding-top: 201px;
     margin-top: 115px;
 
+    @include breakpoint($break-medium-big){
+        margin-top: 45px;
+        padding: 60px 10px 0 10px;
+    }
+
     .footer-middle.container{
         padding-top: 75px;
 
+        @include breakpoint($break-small){
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
         > div{
             width: 50%;
+
+            @include breakpoint($break-small){
+                width: 100%;
+            }
         }
     }
 }
 
 .dados-loja{
+    @include breakpoint($break-small){ 
+        text-align: center;
+    }
+
+    img{
+        @include breakpoint($break-small){ 
+            margin: 0 auto;
+        }
+    }
+
     .horario-atendimento{
         margin-top: 20px;
-        
+
         h4{
             font-size: em(15);
             font-weight: bold;
             color: $cor-texto;
         }
-        
+
         p{
             font-size: em(12);
             margin-top: 0;
             line-height: initial;
         }
     }
-    
+
     p{
         width: 280px;
         font-size: em(14);
         color: $cor-texto-secundario;
         line-height: 22px;
         margin-top: 20px;
+
+        @include breakpoint($break-small){ 
+            width: auto;
+        }
     }
 }
 
 .conteudo-geral{
+    @include breakpoint($break-small){
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
     a{
         font-size: em(14);
         line-height: 27px;
         color: $cor-texto-secundario;
         cursor: pointer;
-        
+
         &:hover{
             color: $cor-base;
         }
     }
-    
+
     .destaque{
         font-weight: bold;
     }
 }
 
 .atendimento{
+    @include breakpoint($break-small){
+        margin-top: 40px;
+    }
+
     .icon{
         margin-right: 10px;
     }
@@ -69,6 +106,10 @@ footer{
 .formas-pagto{
     margin: 90px 0;
     
+    @include breakpoint($break-small){
+        margin: 40px 0;
+    }
+
     .container{
         max-width: 460px;
     }
@@ -77,9 +118,21 @@ footer{
 .footer-bottom{
     border-top: 1px solid $cor-bordas;
     padding: 10px 0;
-    
+
     .dados-loja{
         font-size: em(13); 
-        color: $cor-texto-secundario;
+        color: $cor-texto-secundario;        
+    }
+
+    .flex{
+        @include breakpoint($break-medium-big){
+            flex-direction: column;
+        }
+    }
+
+    .empresa-grupo{
+        @include breakpoint($break-medium-big){
+            margin-top: 10px;
+        }
     }
 }

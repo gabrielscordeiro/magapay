@@ -130,33 +130,53 @@ body .ui-tooltip { border-width: 2px; }
 .no-js .owl-carousel { display: block; }
 
 body { background: url(../image/home/bg-magapay.jpg); background-size: 100%; background-position: right top; background-repeat: no-repeat; }
+@media (max-width: 1024px) { body { background: #fff; } }
 
 .descricao-topo { padding-top: 30px; }
+@media (max-width: 520px) { .descricao-topo { flex-direction: column-reverse; } }
 .descricao-topo .desc { width: 525px; }
+@media (max-width: 520px) { .descricao-topo .desc { width: 100%; text-align: center; } }
 .descricao-topo .desc img { margin-top: 20px; }
+@media (max-width: 1024px) { .descricao-topo .desc img { display: none; } }
 .descricao-topo h2 { font-size: 3.5em; color: #fff; font-weight: 700; }
+@media (max-width: 1024px) { .descricao-topo h2 { color: #a11b51; font-size: 2em; padding-left: 20px; } }
+@media (max-width: 520px) { .descricao-topo h2 { font-size: 1.5625em; margin-top: 30px; padding-left: 0; } }
 .descricao-topo h2 span { display: block; }
+@media (max-width: 520px) { .descricao-topo .maquininha-magapay img { margin: 0 auto; } }
 
 .vantagens { padding-top: 315px; }
+@media (max-width: 1024px) { .vantagens { padding-top: 80px; } }
+@media (max-width: 520px) { .vantagens { padding-top: 50px; } }
+@media (max-width: 1024px) { .vantagens .flex { flex-wrap: wrap; padding: 0 20px; } }
 .vantagens h2 { color: #d2310f; }
 .vantagens .vantagem { width: 232px; height: 222px; text-align: center; background: #fff; border-radius: 30px; -moz-box-shadow: 0px 0px 17px 0px #edada0; -webkit-box-shadow: 0px 0px 17px 0px #edada0; box-shadow: 0px 0px 17px 0px #edada0; padding: 40px 30px; margin-top: 30px; }
+@media (max-width: 1024px) { .vantagens .vantagem { width: 48%; } }
+@media (max-width: 520px) { .vantagens .vantagem { width: 100%; } }
 .vantagens .vantagem h3 { font-size: 1.125em; font-weight: 700; color: #d2310f; margin-top: 25px; }
 
 .calculadora { padding-top: 150px; }
+@media (max-width: 1024px) { .calculadora { padding-top: 70px; } }
 .calculadora h2 { color: #1cc9ed; }
 
 .navegacao { width: 590px; margin: 25px 0; }
+@media (max-width: 520px) { .navegacao { width: 100%; } }
 .navegacao .nav-item { font-size: 0.75em; background: #fff; padding: 15px 60px; cursor: pointer; border-radius: 50px; -moz-box-shadow: 0px 0px 17px 0px #d7d7d7; -webkit-box-shadow: 0px 0px 17px 0px #d7d7d7; box-shadow: 0px 0px 17px 0px #d7d7d7; color: #1cc9ed; }
+@media (max-width: 520px) { .navegacao .nav-item { padding: 15px 40px; } }
 .navegacao .nav-item.selected, .navegacao .nav-item:hover { background: #1cc9ed; color: #fff; -moz-box-shadow: 0px 0px 17px 0px #1cc9ed; -webkit-box-shadow: 0px 0px 17px 0px #1cc9ed; box-shadow: 0px 0px 17px 0px #1cc9ed; }
 
 .calculo-area { width: 585px; -moz-box-shadow: 0px 0px 17px 0px #c1dde2; -webkit-box-shadow: 0px 0px 17px 0px #c1dde2; box-shadow: 0px 0px 17px 0px #c1dde2; padding: 50px 0 20px 0; border-radius: 50px; margin-top: 25px; background: #fff; }
+@media (max-width: 520px) { .calculo-area { width: 95%; } }
 .calculo-area h3 { font-size: 1.375em; font-weight: 700; color: #085c6e; text-align: center; }
 .calculo-area .simulacao { margin-top: 30px; }
 .calculo-area .simular { width: 500px; font-size: 2.25em; color: #1cc9ed; font-weight: 700; border-bottom: 2px solid #8ad40f; }
+@media (max-width: 520px) { .calculo-area .simular { width: 95%; } }
 .calculo-area .simular .prefix { margin-right: 10px; }
 .calculo-area .simular input.valor-simulacao { width: 445px; border: 0; outline: 0 none; }
+@media (max-width: 520px) { .calculo-area .simular input.valor-simulacao { width: 90%; } }
 .calculo-area #slider { width: 500px; margin-top: 30px; }
+@media (max-width: 520px) { .calculo-area #slider { width: 95%; } }
 .calculo-area .lista-opcoes-pagamento { width: 500px; margin: 0 auto; position: relative; }
+@media (max-width: 520px) { .calculo-area .lista-opcoes-pagamento { width: 80%; } }
 .calculo-area .selecao-pagamento { position: relative; margin-top: 50px; }
 .calculo-area .selecao-pagamento .tipo-pagto { width: max-content; border: 2px solid #1cc9ed; font-size: 0.875em; font-weight: 700; padding: 5px 30px; cursor: pointer; border-radius: 5px; }
 .calculo-area .selecao-pagamento .tipo-pagto:hover, .calculo-area .selecao-pagamento .tipo-pagto.selected { background: #1cc9ed; color: #fff; }
@@ -166,6 +186,7 @@ body { background: url(../image/home/bg-magapay.jpg); background-size: 100%; bac
 .calculo-area .selecao-pagamento .owl-nav .prev { width: 10px; height: 10px; border-right: 2px solid #adadad; border-bottom: 2px solid #adadad; -moz-transform: translateX(20%) rotate(135deg); -ms-transform: translateX(20%) rotate(135deg); -webkit-transform: translateX(20%) rotate(135deg); transform: translateX(20%) rotate(135deg); }
 .calculo-area .selecao-pagamento .owl-nav .next { width: 10px; height: 10px; border-right: 2px solid #adadad; border-bottom: 2px solid #adadad; -moz-transform: translateX(-20%) rotate(-45deg); -ms-transform: translateX(-20%) rotate(-45deg); -webkit-transform: translateX(-20%) rotate(-45deg); transform: translateX(-20%) rotate(-45deg); }
 .calculo-area .info-taxas { width: 500px; margin: 0 auto; }
+@media (max-width: 520px) { .calculo-area .info-taxas { width: 95%; } }
 .calculo-area .taxas { margin-top: 60px; padding-bottom: 35px; border-bottom: 2px solid #8ad40f; }
 .calculo-area .percent-taxa, .calculo-area p { font-size: 1.4375em; font-weight: 700; color: #085c6e; }
 .calculo-area .valor-cobrado { color: #1cc9ed; font-weight: 700; }
@@ -181,6 +202,7 @@ body { background: url(../image/home/bg-magapay.jpg); background-size: 100%; bac
 .controle-vendas > img { display: block; width: 100%; margin: 0 auto; }
 
 .duvidas-frequentes { background: #f0f0f0; margin-top: 75px; padding: 45px 0; }
+@media (max-width: 1024px) { .duvidas-frequentes { padding: 45px 0 0 0; } }
 .duvidas-frequentes h2 { color: #a11b51; }
 .duvidas-frequentes #accordion { margin-top: 50px; }
 .duvidas-frequentes .ui-accordion .ui-accordion-header { display: flex; justify-content: space-between; flex-direction: row-reverse; align-items: center; padding: 15px 10px; background: #f0f0f0; border: 0; border-bottom: 2px solid #c5c3c3; border-radius: 0; font-size: 0.875em; color: #252525; outline: 0 none; }
