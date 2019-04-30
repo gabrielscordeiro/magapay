@@ -22,7 +22,7 @@
 
 .ui-slider { position: relative; text-align: left; }
 .ui-slider.ui-state-disabled .ui-slider-handle, .ui-slider.ui-state-disabled .ui-slider-range { filter: inherit; }
-.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 14px; height: 20px; cursor: default; -ms-touch-action: none; touch-action: none; }
+.ui-slider .ui-slider-handle { position: absolute; width: 30px; height: 20px; cursor: default; z-index: 2; -ms-touch-action: none; touch-action: none; }
 .ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
 
 .ui-slider-horizontal { height: 8px; }
@@ -53,7 +53,10 @@ body .ui-tooltip { border-width: 2px; }
 .ui-widget-header { border: 1px solid #ddd; background: #e9e9e9; color: #333; font-weight: bold; }
 .ui-widget-header a { color: #333; }
 
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active { border: 1px solid #1cc9ed; background: #1cc9ed; font-weight: normal; color: #454545; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active { border: 1px solid #1cc9ed; background: #1cc9ed; font-weight: normal; }
+
+.ui-slider-handle { color: #fff; font-size: 0.75em; font-family: monospace; cursor: pointer; text-align: center; }
+.ui-slider-handle:before { content: '< >'; }
 
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, a.ui-button, a:link.ui-button, a:visited.ui-button, .ui-button { color: #454545; text-decoration: none; }
 
@@ -126,7 +129,7 @@ body .ui-tooltip { border-width: 2px; }
 /* No Js */
 .no-js .owl-carousel { display: block; }
 
-body { background: url(../image/home/bg-magapay.jpg); background-size: 100%; background-position: right top; background-repeat: no-repeat; padding-bottom: 100px; }
+body { background: url(../image/home/bg-magapay.jpg); background-size: 100%; background-position: right top; background-repeat: no-repeat; }
 
 .descricao-topo { padding-top: 30px; }
 .descricao-topo .desc { width: 525px; }
@@ -149,10 +152,10 @@ body { background: url(../image/home/bg-magapay.jpg); background-size: 100%; bac
 .calculo-area { width: 585px; -moz-box-shadow: 0px 0px 17px 0px #c1dde2; -webkit-box-shadow: 0px 0px 17px 0px #c1dde2; box-shadow: 0px 0px 17px 0px #c1dde2; padding: 50px 0 20px 0; border-radius: 50px; margin-top: 25px; background: #fff; }
 .calculo-area h3 { font-size: 1.375em; font-weight: 700; color: #085c6e; text-align: center; }
 .calculo-area .simulacao { margin-top: 30px; }
-.calculo-area .simular { width: 340px; font-size: 2.25em; color: #1cc9ed; font-weight: 700; border-bottom: 2px solid #8ad40f; }
+.calculo-area .simular { width: 500px; font-size: 2.25em; color: #1cc9ed; font-weight: 700; border-bottom: 2px solid #8ad40f; }
 .calculo-area .simular .prefix { margin-right: 10px; }
-.calculo-area .simular input.valor-simulacao { width: 285px; border: 0; outline: 0 none; }
-.calculo-area #slider { width: 335px; margin-top: 30px; }
+.calculo-area .simular input.valor-simulacao { width: 445px; border: 0; outline: 0 none; }
+.calculo-area #slider { width: 500px; margin-top: 30px; }
 .calculo-area .lista-opcoes-pagamento { width: 500px; margin: 0 auto; position: relative; }
 .calculo-area .selecao-pagamento { position: relative; margin-top: 50px; }
 .calculo-area .selecao-pagamento .tipo-pagto { width: max-content; border: 2px solid #1cc9ed; font-size: 0.875em; font-weight: 700; padding: 5px 30px; cursor: pointer; border-radius: 5px; }
@@ -162,16 +165,16 @@ body { background: url(../image/home/bg-magapay.jpg); background-size: 100%; bac
 .calculo-area .selecao-pagamento .owl-nav button.owl-next { right: -20px; }
 .calculo-area .selecao-pagamento .owl-nav .prev { width: 10px; height: 10px; border-right: 2px solid #adadad; border-bottom: 2px solid #adadad; -moz-transform: translateX(20%) rotate(135deg); -ms-transform: translateX(20%) rotate(135deg); -webkit-transform: translateX(20%) rotate(135deg); transform: translateX(20%) rotate(135deg); }
 .calculo-area .selecao-pagamento .owl-nav .next { width: 10px; height: 10px; border-right: 2px solid #adadad; border-bottom: 2px solid #adadad; -moz-transform: translateX(-20%) rotate(-45deg); -ms-transform: translateX(-20%) rotate(-45deg); -webkit-transform: translateX(-20%) rotate(-45deg); transform: translateX(-20%) rotate(-45deg); }
-.calculo-area .info-taxas { width: 340px; margin: 0 auto; }
+.calculo-area .info-taxas { width: 500px; margin: 0 auto; }
 .calculo-area .taxas { margin-top: 60px; padding-bottom: 35px; border-bottom: 2px solid #8ad40f; }
-.calculo-area .percent-taxa, .calculo-area p { font-size: 1.125em; font-weight: 700; color: #085c6e; }
+.calculo-area .percent-taxa, .calculo-area p { font-size: 1.4375em; font-weight: 700; color: #085c6e; }
 .calculo-area .valor-cobrado { color: #1cc9ed; font-weight: 700; }
 .calculo-area .valor-cobrado .prefix { font-size: 0.875em; }
-.calculo-area .valor-cobrado .value { font-size: 1.5em; }
+.calculo-area .valor-cobrado .value { font-size: 1.875em; }
 .calculo-area .cliente-recebe { text-align: center; font-weight: 700; margin-top: 40px; }
 .calculo-area .cliente-recebe .valor-cliente { color: #1cc9ed; }
 .calculo-area .cliente-recebe .prefix { font-size: 1.25em; }
-.calculo-area .cliente-recebe .valor-total-cliente { font-size: 2.3125em; }
+.calculo-area .cliente-recebe .valor-total-cliente { font-size: 2.5em; }
 
 .controle-vendas { margin-top: 20px; /* .container-vendas{ position: absolute; right: 0; bottom: 0; left: 0; margin: 0 auto; width: 1240px; display: flex; }
  .imagem-maquinha{ margin-left: 70px; }  .conteudo-similacao{ margin-top: 70px; }  .btn-simular{ display: block; width: 270px; margin: 0 auto; padding: 10px 0; color: $cor-base; background: #fff; font-size: em(19); text-align: center; border-radius: 50px; float: right;  &:hover{ background: $cor-secundaria; color: $cor-primaria; } }*/ }
@@ -184,3 +187,5 @@ body { background: url(../image/home/bg-magapay.jpg); background-size: 100%; bac
 .duvidas-frequentes .ui-accordion .ui-accordion-header[aria-expanded="true"] { background: #a11b51; color: #fff; }
 .duvidas-frequentes .ui-accordion .ui-accordion-header[aria-expanded="true"] .ui-accordion-header-icon { width: 10px; height: 10px; border-right: 2px solid #fff; border-bottom: 2px solid #fff; -moz-transform: translateY(20%) rotate(-135deg); -ms-transform: translateY(20%) rotate(-135deg); -webkit-transform: translateY(20%) rotate(-135deg); transform: translateY(20%) rotate(-135deg); }
 .duvidas-frequentes .ui-accordion .ui-accordion-header .ui-accordion-header-icon { width: 10px; height: 10px; border-right: 2px solid #c5c3c3; border-bottom: 2px solid #c5c3c3; -moz-transform: translateY(-20%) rotate(45deg); -ms-transform: translateY(-20%) rotate(45deg); -webkit-transform: translateY(-20%) rotate(45deg); transform: translateY(-20%) rotate(45deg); }
+.duvidas-frequentes li { padding-left: 20px; margin-bottom: 5px; font-size: 0.875em; }
+.duvidas-frequentes li:before { position: relative; bottom: 3px; margin-right: 4px; font-size: 0.375em; content: '\002B24'; }

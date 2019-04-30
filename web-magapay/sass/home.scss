@@ -9,8 +9,6 @@ body{
     background-size: 100%;
     background-position: right top;
     background-repeat: no-repeat;
-
-    padding-bottom: 100px;
 }
 
 .descricao-topo{
@@ -110,7 +108,7 @@ body{
     }
 
     .simular{
-        width: 340px;
+        width: 500px;
         font-size: em(36);
         color: $cor-calculadora;
         font-weight: 700;
@@ -121,14 +119,14 @@ body{
         }
 
         input.valor-simulacao{
-            width: 285px;
+            width: 445px;
             border: 0;
             outline: 0 none;
         }
     }
 
     #slider{
-        width: 335px;
+        width: 500px;
         margin-top: 30px;
     }
 
@@ -182,7 +180,7 @@ body{
     }
 
     .info-taxas{
-        width: 340px; 
+        width: 500px; 
         margin: 0 auto;
     }
 
@@ -193,7 +191,7 @@ body{
     }
 
     .percent-taxa, p{
-        font-size: em(18);
+        font-size: em(23);
         font-weight: 700;
         color: #085c6e;
     }
@@ -207,7 +205,7 @@ body{
         }
 
         .value{
-            font-size: em(24);
+            font-size: em(30);
         }
     }
 
@@ -225,7 +223,7 @@ body{
         }
 
         .valor-total-cliente{
-            font-size: em(37);
+            font-size: em(40);
         }
     }
 }
@@ -314,6 +312,20 @@ body{
 
         .ui-accordion-header-icon{
             @include seta(10px, #c5c3c3, 'bottom');
+        }
+    }
+
+    li{
+        padding-left: 20px;
+        margin-bottom: 5px;
+        font-size: em(14);
+
+        &:before{
+            position: relative;
+            bottom: 3px;
+            margin-right: 4px;
+            font-size: em(6);
+            content: '\002B24';
         }
     }
 }

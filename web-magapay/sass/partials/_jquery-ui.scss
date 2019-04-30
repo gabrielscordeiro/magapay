@@ -107,10 +107,10 @@
 
     .ui-slider-handle {
         position: absolute;
-        z-index: 2;
-        width: 14px;
+        width: 30px;
         height: 20px;
         cursor: default;
+        z-index: 2;
         -ms-touch-action: none;
         touch-action: none;
     }
@@ -239,7 +239,18 @@ html .ui-button.ui-state-disabled:active {
     border: 1px solid #1cc9ed;
     background: #1cc9ed;
     font-weight: normal;
-    color: #454545
+}
+
+.ui-slider-handle{
+    color: #fff;
+    font-size: em(12);
+    font-family: monospace;
+    cursor: pointer;
+    text-align: center;
+
+    &:before{
+        content: '< >';
+    }
 }
 
 .ui-state-default a,

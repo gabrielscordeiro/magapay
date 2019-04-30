@@ -107,3 +107,38 @@ h2.title-default{
     font-weight: 700;
     text-align: center;
 }
+
+
+#popup-msg-whats{
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    background: #009688;
+    font-size: em(14);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    a{
+        display: block;
+        color: #fff;
+        padding: 5px 30px;
+    }
+
+    .icon-whats{
+        position: relative;
+        top: 4px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 3px;
+
+        svg{
+            width: 100%;
+            height: 100%;
+
+            path{
+                fill: #fff;
+            }
+        }
+    }
+}

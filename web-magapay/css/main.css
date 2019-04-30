@@ -112,14 +112,30 @@ header { padding: 50px 0; }
 ul#nav-root { width: 725px; }
 ul#nav-root li:not(.destaque):hover a { color: #8ad40f; }
 ul#nav-root a { display: block; font-size: 0.875em; font-weight: 700; color: #fff; }
+ul#nav-root li.destaque.clean a { padding: 10px 35px; background: none; border: 1px solid #fff; }
 ul#nav-root li.destaque a { background: #8ad40f; border-radius: 5px; padding: 10px 45px; }
 ul#nav-root li.destaque a:hover { background: #6ba40c; }
 
 footer { background: url(../image/footer/bg-footer.jpg); background-size: 100%; background-position: right top; background-repeat: no-repeat; padding-top: 201px; margin-top: 115px; }
-footer .container { padding-top: 75px; }
-footer .container > div { width: 50%; }
+footer .footer-middle.container { padding-top: 75px; }
+footer .footer-middle.container > div { width: 50%; }
 
-.dados-loja p { width: 280px; font-size: 0.875em; color: #666; line-height: 27px; margin-top: 35px; }
+.dados-loja .horario-atendimento { margin-top: 20px; }
+.dados-loja .horario-atendimento h4 { font-size: 0.9375em; font-weight: bold; color: #252525; }
+.dados-loja .horario-atendimento p { font-size: 0.75em; margin-top: 0; line-height: initial; }
+.dados-loja p { width: 280px; font-size: 0.875em; color: #666; line-height: 22px; margin-top: 20px; }
+
+.conteudo-geral a { font-size: 0.875em; line-height: 27px; color: #666; cursor: pointer; }
+.conteudo-geral a:hover { color: #a11b51; }
+.conteudo-geral .destaque { font-weight: bold; }
+
+.atendimento .icon { margin-right: 10px; }
+
+.formas-pagto { margin: 90px 0; }
+.formas-pagto .container { max-width: 460px; }
+
+.footer-bottom { border-top: 1px solid #e1e1e1; padding: 10px 0; }
+.footer-bottom .dados-loja { font-size: 0.8125em; color: #666; }
 
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -166,3 +182,9 @@ strong { font-weight: bold; }
 .direction-row { flex-direction: row; }
 
 h2.title-default { font-size: 1.125em; font-weight: 700; text-align: center; }
+
+#popup-msg-whats { position: fixed; bottom: 0; left: 10px; background: #009688; font-size: 0.875em; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+#popup-msg-whats a { display: block; color: #fff; padding: 5px 30px; }
+#popup-msg-whats .icon-whats { position: relative; top: 4px; display: inline-block; width: 16px; height: 16px; margin-right: 3px; }
+#popup-msg-whats .icon-whats svg { width: 100%; height: 100%; }
+#popup-msg-whats .icon-whats svg path { fill: #fff; }

@@ -7,10 +7,10 @@ footer{
     background-repeat: no-repeat;
     padding-top: 201px;
     margin-top: 115px;
-    
-    .container{
+
+    .footer-middle.container{
         padding-top: 75px;
-        
+
         > div{
             width: 50%;
         }
@@ -18,11 +18,68 @@ footer{
 }
 
 .dados-loja{
+    .horario-atendimento{
+        margin-top: 20px;
+        
+        h4{
+            font-size: em(15);
+            font-weight: bold;
+            color: $cor-texto;
+        }
+        
+        p{
+            font-size: em(12);
+            margin-top: 0;
+            line-height: initial;
+        }
+    }
+    
     p{
         width: 280px;
         font-size: em(14);
         color: $cor-texto-secundario;
+        line-height: 22px;
+        margin-top: 20px;
+    }
+}
+
+.conteudo-geral{
+    a{
+        font-size: em(14);
         line-height: 27px;
-        margin-top: 35px;
+        color: $cor-texto-secundario;
+        cursor: pointer;
+        
+        &:hover{
+            color: $cor-base;
+        }
+    }
+    
+    .destaque{
+        font-weight: bold;
+    }
+}
+
+.atendimento{
+    .icon{
+        margin-right: 10px;
+    }
+}
+
+.formas-pagto{
+    margin: 90px 0;
+    
+    .container{
+        max-width: 460px;
+    }
+}
+
+.footer-bottom{
+    border-top: 1px solid $cor-bordas;
+    padding: 10px 0;
+    
+    .dados-loja{
+        font-size: em(13); 
+        color: $cor-texto-secundario;
     }
 }

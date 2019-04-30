@@ -26,13 +26,21 @@ ul#nav-root{
         color: #fff;
     }
 
-    li.destaque a{
-        background: $cor-secundaria;
-        border-radius: 5px;
-        padding: 10px 45px;
+    li.destaque{
+        &.clean a{
+            padding: 10px 35px;
+            background: none;
+            border: 1px solid #fff;
+        }
 
-        &:hover{
-            background: darken($cor-secundaria, 10);
+        a{
+            background: $cor-secundaria;
+            border-radius: 5px;
+            padding: 10px 45px;
+
+            &:hover{
+                background: darken($cor-secundaria, 10);
+            }
         }
     }
 }
