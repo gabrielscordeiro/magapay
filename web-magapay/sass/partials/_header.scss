@@ -31,6 +31,10 @@ header{
     @include breakpoint($break-medium-big){
         display: flex;
     }
+    
+    &.active{
+        position: fixed;
+    }
 
     .icon-menu, .icon-menu:before, .icon-menu:after{
         position: absolute;

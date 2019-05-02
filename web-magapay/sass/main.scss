@@ -14,7 +14,6 @@ html, body{
         overflow: hidden;          
         -webkit-overflow-scrolling: touch;
         overflow: hidden;
-        height: 100%;
     }
 }
 
@@ -119,15 +118,28 @@ h2.title-default{
     font-size: em(14);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
+    
     @include breakpoint($break-medium){
-        display: none;
+        right: 10px;
+        bottom: 10px;
+        left: auto;
+        border-radius: 50px;
+    }
+
+    .text{
+        @include breakpoint($break-medium){
+            display: none;
+        }
     }
 
     a{
         display: block;
         color: #fff;
         padding: 5px 30px;
+        
+        @include breakpoint($break-medium){
+            padding: 10px 11px;
+        }
     }
 
     .icon-whats{

@@ -175,6 +175,11 @@ body{
         font-weight: 700;
         color: #085c6e;
         text-align: center;
+        padding: 0 10px;
+        
+        @include breakpoint($break-small){
+            font-size: em(17);
+        }
     }
 
     .simulacao{

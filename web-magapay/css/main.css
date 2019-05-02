@@ -110,6 +110,7 @@ header { padding: 50px 0; }
 
 .menu-button { display: none; position: absolute; top: 22px; justify-content: center; align-items: center; width: 45px; height: 20px; background: #fff; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
 @media (max-width: 1024px) { .menu-button { display: flex; } }
+.menu-button.active { position: fixed; }
 .menu-button .icon-menu, .menu-button .icon-menu:before, .menu-button .icon-menu:after { position: absolute; width: 25px; height: 3px; background: #a11b51; -moz-transition: -moz-transform 0.5s ease; -o-transition: -o-transform 0.5s ease; -webkit-transition: -webkit-transform 0.5s ease; transition: transform 0.5s ease; }
 .menu-button .icon-menu:before { content: ''; top: 7px; }
 .menu-button .icon-menu:after { content: ''; top: -7px; }
@@ -172,7 +173,7 @@ footer .footer-middle.container > div { width: 50%; }
 
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-html.menu-active, body.menu-active { overflow: hidden; -webkit-overflow-scrolling: touch; overflow: hidden; height: 100%; }
+html.menu-active, body.menu-active { overflow: hidden; -webkit-overflow-scrolling: touch; overflow: hidden; }
 
 html { overflow-x: hidden; }
 
@@ -217,8 +218,10 @@ strong { font-weight: bold; }
 h2.title-default { font-size: 1.125em; font-weight: 700; text-align: center; }
 
 #popup-msg-whats { position: fixed; bottom: 0; left: 10px; background: #009688; font-size: 0.875em; border-top-left-radius: 10px; border-top-right-radius: 10px; }
-@media (max-width: 800px) { #popup-msg-whats { display: none; } }
+@media (max-width: 800px) { #popup-msg-whats { right: 10px; bottom: 10px; left: auto; border-radius: 50px; } }
+@media (max-width: 800px) { #popup-msg-whats .text { display: none; } }
 #popup-msg-whats a { display: block; color: #fff; padding: 5px 30px; }
+@media (max-width: 800px) { #popup-msg-whats a { padding: 10px 11px; } }
 #popup-msg-whats .icon-whats { position: relative; top: 4px; display: inline-block; width: 16px; height: 16px; margin-right: 3px; }
 #popup-msg-whats .icon-whats svg { width: 100%; height: 100%; }
 #popup-msg-whats .icon-whats svg path { fill: #fff; }
