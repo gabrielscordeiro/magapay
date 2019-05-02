@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: http://www.magapay.com.br/sitemap.xml
