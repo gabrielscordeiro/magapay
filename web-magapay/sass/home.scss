@@ -5,10 +5,13 @@
 $cor-calculadora: #1cc9ed;
 
 body{
-    background: url(../image/home/bg-magapay.jpg);
-    background-size: 100%;
-    background-position: right top;
+    background: url(../image/home/bg-magapay.jpg);    
+    background-position: top;
     background-repeat: no-repeat;
+
+    @include breakpoint($break-min-big){
+        background-size: 100%;
+    }
 
     @include breakpoint($break-medium-big){
         background: #fff;

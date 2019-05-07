@@ -4,7 +4,7 @@
 
 //Variáveis globais
 $max-width: 1240px;
-$break-min-big: (min-width $max-width);
+$break-min-big: (min-width 1900px);
 $break-big: (max-width $max-width);   
 $break-medium-big: (max-width 1024px); 
 $break-medium: (max-width 800px); 
@@ -56,10 +56,10 @@ $pixel-base: 16;
     @if $direcao == 'right' {
         @include transform(translateX(-20%) rotate(-45deg));
     }
-    @elseif $direcao == 'bottom'{
+    @else if $direcao == 'bottom'{
         @include transform(translateY(-20%) rotate(45deg));
     }
-    @elseif $direcao == 'left'{
+    @else if $direcao == 'left'{
         @include transform(translateX(20%) rotate(135deg));
     }
     @else{

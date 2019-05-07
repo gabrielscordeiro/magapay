@@ -129,7 +129,8 @@ body .ui-tooltip { border-width: 2px; }
 /* No Js */
 .no-js .owl-carousel { display: block; }
 
-body { background: url(../image/home/bg-magapay.jpg); background-size: 100%; background-position: right top; background-repeat: no-repeat; }
+body { background: url(../image/home/bg-magapay.jpg); background-position: top; background-repeat: no-repeat; }
+@media (min-width: 1900px) { body { background-size: 100%; } }
 @media (max-width: 1024px) { body { background: #fff; } }
 
 .descricao-topo { padding-top: 30px; }
