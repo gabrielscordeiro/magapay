@@ -121,10 +121,10 @@ body{
 }
 
 .calculadora{
-    padding-top: 150px;
+    margin-top: 150px;
 
     @include breakpoint($break-medium-big){
-        padding-top: 70px;
+        margin-top: 70px;
     }
 
     h2{

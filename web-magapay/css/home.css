@@ -155,8 +155,8 @@ body { background: url(../image/home/bg-magapay.jpg); background-position: top; 
 @media (max-width: 520px) { .vantagens .vantagem { width: 100%; } }
 .vantagens .vantagem h3 { font-size: 1.125em; font-weight: 700; color: #d2310f; margin-top: 25px; }
 
-.calculadora { padding-top: 150px; }
-@media (max-width: 1024px) { .calculadora { padding-top: 70px; } }
+.calculadora { margin-top: 150px; }
+@media (max-width: 1024px) { .calculadora { margin-top: 70px; } }
 .calculadora h2 { color: #1cc9ed; }
 
 .navegacao { width: 590px; margin: 25px 0; }
