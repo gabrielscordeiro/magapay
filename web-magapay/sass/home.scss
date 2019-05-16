@@ -171,6 +171,8 @@ body{
     
     @include breakpoint($break-small){
         width: 95%;
+        padding: 20px 0;
+        margin-top: 0;
     }
 
     h3{
@@ -239,6 +241,10 @@ body{
         position: relative;
         margin-top: 50px;
 
+        @include breakpoint($break-small){
+            margin-top: 30px;
+        }
+
         .tipo-pagto{
             width: max-content;
             border: 2px solid $cor-calculadora;
@@ -291,6 +297,11 @@ body{
         margin-top: 60px;
         padding-bottom: 35px;
         border-bottom: 2px solid #8ad40f; 
+
+        @include breakpoint($break-small){
+            margin-top: 10px;
+            padding-bottom: 0;
+        }
     }
 
     .percent-taxa, p{
@@ -316,6 +327,10 @@ body{
         text-align: center; 
         font-weight: 700;
         margin-top: 40px;
+
+        @include breakpoint($break-small){
+            margin-top: 20px;
+        }
 
         .valor-cliente{
             color: $cor-calculadora;
