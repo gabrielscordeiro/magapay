@@ -104,7 +104,7 @@ footer{
 }
 
 .formas-pagto{
-    margin: 90px 0;
+    margin: 90px 0;	
     
     @include breakpoint($break-small){
         margin: 40px 0;
@@ -112,6 +112,18 @@ footer{
 
     .container{
         max-width: 460px;
+		
+		
+		@include breakpoint($break-small){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		img{
+			@include breakpoint($break-small){
+				margin: 2px;
+			}
+		}
     }
 }
 
