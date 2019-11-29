@@ -16,15 +16,28 @@ footer{
     .footer-middle.container{
         padding-top: 75px;
 
-        @include breakpoint($break-small){
-            flex-direction: column;
+        @include breakpoint($break-medium-big){
+            flex-wrap: wrap;
             padding-top: 20px;
         }
 
-        > div{
-            width: 50%;
+        .dados-loja{
+            width: 40%;
 
-            @include breakpoint($break-small){
+            @include breakpoint($break-medium-big){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+        .conteudo-geral{
+            width: 60%;
+
+            @include breakpoint($break-medium-big){
                 width: 100%;
             }
         }
@@ -74,7 +87,13 @@ footer{
 .conteudo-geral{
     @include breakpoint($break-small){
         flex-direction: column;
-        margin-top: 40px;
+    }
+
+    li.title{
+        font-size: em(14);
+        color: #000;
+        font-weight: bold;
+        margin-bottom: 10px;
     }
 
     a{
@@ -93,9 +112,27 @@ footer{
     }
 }
 
+.reconhecimentos{
+    @include breakpoint($break-small){
+        margin-top: 20px;
+    }
+    
+    ul{
+        a{
+            img{
+                @include transition(0.2s);
+
+                &:hover{
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+}
+
 .atendimento{
     @include breakpoint($break-small){
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .icon{

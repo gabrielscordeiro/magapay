@@ -42,7 +42,7 @@
         <script type="text/javascript" src="web-magapay/js/jquery-3.4.0.min.js?v=2019-05-16-1"></script>
         <script type="text/javascript" src="web-magapay/js/magapay.js?v=2019-05-16-1"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-        <meta name="author" content="Gabriel Schmidt Cordeiro">
+        <meta name="author" content="Desenvolvido por Magazord Tecnologia - magazord.com.br">
     </head>
 
     <body>
@@ -79,10 +79,10 @@
                                 Fale conosco
                             </a>
                         </li>
-                        <li class="destaque clean">
+                        <li class="destaque azul">
                             <meta itemprop="name" content="Peça já a sua">
-                            <a href="https://magapay.minhaconta.zoop.com.br/criar-conta"  target="_blank">
-                                Peça já a sua
+                            <a onclick="sendMsgWhats('Como funciona a franquia da Magapay?')">
+                                Seja um Franqueado
                             </a>
                         </li>
                         <li class="destaque">
@@ -144,21 +144,21 @@
 
                 <div class="flex space-between center">
                     <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-aluguel.svg" alt="Aluguel Zero" title="Aluguel Zero" draggable="false"/>
+                        <img src="web-magapay/image/home/icon-aluguel.svg" alt="Aluguel Zero*" title="Aluguel Zero*" draggable="false"/>
                         <h3>
-                            Aluguel ZERO.*
+                            Aluguel ZERO*
                         </h3>
                     </div>
                     <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-suporte.svg" alt="Suporte local perto de você." title="Suporte local perto de você." draggable="false"/>
+                        <img src="web-magapay/image/home/icon-suporte.svg" alt="Suporte local perto de você" title="Suporte local perto de você" draggable="false"/>
                         <h3>
-                            Suporte local perto de você.
+                            Suporte local perto de você
                         </h3>
                     </div>
                     <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-calendar.svg" alt="Receba tudo em até 24 horas." title="Receba tudo em até 24 horas." draggable="false"/>
+                        <img src="web-magapay/image/home/icon-calendar.svg" alt="Receba tudo em até 24 horas" title="Receba tudo em até 24 horas" draggable="false"/>
                         <h3>
-                            Receba tudo em até 24 horas.
+                            Receba tudo em até 24 horas
                         </h3>
                     </div>
                     <div class="vantagem flex center justify-center column">
@@ -510,21 +510,7 @@
         </script>
 
         <div class="controle-vendas">
-            <img src="web-magapay/image/home/banner-alternativo.jpg" alt="Background" title="Backhround" draggable="false"/>
-            <!--            <div class="container-vendas">
-                            <div class="imagem-maquinha">
-                                <img src="web-magapay/image/home/maquininhas-magapay.png" alt="Maquininhas Magapay" title="Maquininhas Magapay" draggable="false"/>
-                            </div>
-                            <div class="conteudo-similacao">
-                                <h2 title="O controle de suas vendas na palma da mão">
-                                    <img src="web-magapay/image/home/titulo-controle-vendas.png" alt="O controle de suas vendas na palma da mão" title="O controle de suas vendas na palma da mão" draggable="false"/>
-                                </h2>
-                                <a href="#" class="btn-simular">
-                                    Faça uma simulação!
-                                </a>
-                            </div>
-                            
-                        </div>-->
+            <img src="web-magapay/image/home/banner-alternativo.jpg" alt="O controle de suas vendas na palma da mão" title="O controle de suas vendas na palma da mão" draggable="false"/>
         </div>
 
         <div class="duvidas-frequentes" id="duvidas">
@@ -534,14 +520,14 @@
             <div class="container">
 
                 <div id="accordion">
-                    <h3>Quais são os Benefícios de ser um cliente Magapay?</h3>
+                    <h3><span class="text">Quais são os Benefícios de ser um cliente Magapay?</span></h3>
                     <div>
                         <p>
-                            Além de não pagar aluguel ou qualquer valor pela máquina, as vendas realizadas no crédito à vista é 3,59% já incluso a antecipaçao e recebe em 24h. Para as vendas realizadas no cartão de débito a taxa é de 1,59%. A Magapay oferece ainda chip 2G/3G com pacote de dados grátis, suporte 24 horas por dia, 7 dias por semana, segurança em todas as suas transações e Conta Digital. Tudo isso com a qualidade Magapay.
+                            Além de não pagar aluguel ou qualquer valor pela máquina, as vendas realizadas no crédito à vista é 3,59% já incluso a antecipação e recebe em 24h. Para as vendas realizadas no cartão de débito a taxa é de 1,59%. A Magapay oferece ainda chip 2G/3G com pacote de dados grátis, suporte 24 horas por dia, 7 dias por semana, segurança em todas as suas transações e Conta Digital. Tudo isso com a qualidade Magapay.
                         </p>
                     </div>
 
-                    <h3>A máquina é mesmo grátis? Eu não pagarei aluguel? Preciso faturar um valor mínimo para usufruir da gratuidade?</h3>
+                    <h3><span class="text">A máquina é mesmo grátis? Eu não pagarei aluguel? Preciso faturar um valor mínimo para usufruir da gratuidade?</span></h3>
                     <div>
                         <p>
                             Você não precisa mais comprar ou pagar aluguel pela máquina para vender com cartão (débito e crédito). Para isso, é preciso apenas atingir o volume mínimo de vendas determinado por máquina:<br/><br/>
@@ -555,10 +541,10 @@
                         </ul>
                     </div>
 
-                    <h3>Como eu faço para solicitar a máquina Magapay?</h3>
+                    <h3><span class="text">Como eu faço para solicitar a máquina Magapay?</span></h3>
                     <div>
                         <p>
-                            Para solicitar a sua Magapay, clique no botão "PEÇA JÁ A SUA". Você seguirá os seguintes passos:<br/><br/>
+                            Para solicitar a sua Magapay, entre em contato conosco através do nosso Whatsapp, ou <a href="https://magapay.minhaconta.zoop.com.br/criar-conta"  target="_blank">clique aqui</a> e siga os seguintes passos:<br/><br/>
                         </p>
 
                         <ul>
@@ -577,21 +563,21 @@
                         </ul>
                     </div>
 
-                    <h3>A Magapay faz recarga de celular?</h3>
+                    <h3><span class="text">A Magapay faz recarga de celular?</span></h3>
                     <div>
                         <p>
                             Não. No momento, a Magapay não faz recarga de celulares.
                         </p>
                     </div>
 
-                    <h3>Posso vender parcelado com a máquina? Em até quantas vezes?</h3>
+                    <h3><span class="text">Posso vender parcelado com a máquina? Em até quantas vezes?</span></h3>
                     <div>
                         <p>
                             Sim, é possível vender no modo Crédito Parcelado com a Magapay. As vendas podem ser parceladas em até 12X respeitando o mínimo de R$5,00 por parcela.
                         </p>
                     </div>
 
-                    <h3>Quais bandeiras são aceitas na Magapay?</h3>
+                    <h3><span class="text">Quais bandeiras são aceitas na Magapay?</span></h3>
                     <div>
                         <p>
                             A Magapay aceita as principais bandeiras do mercado. <br/><br/>
@@ -599,7 +585,7 @@
                         </p>
                     </div>
 
-                    <h3>Qual a taxa de cobrança se eu cancelar a Magapay?</h3>
+                    <h3><span class="text">Qual a taxa de cobrança se eu cancelar a Magapay?</span></h3>
                     <div>
                         <p>
                             Caso cancele a Magapay, você não terá custos por isso! Não possui carência.
@@ -680,6 +666,9 @@
                 </div>
                 <div class="conteudo-geral flex space-between">     
                     <ul id="menu-footer">
+                        <li class="title">
+                            Links Úteis
+                        </li>
                         <li>
                             <a href="#vantagens" class="link-slide">
                                 Vantagens
@@ -696,14 +685,40 @@
                             </a>
                         </li>
                         <li>
+                            <a href="https://api.magapay.com.br/docs"  target="_blank">
+                                API Magapay
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://magapay.minhaconta.zoop.com.br/criar-conta"  target="_blank">
+                                Peça já a sua
+                            </a>
+                        </li>
+                        <li>
                             <a href="https://magapay.minhaconta.zoop.com.br/login" class="destaque" target="_blank">
                                 Acesse sua conta
                             </a>
                         </li>
                     </ul>
 
+                    <div class="reconhecimentos">
+                        <ul id="nav-reconhecimentos">
+                            <li class="title">
+                                Reconhecimentos
+                            </li>
+                            <li>
+                                <a href="/magapay-premio-de-inovacao.html">
+                                    <img src="web-magapay/image/footer/premio-inovacao.svg" alt="Prêmio de Inovação" title="Prêmio de Inovação" draggable="false">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                     <div class="atendimento" id="fale-conosco">
                         <ul id="nav-contact">
+                            <li class="title">
+                                Atendimento
+                            </li>
                             <li>
                                 <a href="tel:+554735208058" class="flex center">
                                     <div class="icon">
@@ -713,7 +728,7 @@
                                         (47) 3520-8058
                                     </div>
                                 </a>
-                                <a onclick="sendMsgWhats()" class="flex center">
+                                <a onclick="sendMsgWhats('Quais as taxas? E aluguel?')" class="flex center">
                                     <div class="icon">
                                         <img src="web-magapay/image/footer/icon-whatsapp.svg" alt="Whatsapp" title="Whatsapp" draggable="false"/>
                                     </div>
@@ -793,7 +808,7 @@
         </footer>
 
         <div id="popup-msg-whats">
-            <a href="javascript:sendMsgWhats()">
+            <a href="javascript:sendMsgWhats('Quais as taxas? E aluguel?')">
                 <span class="icon-whats">
                     <img src="web-magapay/image/global-icons/icon-whatsapp.svg" alt="fale conosco"/>
                 </span>
@@ -802,7 +817,7 @@
         </div>
 
         <script language=javascript type="text/javascript">
-            function sendMsgWhats() {
+            function sendMsgWhats(mensagem) {
                 var w = 900;
                 var h = 500;
 
@@ -815,7 +830,7 @@
                 var left = ((width / 2) - (w / 2)) + dualScreenLeft;
                 var top = ((height / 2) - (h / 2)) + dualScreenTop;
 
-                var newWindow = window.open('https://api.whatsapp.com/send?phone=554735208058&text=Quais as taxas? E aluguel?', 'title', 'scrollbars=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+                var newWindow = window.open('https://api.whatsapp.com/send?phone=554735208058&text='+mensagem, 'scrollbars=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
 
                 // Puts focus on the newWindow
                 if (window.focus) {

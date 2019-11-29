@@ -61,7 +61,7 @@ header{
         visibility: visible;
     }
 
-    ul#nav-root {   
+    ul#nav-root {
         @include transform(translateX(0));
         @include box-shadow(0 0 15px 5px rgba(0, 0, 0, 0.75));
     }
@@ -90,6 +90,8 @@ header{
 
 .logo{
     width: 250px;
+    display: flex;
+    align-items: center;
 
     @include breakpoint($break-medium-big){
         width: auto;
@@ -101,7 +103,7 @@ header{
 }
 
 ul#nav-root{
-    width: 725px;
+    width: 755px;
 
     @include breakpoint($break-medium-big){
         position: fixed;
@@ -148,35 +150,29 @@ ul#nav-root{
     }
 
     li.destaque{
-        &.clean a{
-            padding: 10px 35px;
-            background: none;
-            border: 1px solid #fff;
+        &.azul a{
+            background: $cor-azul;
+            color: $cor-azul-escuro;
+            cursor: pointer;
 
-            @include breakpoint($break-medium-big){
-                padding: 0 0 0 10px;
-                border: 0;
-                background: none;
+            &:hover{
+                background: $cor-azul-escuro;
             }
         }
 
         a{
             background: $cor-secundaria;
+            color: $cor-verde-escuro;
             border-radius: 5px;
-            padding: 10px 45px;
+            padding: 10px 30px;
 
             @include breakpoint($break-medium-big){
                 padding: 0 0 0 10px;
-                border: 0;
-                background: none;
             }
 
             &:hover{
                 background: darken($cor-secundaria, 10);
-
-                @include breakpoint($break-medium-big){
-                    background: none;
-                }
+                color: #fff;
             }
         }
     }

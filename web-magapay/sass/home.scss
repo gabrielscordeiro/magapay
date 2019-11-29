@@ -141,7 +141,8 @@ body{
     }
 
     .nav-item{
-        font-size: em(12);
+        font-size: em(15);
+        font-weight: bold;
         background: #fff;
         padding: 15px 60px;
         cursor: pointer;
@@ -414,26 +415,54 @@ body{
         justify-content: space-between;
         flex-direction: row-reverse;
         align-items: center;
-        padding: 15px 10px;
+        padding: 20px 30px;
         background: $cor-background;
         border: 0;
-        border-bottom: 2px solid #c5c3c3;
+        border-top: 2px solid #c5c3c3;
         border-radius: 0;   
-        font-size: em(14);
+        font-size: em(16);
         color: $cor-texto;
         outline: 0 none;
+
+        &:first-of-type{
+            border-top: 0;
+        }
 
         &[aria-expanded="true"]{
             background: $cor-base;
             color: #fff;
+            border-top: 0;
 
             .ui-accordion-header-icon{
                 @include seta(10px, #fff, 'top');
+            }
+
+            &:before,
+            &:after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: $cor-base;
+            }
+
+            &:before{
+                left: 100%;
+            }
+
+            &:after{
+                right: 100%;
             }
         }
 
         .ui-accordion-header-icon{
             @include seta(10px, #c5c3c3, 'bottom');
+        }
+
+        .text{
+            @include breakpoint($break-medium-big){
+                width: calc(100% - 10px);
+            }
         }
     }
 
