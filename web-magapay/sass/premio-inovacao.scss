@@ -1,46 +1,55 @@
-@import 'partials/base';
+@import "partials/base";
 
-header{
+header {
     padding: 20px 0;
     box-shadow: 0 0 90px 0px #9c154f29;
 
-    ul#nav-root{
-        a{
+    ul#nav-root {
+        a {
             color: $cor-texto-secundario;
+
+            @include breakpoint($break-medium) {
+                color: #fff;
+            }
         }
     }
 }
 
-.descricao-topo{
+.descricao-topo {
     text-align: center;
     margin-top: 80px;
 
-    h2{
+    @include breakpoint($break-medium) {
+        margin-top: 40px;
+    }
+
+    h2 {
         font-size: em(56);
         color: $cor-texto;
         font-weight: 700;
         line-height: 1.2;
 
-        @include breakpoint($break-medium-big){
+        @include breakpoint($break-medium-big) {
             font-size: em(32);
         }
 
-        @include breakpoint($break-medium-big){
-            font-size: em(30);
+        @include breakpoint($break-medium) {
+            font-size: em(23);
+            line-height: 34px;
         }
 
-        .destaque{
+        .destaque {
             display: block;
             color: $cor-base;
         }
     }
 
-    .arrow-down-container{
+    .arrow-down-container {
         display: flex;
         justify-content: center;
         margin: 40px 0;
 
-        .arrow-down-background{
+        .arrow-down-background {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -50,115 +59,125 @@ header{
             width: 45px;
             height: 45px;
             @include box-shadow(0 0 20px 5px #8ad40f);
-        
-            .arrow-down{
+
+            .arrow-down {
                 position: absolute;
-                @include seta(15px, $cor-verde-escuro, 'bottom');
+                @include seta(15px, $cor-verde-escuro, "bottom");
             }
 
-            @include breakpoint($break-medium-big){
+            @include breakpoint($break-medium-big) {
                 width: 35px;
                 height: 35px;
 
-                .arrow-down{
-                    @include seta(10px, $cor-verde-escuro, 'bottom');
+                .arrow-down {
+                    @include seta(10px, $cor-verde-escuro, "bottom");
                 }
             }
         }
     }
 }
 
-.text-container{
+.text-container {
     display: flex;
     align-items: center;
     padding: 0 40px;
     margin-top: 100px;
 
-    @include breakpoint($break-small){
+    @include breakpoint($break-small) {
         flex-wrap: wrap;
         padding: 0 10px;
         margin-top: 50px;
     }
 
-    h3{
+    h3 {
         font-size: em(25);
         font-weight: bold;
         color: $cor-texto;
         line-height: 1.2;
         margin-bottom: 20px;
 
-        .vermelho{
+        @include breakpoint($break-medium) {
+            font-size: em(18);
+            text-align: center;
+        }
+
+        .vermelho {
             color: $cor-vermelho;
         }
 
-        .azul{
+        .azul {
             color: $cor-azul;
         }
     }
 
-    p{
+    p {
         color: $cor-texto-secundario;
+
+        @include breakpoint($break-small) {
+            font-size: em(14);
+            line-height: 28px;
+        }
     }
-    
-    .half{
+
+    .half {
         width: 50%;
 
-        @include breakpoint($break-small){
+        @include breakpoint($break-small) {
             width: 100%;
         }
 
-        &.text{
+        &.text {
             padding: 0 90px;
 
-            @include breakpoint($break-medium-big){
+            @include breakpoint($break-medium-big) {
                 padding: 0 20px;
             }
         }
 
-        &.img{
+        &.img {
             display: flex;
             justify-content: center;
 
-            @include breakpoint($break-medium-big){
+            @include breakpoint($break-medium-big) {
                 padding: 0 20px;
             }
 
-            @include breakpoint($break-small){
+            @include breakpoint($break-small) {
                 margin-top: 20px;
             }
         }
     }
 
-    .full{
+    .full {
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 100%;
 
-        p{
+        p {
             text-align: center;
             margin-top: 20px;
             padding: 0 70px;
 
-            &.quote{
+            &.quote {
                 padding: 0 40px;
 
-                span{
+                span {
                     font-weight: bold;
                 }
             }
         }
     }
 
-    .destaque{
+    .destaque {
         color: $cor-base;
         font-weight: bold;
     }
 
-    li{
+    li {
         margin-top: 20px;
 
-        &:last-of-type{
+        &:last-of-type {
             margin-bottom: 20px;
         }
     }
