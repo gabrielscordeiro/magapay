@@ -1,0 +1,72 @@
+@import "compass";
+@import "susy";
+@import "breakpoint";
+
+//Variáveis globais
+$max-width: 1240px;
+$break-min-big: (min-width 1900px);
+$break-big: (max-width $max-width);   
+$break-medium-big: (max-width 1024px); 
+$break-medium: (max-width 800px); 
+$break-small: (max-width 520px);
+$break-smaller: (max-width 380px); 
+ 
+//Cores default, devem ser alteradas confome o projeto
+$cor-base: #bd1450; //#a11b51;
+$cor-primaria: #fff; 
+$cor-secundaria: #8ad40f;  
+$cor-bordas: #e1e1e1;   
+$cor-texto: #252525;    
+$cor-texto-secundario: #666; 
+$cor-background: #f0f0f0;
+$cor-azul: #00c5e9;
+$cor-azul-escuro: #005b6f;
+$cor-verde-escuro: #005f00;
+$cor-vermelho: #f72f03;
+
+$cor-border-light: lighten($cor-bordas, 10); 
+$cor-base-darken: darken($cor-base, 10); 
+$cor-base-darken-strong: darken($cor-base, 20);  
+
+@mixin location($top, $right: $top, $bottom: $top, $left: $right) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+//Corversor px to em
+$pixel-base: 16;
+
+@function em($pixels, $contexto: $pixel-base) {
+   //se existir o pixel passado como parametro
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  //se existir pixel base definido
+  @if (unitless($contexto)) {
+    $contexto: $contexto * 1px;
+  }
+
+  @return $pixels / $contexto * 1em;
+}
+
+@mixin seta($tamanho, $cor, $direcao){
+    width: $tamanho;
+    height: $tamanho;
+    border-right: ($tamanho * 0.2) solid $cor;
+    border-bottom: ($tamanho * 0.2) solid $cor;
+
+    @if $direcao == 'right' {
+        @include transform(translateX(-20%) rotate(-45deg));
+    }
+    @else if $direcao == 'bottom'{
+        @include transform(translateY(-20%) rotate(45deg));
+    }
+    @else if $direcao == 'left'{
+        @include transform(translateX(20%) rotate(135deg));
+    }
+    @else{
+        @include transform(translateY(20%) rotate(-135deg));
+    }
+}
