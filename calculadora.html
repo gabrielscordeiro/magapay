@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55222963-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-55222963-4");
+  </script>
+  <title>Magapay - A solução perfeita para o seu negócio</title>
+  <link href="web-magapay/image/favicon.png" type="image/x-icon" rel="icon" />
+  <link href="web-magapay/image/favicon.png" type="image/x-icon" rel="shortcut icon" />
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="rating" content="general" />
+  <meta name="country" content="BRA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#a11b51" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#a11b51" />
+  <meta name="msapplication-navbutton-color" content="#a11b51" />
+
+  <meta name="robots" content="index, follow" />
+  <meta property="og:url" content="http://www.magapay.com.br" />
+  <meta property="og:title" content="Magapay - A solução perfeita para o seu negócio" />
+  <meta property="og:site_name" content="Magapay" />
+  <meta property="og:description"
+    content="A Magapay é prestadora de serviços de tecnologia relacionada a soluções de pagamento por meios eletrônicos, mediante a captura, transmissão, processamento e liquidação das TRANSAÇÕES oriundas do uso de CARTÕES e/ou CONTA DE PAGAMENTO, possibilitando que os ESTABELECIMENTOS recebam e enviem pagamentos." />
+
+  <meta name="description"
+    content="A Magapay é prestadora de serviços de tecnologia relacionada a soluções de pagamento por meios eletrônicos, mediante a captura, transmissão, processamento e liquidação das TRANSAÇÕES oriundas do uso de CARTÕES e/ou CONTA DE PAGAMENTO, possibilitando que os ESTABELECIMENTOS recebam e enviem pagamentos." />
+  <meta name="title" content="Magapay - A solução perfeita para o seu negócio" />
+  <meta name="keywords"
+    content="Pagamentos, Cartão de Credito, Cartão de Dédito, Pagamentos online, Menores Taxas, Qualidade em atendimento, Compromisso" />
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="web-magapay/css/main.css?v=2019-05-16-1" />
+  <link rel="stylesheet" type="text/css" href="web-magapay/css/calculadora.css?v=2019-05-16-1" />
+
+  <script type="text/javascript" src="web-magapay/js/jquery-3.4.0.min.js?v=2019-05-16-1"></script>
+  <script type="text/javascript" src="web-magapay/js/magapay.js?v=2019-05-16-1"></script>
+  <script type="text/javascript"
+    src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <meta name="author" content="Gabriel Schmidt Cordeiro" />
+</head>
+
+<body>
+  <div class="menu-mobile-overlay"></div>
+
+  <header>
+    <div class="container">
+      <div class="menu-button">
+        <div class="icon-menu"></div>
+      </div>
+      <div class="flex space-between">
+        <h1 title="Magapay" class="logo">
+          <a href="/">
+            <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false" />
+          </a>
+        </h1>
+
+        <ul id="nav-root" class="flex space-between center" itemscope
+          itemtype="http://schema.org/SiteNavigationElement">
+          <li>
+            <meta itemprop="name" content="Vantagens" />
+            <a href="#vantagens" class="link-slide">
+              Vantagens
+            </a>
+          </li>
+          <li>
+            <meta itemprop="name" content="Dúvidas Frequentes" />
+            <a href="#duvidas" class="link-slide">
+              Dúvidas Frequentes
+            </a>
+          </li>
+          <li>
+            <meta itemprop="name" content="Fale conosco" />
+            <a href="#fale-conosco" class="link-slide">
+              Fale conosco
+            </a>
+          </li>
+          <li class="destaque azul">
+            <meta itemprop="name" content="Peça já a sua" />
+            <a onclick="sendMsgWhats('Como funciona a franquia da Magapay?')">
+              Seja um Franqueado
+            </a>
+          </li>
+          <li class="destaque">
+            <meta itemprop="name" content="Simulação" />
+            <a href="#calculadora" class="link-slide">
+              Simulação
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    (function () {
+      "use strict";
+
+      $("header").on("click", ".menu-button", function () {
+        $("html, body").toggleClass("menu-active");
+        $(this).toggleClass("active");
+      });
+
+      $("body").on("click", ".menu-mobile-overlay", function () {
+        $("html,body").toggleClass("menu-active");
+        $(".menu-button").toggleClass("active");
+      });
+
+      $("body").on("swipe", "header, .menu-mobile-overlay", function (e) {
+        $(".menu-button").trigger("click");
+      });
+
+      if (window.outerWidth <= 1024) {
+        var htmlMenu = $("ul#nav-root").html();
+        $("ul#nav-root").remove();
+
+        $("header").append('<ul id="nav-root">' + htmlMenu + "</ul>");
+      }
+    })();
+  </script>
+
+  <div class="container title">
+    <h1>Quanto passar na Maquininha <span>Magapay?</span></h1>
+  </div>
+  <div class="container arrow-down">
+    <img src="web-magapay/image/calculadora/arrow-down.svg" draggable="false" />
+  </div>
+
+  <div class="container content">
+    <div class="calculo-area">
+      <div class="valor-area">
+        <h3>Valor Desejado</h3>
+        <div class="simular-valor">
+          <div class="prefix">R$</div>
+          <input type="text" class="valor-desejado" value="7000,00" data-value-price="7000" />
+        </div>
+        <span class="bar bar-valor">
+          <span class="fill fill-valor"></span>
+        </span>
+        <div class="slider" id="slider-valor"></div>
+        <div class="min-max">
+          <div class="min">R$500</div>
+          <div class="max">R$25.000</div>
+        </div>
+      </div>
+
+      <div class="taxa-area">
+        <h3>Taxa Magapay</h3>
+        <div class="simular-taxa">
+          <div class="prefix">
+            %
+          </div>
+          <input type="text" class="taxa-simulacao" value="9,96" data-tax="9,96" readonly="true" />
+        </div>
+        <span class="bar bar-taxa"><span class="fill fill-taxa"></span></span>
+        <div class="slider" id="slider-taxa"></div>
+        <div class="min-max">
+          <div class="min">2%</div>
+          <div class="min">50%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="valor-total">
+      <div class="text text-lojista">
+        <span>Quanto você lojista precisa passar na máquina para repassar os
+          juros para seu cliente?</span>
+      </div>
+      <div class="text text-valor">
+        <span>O Valor Total que você deverá passar na Máquina é de</span>
+      </div>
+      <div class="area-valor">
+        <div class="moeda">
+          <span>R$</span>
+        </div>
+        <div class="valor-total-necessario">
+          <span>23.320,38</span>
+        </div>
+      </div>
+    </div>
+    <div class="rectangle-blue"></div>
+    <div class="rectangle-green"></div>
+  </div>
+
+  <div class="area-franqueado">
+    <div class="container">
+      <h3>Está pronto para ser um cliente Magapay?</h3>
+      <a onclick="sendMsgWhats('Como funciona a franquia da Magapay?')">
+        <button class="btn-franqueado" )>
+          <span>Seja um Franqueado</span>
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+      "use strict";
+
+      setTimeout(function () {
+        calculaValorVendas();
+      }, 2);
+
+      $(".valor-desejado").mask("0.000,00", {
+        reverse: true,
+      });
+
+      $(".taxa-simulacao").mask("0,00", {
+        reverse: true,
+      });
+
+      $("#slider-taxa").slider({
+        orientation: "horizontal",
+        value: 9.96,
+        min: 2,
+        max: 50,
+        step: 0.01,
+        slide: function (e, ui) {
+          var valueSlider = numberFormat(ui.value, 2, ",");
+          var $fill = $(".fill-taxa");
+          $fill.css("width", ui.value * 2 - 1 + "%");
+          $(".taxa-simulacao").val(valueSlider);
+          $(".taxa-simulacao").attr("data-tax", valueSlider);
+
+          calculaValorVendas();
+        },
+      });
+
+      $("#slider-valor").slider({
+        orientation: "horizontal",
+        value: 7000,
+        min: 500,
+        max: 25000,
+        slide: function (e, ui) {
+          var $fill = $(".fill-valor");
+          $fill.css("width", ui.value * 0.004 + "%");
+          var valueSlider = numberFormat(ui.value, 2, ",", ".");
+          $(".valor-desejado").val(valueSlider);
+          $(".valor-desejado").attr("data-value-price", valueSlider);
+
+          calculaValorVendas();
+        },
+      });
+
+      $(".valor-desejado").on("focus", function () {
+        $(this).val("");
+      });
+
+      $(".valor-desejado").on("blur", function () {
+        var $this = $(this);
+        var valueCurrent = valorInt($this.attr("data-value-price"));
+        var valueModified = valorInt($this.val());
+
+        if (valueCurrent !== valueModified && !isNaN(valueModified)) {
+          $this.val(numberFormat(valueModified, 2, ",", "."));
+        } else {
+          $this.val(numberFormat(valueCurrent, 2, ",", "."));
+        }
+
+        var $fill = $(".fill-valor");
+        $fill.css("width", valueModified * 0.004 + "%");
+        calculaValorVendas();
+      });
+
+      $(".valor-desejado").on("keyup", function () {
+        var $this = $(this);
+        var valueInput = valorInt($this.val());
+
+        if (valueInput <= 0) {
+          $(this).val(numberFormat(1, 2, ",", "."));
+        } else if (valueInput > 25000) {
+          $(this).val(numberFormat(25000, 2, ",", "."));
+        }
+
+        if (parseInt(valueInput) >= 1) {
+          var $fill = $(".fill-valor");
+          $fill.css("width", valueInput * 0.004 + "%");
+          $("#slider-valor").slider({
+            value: valueInput,
+          });
+        }
+
+        calculaValorVendas();
+      });
+
+      function valorInt(valor) {
+        return parseInt(valor.split(",")[0].replace(".", ""));
+      }
+
+      function taxaFloat(taxa) {
+        return parseFloat(taxa.replace(",", "."));
+      }
+
+      function numberFormat(number, decimals, dec_point, thousands_sep) {
+        number = (number + "").replace(/[^0-9+\-Ee.]/g, "");
+        var n = !isFinite(+number) ? 0 : +number,
+          prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+          sep = typeof thousands_sep === "undefined" ? "," : thousands_sep,
+          dec = typeof dec_point === "undefined" ? "." : dec_point,
+          s = "",
+          toFixedFix = function (n, prec) {
+            var k = Math.pow(10, prec);
+            return "" + (Math.round(n * k) / k).toFixed(prec);
+          };
+        // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+        s = (prec ? toFixedFix(n, prec) : "" + Math.round(n)).split(".");
+        if (s[0].length > 2) {
+          s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+        }
+        if ((s[1] || "").length < prec) {
+          s[1] = s[1] || "";
+          s[1] += new Array(prec - s[1].length + 1).join("0");
+        }
+        return s.join(dec);
+      }
+
+      function calculaValorVendas() {
+        var tipoCalc = $(".nav-item.selected").data("id");
+        var tipoPagto = $(".tipo-pagto.selected").data("type-pagto");
+        var valor = $(".valor-desejado").val();
+        var taxa = taxaFloat($(".taxa-simulacao").val());
+
+        var valorNecessario = valorInt(valor) / (1 - taxa / 100);
+
+        $(".valor-total-necessario").html(
+          numberFormat(valorNecessario, 2, ",", ".")
+        );
+      }
+    });
+  </script>
+
+  <footer itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Magapay" />
+    <meta itemprop="url" content="/" />
+
+    <div class="container footer-middle flex">
+      <div class="dados-loja">
+        <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false" />
+        <div class="horario-atendimento">
+          <h4>
+            Horário de atendimento
+          </h4>
+          <p>
+            De segunda a sexta, das 08:00h às 18:00h.
+          </p>
+        </div>
+        <p>
+          Estrada da Madeira, 1875 - Barragem, Rio do Sul - SC - CEP:
+          89165-063
+        </p>
+      </div>
+      <div class="conteudo-geral flex space-between">
+        <ul id="menu-footer">
+          <li class="title">
+            Links Úteis
+          </li>
+          <li>
+            <a href="#vantagens" class="link-slide">
+              Vantagens
+            </a>
+          </li>
+          <li>
+            <a href="#calculadora" class="link-slide">
+              Calculadora
+            </a>
+          </li>
+          <li>
+            <a href="#duvidas" class="link-slide">
+              Dúvidas frequentes
+            </a>
+          </li>
+          <li>
+            <a href="https://api.magapay.com.br/docs" target="_blank">
+              API Magapay
+            </a>
+          </li>
+          <li>
+            <a href="https://magapay.minhaconta.zoop.com.br/criar-conta" target="_blank">
+              Peça já a sua
+            </a>
+          </li>
+          <li>
+            <a href="https://magapay.minhaconta.zoop.com.br/login" class="destaque" target="_blank">
+              Acesse sua conta
+            </a>
+          </li>
+        </ul>
+
+        <div class="reconhecimentos">
+          <ul id="nav-reconhecimentos">
+            <li class="title">
+              Reconhecimentos
+            </li>
+            <li>
+              <a href="/magapay-premio-de-inovacao.html">
+                <img src="web-magapay/image/footer/premio-inovacao.svg" alt="Prêmio de Inovação"
+                  title="Prêmio de Inovação" draggable="false" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.inovativabrasil.com.br/aprovadas2020-1/" target="_blank" rel="nofollow">
+                <img src="web-magapay/image/footer/selo-inovativabrasil.png" alt="InovAtiva Brasil"
+                  title="InovAtiva Brasil" draggable="false" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="atendimento" id="fale-conosco">
+          <ul id="nav-contact">
+            <li class="title">
+              Atendimento
+            </li>
+            <li>
+              <a href="tel:+554735208058" class="flex center">
+                <div class="icon">
+                  <img src="web-magapay/image/footer/icon-telefone.svg" alt="Telefone" title="Telefone"
+                    draggable="false" />
+                </div>
+                <div class="text">
+                  (47) 3520-8058
+                </div>
+              </a>
+              <a onclick="sendMsgWhats('Quais as taxas? E aluguel?')" class="flex center">
+                <div class="icon">
+                  <img src="web-magapay/image/footer/icon-whatsapp.svg" alt="Whatsapp" title="Whatsapp"
+                    draggable="false" />
+                </div>
+                <div class="text">
+                  (47) 3520-8058
+                </div>
+              </a>
+              <a href="mailto:magapay@magamobi.com.br" class="flex center">
+                <div class="icon">
+                  <img src="web-magapay/image/footer/icon-email.svg" alt="E-mail" title="E-mail" draggable="false" />
+                </div>
+                <div class="text">
+                  magapay@magamobi.com.br
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(function () {
+        "use strict";
+
+        $(".link-slide").on("click", function () {
+          var target = $(this.hash);
+          target = target.length
+            ? target
+            : $("[name=" + this.hash.slice(1) + "]");
+
+          if (target.length) {
+            $("html,body").animate(
+              {
+                scrollTop: target.offset().top - 67,
+              },
+              2000
+            );
+          }
+          return false;
+        });
+      });
+    </script>
+
+    <div class="formas-pagto">
+      <div class="container flex center space-between">
+        <img src="web-magapay/image/payment-vector/cartao-visa.svg" alt="Visa" title="Visa" draggable="false" />
+        <img src="web-magapay/image/payment-vector/cartao-mastercard.svg" alt="Mastercard" title="Mastercard"
+          draggable="false" />
+        <img src="web-magapay/image/payment-vector/cartao-elo.svg" alt="Elo" title="Elo" draggable="false" />
+        <img src="web-magapay/image/payment-vector/cartao-banescard.svg" alt="Banescard" title="Banescard"
+          draggable="false" />
+        <img src="web-magapay/image/payment-vector/cartao-american-express.svg" alt="American Express"
+          title="American Express" draggable="false" />
+        <img src="web-magapay/image/payment-vector/cartao-hipercard.svg" alt="Hipercard" title="Hipercard"
+          draggable="false" />
+        <img src="web-magapay/image/payment-vector/cartao-hiper.svg" alt="Hiper" title="Hiper" draggable="false" />
+        <img src="web-magapay/image/payment-vector/cartao-diners.svg" alt="Dinners" title="Dinners" draggable="false" />
+        <img src="web-magapay/image/payment-vector/cartao-jcb.svg" alt="JCB" title="JCB" draggable="false" />
+        <img src="web-magapay/image/payment-vector/cartao-aura.svg" alt="Aura" title="Aura" draggable="false" />
+      </div>
+    </div>
+
+    <div class="footer-bottom" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <meta itemprop="streetAddress" content="Estrada da Madeira, 1875, bairro Barragem" />
+      <meta itemprop="postalCode" content="891650-063" />
+      <meta itemprop="addressLocality" content="Rio do Sul" />
+      <meta itemprop="addressRegion" content="Santa Catarina" />
+      <meta itemprop="addressCountry" content="Brasil" />
+      <meta itemprop="telephone" content="(47)3520-8058" />
+
+      <div class="container">
+        <div class="flex center space-around">
+          <div class="dados-loja">
+            MAGAMOBI PAGAMENTOS ELETRONICOS LTDA - 29.247.605/0001-63 &copy;
+            Todos os direitos reservados.
+          </div>
+
+          <div class="empresa-grupo">
+            <a href="http://www.magamobi.com.br/" target="_blank">
+              <img src="web-magapay/image/footer/logo-magamobi.svg" alt="Uma empresa do grupo Magamobi"
+                title="Uma empresa do grupo Magamobi" draggable="false" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="popup-msg-whats">
+    <a href="javascript:sendMsgWhats('Quais as taxas? E aluguel?')">
+      <span class="icon-whats">
+        <img src="web-magapay/image/global-icons/icon-whatsapp.svg" alt="fale conosco" />
+      </span>
+      <span class="text">Fale conosco</span>
+    </a>
+  </div>
+
+  <script language="javascript" type="text/javascript">
+    function sendMsgWhats(mensagem) {
+      var w = 900;
+      var h = 500;
+
+      var dualScreenLeft =
+        window.screenLeft != undefined ? window.screenLeft : window.screenX;
+      var dualScreenTop =
+        window.screenTop != undefined ? window.screenTop : window.screenY;
+
+      var width = window.innerWidth
+        ? window.innerWidth
+        : document.documentElement.clientWidth
+          ? document.documentElement.clientWidth
+          : screen.width;
+      var height = window.innerHeight
+        ? window.innerHeight
+        : document.documentElement.clientHeight
+          ? document.documentElement.clientHeight
+          : screen.height;
+
+      var left = width / 2 - w / 2 + dualScreenLeft;
+      var top = height / 2 - h / 2 + dualScreenTop;
+
+      var newWindow = window.open(
+        "https://api.whatsapp.com/send?phone=554735208058&text=" + mensagem,
+        "scrollbars=no, width=" +
+        w +
+        ", height=" +
+        h +
+        ", top=" +
+        top +
+        ", left=" +
+        left
+      );
+
+      // Puts focus on the newWindow
+      if (window.focus) {
+        newWindow.focus();
+      }
+    }
+  </script>
+</body>
+
+</html>

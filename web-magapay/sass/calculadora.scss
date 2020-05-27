@@ -1,0 +1,371 @@
+@import "partials/base";
+@import "partials/jquery-ui";
+@import "partials/owl-carousel";
+
+.title {
+  margin-top: 25px;
+  text-align: center;
+  font-size: em(40);
+  font-weight: bold;
+
+  @include breakpoint($break-medium-big) {
+    font-size: em(35);
+  }
+
+  @include breakpoint($break-small) {
+    font-size: em(28);
+  }
+
+  span {
+    display: block;
+    color: $cor-base;
+  }
+}
+
+.arrow-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 22px;
+  height: 22px;
+  background: #95c11f;
+  box-shadow: 0px 0px 20px #95c11f;
+  border-radius: 50%;
+
+  @include breakpoint($break-medium-big) {
+    width: 19px;
+    height: 19px;
+  }
+
+  img {
+    width: 12px;
+
+    @include breakpoint($break-medium-big) {
+      width: 10px;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 125px;
+
+  @include breakpoint($break-medium-big) {
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+
+  @include breakpoint($break-small) {
+    margin-bottom: 40px;
+  }
+
+  .rectangle-blue {
+    position: relative;
+    right: 155px;
+    top: 310px;
+    width: 40px;
+    height: 100px;
+    background: $cor-azul;
+    transform: skewY(-18deg);
+    z-index: -1;
+
+    @include breakpoint($break-medium-big) {
+      top: 290px;
+    }
+
+    @include breakpoint($break-small) {
+      display: none;
+    }
+  }
+
+  .rectangle-green {
+    position: relative;
+    right: 137px;
+    top: 290px;
+    width: 40px;
+    height: 100px;
+    background: $cor-secundaria;
+    transform: skewY(-18deg);
+    z-index: -1;
+
+    @include breakpoint($break-medium-big) {
+      top: 272px;
+    }
+
+    @include breakpoint($break-small) {
+      display: none;
+    }
+  }
+
+  .valor-total {
+    position: relative;
+    padding: 50px 55px 50px 40px;
+    width: 45%;
+    margin-left: 80px;
+    box-shadow: 0px 23px 43px rgba(181, 203, 220, 0.43);
+    border-radius: 26px;
+    background: #f7fafd;
+
+    @include breakpoint($break-medium-big) {
+      width: 75%;
+      margin-left: 80px;
+    }
+
+    @include breakpoint($break-small) {
+      padding: 30px 30px;
+      margin-left: 0;
+      width: 80%;
+    }
+
+    .text {
+      font-size: em(18);
+      color: $cor-azul-escuro;
+
+      @include breakpoint($break-small) {
+        font-size: em(16);
+      }
+    }
+
+    .text-lojista {
+      margin-bottom: 40px;
+    }
+
+    .area-valor {
+      display: flex;
+      position: relative;
+      font-weight: bold;
+      color: $cor-secundaria;
+
+      &::after {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 2px;
+        border-radius: 3px;
+        background: $cor-azul;
+        content: "";
+
+        @include breakpoint($break-small) {
+          top: 55px;
+          height: 1px;
+        }
+      }
+
+      .moeda {
+        font-size: em(35);
+        padding: 14px 11px 0 0;
+
+        @include breakpoint($break-small) {
+          padding: 10px 7px 0 0;
+          font-size: em(20);
+        }
+      }
+
+      .valor-total-necessario {
+        font-size: em(60);
+
+        @include breakpoint($break-small) {
+          font-size: em(40);
+        }
+      }
+    }
+  }
+
+  .calculo-area {
+    width: 22%;
+    color: $cor-azul-escuro;
+
+    @include breakpoint($break-medium-big) {
+      width: 60%;
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint($break-small) {
+      width: 75%;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    h3 {
+      display: block;
+      margin-bottom: 10px;
+      font-size: em(18);
+
+      @include breakpoint($break-small) {
+        font-size: em(16);
+      }
+    }
+
+    .bar {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 28px;
+      overflow: hidden;
+      background: $cor-bordas;
+      z-index: 1;
+
+      @include breakpoint($break-medium-big) {
+        bottom: 32px;
+      }
+
+      .fill {
+        display: block;
+        height: 100%;
+        background: $cor-secundaria;
+      }
+    }
+
+    .slider {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 2px;
+      margin-top: 12px;
+      padding: 10px 0;
+      z-index: 2;
+      border: none;
+      background: transparent;
+      appearance: none;
+      outline: none;
+
+      .ui-slider-handle {
+        top: 0;
+        width: 17px;
+        height: 17px;
+        border: 2px solid $cor-secundaria;
+        border-radius: 50%;
+        background: #fff;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+
+        @include breakpoint($break-medium-big) {
+          width: 23px;
+          height: 23px;
+          top: -2px;
+        }
+
+        &:before {
+          content: "";
+        }
+
+        &.ui-state-active {
+          background: $cor-secundaria;
+        }
+      }
+    }
+
+    .prefix {
+      margin: 5px 10px 0 0;
+      width: em(20);
+      font-weight: bold;
+    }
+
+    .min-max {
+      display: flex;
+      justify-content: space-between;
+      color: #9b9b9b;
+      font-size: em(12);
+
+      @include breakpoint($break-medium-big) {
+        margin-top: 5px;
+      }
+
+      @include breakpoint($break-small) {
+        font-size: em(11);
+      }
+    }
+
+    .valor-area {
+      position: relative;
+
+      .simular-valor {
+        display: flex;
+
+        .valor-desejado {
+          font-size: em(35);
+          font-weight: bold;
+          border: 0;
+          outline: none;
+
+          @include breakpoint($break-small) {
+            font-size: em(28);
+          }
+        }
+      }
+
+      .fill-valor {
+        width: 28%;
+      }
+    }
+
+    .taxa-area {
+      position: relative;
+      margin-top: 50px;
+
+      .simular-taxa {
+        display: flex;
+
+        .taxa-simulacao {
+          font-size: em(35);
+          font-weight: bold;
+          border: 0;
+          outline: none;
+
+          @include breakpoint($break-small) {
+            font-size: em(28);
+          }
+        }
+      }
+
+      .fill-taxa {
+        width: 20%;
+      }
+    }
+  }
+}
+
+.area-franqueado {
+  width: 100%;
+  background: $cor-azul;
+  text-align: center;
+
+  h3 {
+    padding-top: 70px;
+    margin-bottom: 15px;
+    font-size: em(17);
+    font-weight: bold;
+    color: #fff;
+
+    @include breakpoint($break-small) {
+      font-size: em(14);
+    }
+  }
+
+  .btn-franqueado {
+    padding: 6px 22px;
+    margin-bottom: 70px;
+    font-size: em(12);
+    font-weight: bold;
+    color: $cor-azul-escuro;
+    background: #fff;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+
+    @include breakpoint($break-small) {
+      font-size: em(11);
+    }
+
+    &:hover {
+      color: white;
+      background: #00a4c9;
+    }
+  }
+}
