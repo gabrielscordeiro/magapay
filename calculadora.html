@@ -160,12 +160,12 @@
           <div class="prefix">
             %
           </div>
-          <input type="text" class="taxa-simulacao" value="9,96" data-tax="9,96" readonly="true" />
+          <input type="text" class="taxa-simulacao" value="9,96" data-tax="9,96" />
         </div>
         <span class="bar bar-taxa"><span class="fill fill-taxa"></span></span>
         <div class="slider" id="slider-taxa"></div>
         <div class="min-max">
-          <div class="min">2%</div>
+          <div class="min">1%</div>
           <div class="min">50%</div>
         </div>
       </div>
@@ -211,24 +211,24 @@
         calculaValorVendas();
       }, 2);
 
-      $(".valor-desejado").mask("0.000,00", {
+      $(".valor-desejado").mask("00.000,00", {
         reverse: true,
       });
 
-      $(".taxa-simulacao").mask("0,00", {
+      $(".taxa-simulacao").mask("00,00", {
         reverse: true,
       });
 
       $("#slider-taxa").slider({
         orientation: "horizontal",
         value: 9.96,
-        min: 2,
+        min: 1,
         max: 50,
         step: 0.01,
         slide: function (e, ui) {
           var valueSlider = numberFormat(ui.value, 2, ",");
           var $fill = $(".fill-taxa");
-          $fill.css("width", ui.value * 2 - 1 + "%");
+          $fill.css("width", (parseInt(ui.value) * 2) + "%");
           $(".taxa-simulacao").val(valueSlider);
           $(".taxa-simulacao").attr("data-tax", valueSlider);
 
@@ -252,7 +252,7 @@
         },
       });
 
-      $(".valor-desejado").on("focus", function () {
+      $(".valor-desejado, .taxa-simulacao").on("focus", function () {
         $(this).val("");
       });
 
@@ -272,6 +272,22 @@
         calculaValorVendas();
       });
 
+      $(".taxa-simulacao").on("blur", function () {
+        var $this = $(this);
+        var valueCurrent = taxaFloat($this.attr("data-tax"));
+        var valueModified = taxaFloat($this.val());
+
+        if (valueCurrent !== valueModified && !isNaN(valueModified)) {
+          $this.val(numberFormat(valueModified, 2, ",", "."));
+        } else {
+          $this.val(numberFormat(valueCurrent, 2, ",", "."));
+        }
+
+        var $fill = $(".fill-taxa");
+        $fill.css("width", (parseInt(valueModified) * 2) + "%");
+        calculaValorVendas();
+      });
+
       $(".valor-desejado").on("keyup", function () {
         var $this = $(this);
         var valueInput = valorInt($this.val());
@@ -286,6 +302,27 @@
           var $fill = $(".fill-valor");
           $fill.css("width", valueInput * 0.004 + "%");
           $("#slider-valor").slider({
+            value: valueInput,
+          });
+        }
+
+        calculaValorVendas();
+      });
+
+      $(".taxa-simulacao").on("keyup", function () {
+        var $this = $(this);
+        var valueInput = valorInt($this.val());
+
+        if (valueInput <= 0) {
+          $(this).val(numberFormat(1, 2, ",", "."));
+        } else if (valueInput > 50 && $this.val().length != 2) {
+          $(this).val(numberFormat(50, 2, ",", "."));
+        }
+
+        if (parseInt(valueInput) >= 1) {
+          var $fill = $(".fill-taxa");
+          $fill.css("width", (parseInt(valueInput) * 2) + "%");
+          $("#slider-taxa").slider({
             value: valueInput,
           });
         }
@@ -329,12 +366,14 @@
         var tipoPagto = $(".tipo-pagto.selected").data("type-pagto");
         var valor = $(".valor-desejado").val();
         var taxa = taxaFloat($(".taxa-simulacao").val());
-
         var valorNecessario = valorInt(valor) / (1 - taxa / 100);
 
-        $(".valor-total-necessario").html(
-          numberFormat(valorNecessario, 2, ",", ".")
-        );
+        if (taxa <= 50) {
+          $(".valor-total-necessario").html(
+            numberFormat(valorNecessario, 2, ",", ".")
+          );
+        }
+
       }
     });
   </script>

@@ -10,10 +10,13 @@
 	  <priority>1.00</priority>
 	</url>
 	<url>
-		<loc>
-		https://www.magapay.com.br/magapay-premio-de-inovacao.html
-		</loc>
+		<loc>https://www.magapay.com.br/magapay-premio-de-inovacao.html</loc>
 		<lastmod>2019-11-29T11:02:11+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://www.magapay.com.br/calculadora.html</loc>
+		<lastmod>2020-05-28T16:00:00+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 </urlset>
