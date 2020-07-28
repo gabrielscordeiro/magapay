@@ -24,4 +24,4 @@
 
 ## A Magapay
 
-A Magapay é prestadora de serviços de tecnologia relacionada a soluções de pagamento por meios eletrônicos, mediante a captura, transmissão, processamento e liquidação das TRANSAÇÕES oriundas do uso de CARTÕES e/ou CONTA DE PAGAMENTO, possibilitando que os ESTABELECIMENTOS recebam e enviem pagamentos.
+A Magapay é prestadora de serviços de tecnologia relacionada a soluções de pagamento por meios eletrônicos, mediante a captura, transmissão, processamento e liquidação das transações oriundas do uso de cartões e/ou conta de pagamento, possibilitando que os estabelecimentos recebam e enviem pagamentos.

@@ -1,179 +1,116 @@
 @import 'partials/base';
 
-$width-menu-mobile: 270px;
-
 header{
-    padding: 50px 0;
+    margin-top: 45px;
 
-    @include breakpoint($break-medium-big){
-        padding: 15px 0;
-        border-bottom: 1px solid $cor-bordas;
-    }
-
-    .flex.space-between{
-        @include breakpoint($break-medium-big){
-            justify-content: center;
-        }
-    }
-}
-
-.menu-button{
-    display: none;
-    position: absolute;
-    top: 22px;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 20px;
-    background: #fff;
-    @include transition(all .5s ease);
-
-    @include breakpoint($break-medium-big){
+    a.logo{
         display: flex;
-    }
-    
-    &.active{
-        position: fixed;
-    }
 
-    .icon-menu, .icon-menu:before, .icon-menu:after{
-        position: absolute;
-        width: 25px;
-        height: 3px;
-        background: $cor-base;
-        @include transition(transform .5s ease);
-    }
-
-    .icon-menu:before{
-        content:'';
-        top: 7px;
-    }
-
-    .icon-menu:after{
-        content:'';
-        top:-7px;
-    }
-}
-
-
-.menu-active {
-    .menu-mobile-overlay{
-        visibility: visible;
-    }
-
-    ul#nav-root {
-        @include transform(translateX(0));
-        @include box-shadow(0 0 15px 5px rgba(0, 0, 0, 0.75));
-    }
-
-    .menu-button{
-        @include transform(translateX($width-menu-mobile));
-        left: 0;
-        height: 44px;
-        z-index: 99998;
-
-        .icon-menu{
-            background: 0!important;
-
-            &:before{
-                transform: rotate(-45deg);
-                top:0;
+        svg#logo{
+            .fil1,
+            .fil2, 
+            .fil3{
+                fill:#fff;
             }
-
-            &:after{
-                transform: rotate(45deg);
-                top:0;
-            }
-        }
-    }
-}
-
-.logo{
-    width: 250px;
-    display: flex;
-    align-items: center;
-
-    @include breakpoint($break-medium-big){
-        width: auto;
+        } 
     }
 
-    a{
-        display: block;
-    }
-}
+    ul#nav-root{
+        width: 100%; 
+        margin-left: 25px;
 
-ul#nav-root{
-    width: 755px;
-
-    @include breakpoint($break-medium-big){
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: block;
-        width: $width-menu-mobile;
-        height: 100%;
-        z-index: 99998;
-        @include transform(translateX(-100%));
-        @include transition(all .5s ease);
-        background: $cor-base;
-    }
-
-    li:not(.destaque):hover a{
-        color: $cor-secundaria;
-    }
-
-    a{
-        display: block;
-        font-size: em(14);
-        font-weight: 700;
-        color: #fff;
-    }
-
-    > li{
-        @include breakpoint($break-medium-big){
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 45px;
-            border-bottom: 1px solid $cor-base-darken;
-        }
-
-        a{
-            @include breakpoint($break-medium-big){
-                width: 100%;
-                height: 45px;
-                display: flex;
-                align-items: center;
-                padding-left: 10px;
-            }
-        }
-    }
-
-    li.destaque{
-        &.azul a{
-            background: $cor-azul;
-            color: $cor-azul-escuro;
-            cursor: pointer;
-
+        > li{
             &:hover{
-                background: $cor-azul-escuro;
-            }
-        }
+                > a{
+                    text-decoration: underline;
+                }   
 
-        a{
-            background: $cor-secundaria;
-            color: $cor-verde-escuro;
-            border-radius: 5px;
-            padding: 10px 30px;
-
-            @include breakpoint($break-medium-big){
-                padding: 0 0 0 10px;
+                .container-menu{
+                    display: flex;
+                }
             }
 
-            &:hover{
-                background: darken($cor-secundaria, 10);
+            .menu-icon{
+                @include seta(8px, #fff, 'bottom')
+            }
+
+            &.seja-franqueado{
+                margin-left: auto;
+
+                > a{
+                    font-weight: bold;
+                    padding: 17px 28px; 
+                    border: 1px solid #fff;
+                    border-radius: 6px;
+
+                    &:hover{
+                        background: #0FD43A;
+                        border-color: #0FD43A;
+                        color: #fff;
+                    }
+                }
+            }
+
+            > a{
                 color: #fff;
+                font-size: em(14);
+                padding: 0 20px;               
+            }
+        }
+
+        .container-menu{
+            position: absolute;
+            display: flex;
+            max-width: 1100px;
+            max-height: max-content;
+            background: #fff;
+            z-index: 2;
+            @include box-shadow(0px 4px 14px rgba(54, 0, 0, 0.25));
+        }
+
+        ul.menu-level-2{
+            padding: 58px 40px 58px 80px;
+            font-size: em(14);
+
+            > li > a{
+                color: #0A2B49;
+                font-weight: 500
+            }
+        }
+
+        ul.menu-level-3{
+            li{
+                margin-top: 30px; 
+            }
+
+            a{
+                color: rgba(10, 43, 73, 0.53);
+                cursor: pointer;
+
+                &:hover{
+                    color: $cor-base;
+                }
+            }
+        }
+
+        .conteudo-menu-hover{
+            background: #F6F9FC;
+            padding: 58px 80px 76px 53px;
+
+            .title-hover{
+                font-size: em(14);
+                color: #0A2B49;
+                font-weight: 500
+            }
+
+            a.banner-menu-item{
+                display: flex;
+                margin-top: 32px;
+
+                img{
+                    display: block;
+                }
             }
         }
     }
-}
+} 

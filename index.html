@@ -35,810 +35,189 @@
         <meta name="title" content="Magapay - A solução perfeita para o seu negócio">
         <meta name="keywords" content="Pagamentos, Cartão de Credito, Cartão de Dédito, Pagamentos online, Menores Taxas, Qualidade em atendimento, Compromisso" />
 
-        <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="web-magapay/css/main.css?v=2020-05-29"/>
-        <link rel="stylesheet" type="text/css" href="web-magapay/css/home.css?v=2020-05-29"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="web-magapay/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="web-magapay/css/home.css"/>
 
-        <script type="text/javascript" src="web-magapay/js/jquery-3.4.0.min.js?v=2020-05-29"></script>
-        <script type="text/javascript" src="web-magapay/js/magapay.js?v=2020-05-29"></script>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="web-magapay/js/jquery-3.4.0.min.js"></script>
+        <script type="text/javascript" src="web-magapay/js/magapay.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
         <meta name="author" content="Gabriel Schmidt Cordeiro">
     </head>
 
     <body>
-        <div class="menu-mobile-overlay"></div>
 
         <header>
-            <div class="container">
+            <div class="container flex center">
                 <div class="menu-button">
                     <div class="icon-menu"></div>
-                </div>                
-                <div class="flex space-between">
-                    <h1 title="Magapay" class="logo">
-                        <a href="/">
-                            <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false"/>
-                        </a>
-                    </h1>
-
-                    <ul id="nav-root" class="flex space-between center" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        <li>
-                            <meta itemprop="name" content="Vantagens">
-                            <a href="#vantagens" class="link-slide">
-                                Vantagens
-                            </a>
-                        </li>
-                        <li>
-                            <meta itemprop="name" content="Dúvidas Frequentes">
-                            <a href="#duvidas" class="link-slide">
-                                Dúvidas Frequentes
-                            </a>
-                        </li>
-                        <li>
-                            <meta itemprop="name" content="Fale conosco">
-                            <a href="#fale-conosco" class="link-slide">
-                                Fale conosco
-                            </a>
-                        </li>
-                        <li class="destaque azul">
-                            <meta itemprop="name" content="Peça já a sua">
-                            <a onclick="sendMsgWhats('Como funciona a franquia da Magapay?')">
-                                Seja um Franqueado
-                            </a>
-                        </li>
-                        <li class="destaque">
-                            <meta itemprop="name" content="Simulação">
-                            <a href="#calculadora" class="link-slide">
-                                Simulação
-                            </a>
-                        </li>
-                    </ul>
                 </div>
+                <h1 title="Magapay">
+                    <a href="/" class="logo">
+                        <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false" class="svg"/>
+                    </a>
+                </h1>
+
+                <ul id="nav-root" class="flex center" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <li>
+                        <meta itemprop="name" content="Nossas soluções"/>
+                        <a href="#vantagens">
+                            Nossa soluções
+                            <span class="icon-menu"></span>
+                        </a>
+                        <div class="container-menu">
+                            <ul class="menu-level-2">
+                                <li>
+                                    <meta itemprop="name" content="Serviços">
+                                    <a itemprop="url">
+                                        Serviços
+                                    </a>
+                                    <ul class="menu-level-3">
+                                        <li>
+                                            <meta itemprop="name" content="Abaixador de Língua">
+                                            <a itemprop="url">
+                                                Gateway de pagamentos
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <meta itemprop="name" content="Split de Pagamentos">
+                                            <a itemprop="url">
+                                                Split de Pagamentos
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <meta itemprop="name" content="Emissão de Boletos">
+                                            <a itemprop="url">
+                                                Emissão de Boletos
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <meta itemprop="name" content="Emissão de Boletos Parcelados">
+                                            <a itemprop="url">
+                                                Emissão de Boletos Parcelados
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <meta itemprop="name" content="Compra Recorrente de Cartão">
+                                            <a itemprop="url">
+                                                Compra Recorrente de Cartão
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <meta itemprop="name" content="Link de Pagamento">
+                                            <a itemprop="url">
+                                                Link de Pagamento
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <meta itemprop="name" content="Pagamento de Contas">
+                                            <a itemprop="url">
+                                                Pagamento de Contas
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <meta itemprop="name" content="Pagamentos Instantâneos">
+                                            <a itemprop="url">
+                                                Pagamentos Instantâneos
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <meta itemprop="name" content="Máquinas de cartão">
+                                            <a itemprop="url">
+                                                Máquinas de cartão
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <div class="conteudo-menu-hover">
+                                <span class="title-hover">
+                                    Veja Também
+                                </span>
+
+                                <a href="" class="banner-menu-item">
+                                    <img src="web-magapay/image/header/banner-maquininha.jpg" alt="A maquininha perfeita para o seu negócio" title="A maquininha perfeita para o seu negócio"/>
+                                </a>
+
+                                <a href="" class="banner-menu-item">
+                                    <img src="web-magapay/image/header/banner-integracao-magazord.jpg" alt="Integração com Plataforma de E-commerce completa" title="Integração com Plataforma de E-commerce completa"/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Simulação"/>
+                        <a href="#duvidas">
+                            Simulação
+                        </a>
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Dúvidas frequentes"/>
+                        <a href="#fale-conosco">
+                            Dúvidas frequentes
+                        </a>
+                    </li>
+                    <li>
+                        <meta itemprop="name" content="Fale consoco"/>
+                        <a href="#fale-conosco">
+                            Fale consosco
+                        </a>
+                    </li>
+                    <li class="seja-franqueado">
+                        <meta itemprop="name" content="Seja um Franqueado"/>
+                        <a href="#fale-conosco">
+                            Seja um Franqueado
+                        </a>
+                    </li>
+                </ul>
             </div>
         </header>
 
-        <script type="text/javascript">
-            (function () {
-                'use strict';
-
-                $('header').on('click', '.menu-button', function () {
-                    $('html, body').toggleClass('menu-active');
-                    $(this).toggleClass('active');
-                });
-
-                $('body').on('click', '.menu-mobile-overlay', function () {
-                    $('html,body').toggleClass('menu-active');
-                    $('.menu-button').toggleClass('active');
-                });
-
-                $('body').on('swipe', 'header, .menu-mobile-overlay', function (e) {
-                    $('.menu-button').trigger('click');
-                });
-
-                if (window.outerWidth <= 1024) {
-                    var htmlMenu = $('ul#nav-root').html();
-                    $('ul#nav-root').remove();
-
-                    $('header').append('<ul id="nav-root">' + htmlMenu + '</ul>');
-                }
-            })();
-        </script>
-
-        <div class="container">
-            <div class="descricao-topo flex center space-between">
-                <div class="desc">
-                    <h2>
-                        <span>MagaPay,</span><span>a solução perfeita</span> para o seu negócio.
-                    </h2>
-                    <img src="web-magapay/image/home/handshake.svg" alt="Aperto de mãos" title="Aperto de mãos" draggable="false"/>
-                </div>
-
-                <div class="maquininha-magapay">
-                    <img src="web-magapay/image/home/maquina-magapay.png" draggable="false" alt="Maquininha Magapay" title="Maquininha Magapay"/>
-                </div>
-            </div>
-
-            <div class="vantagens" id="vantagens">
-                <h2 class="title-default">
-                    Vantagens
-                </h2>
-
-                <div class="flex space-between center">
-                    <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-aluguel.svg" alt="Aluguel Zero*" title="Aluguel Zero*" draggable="false"/>
-                        <h3>
-                            Aluguel ZERO*
-                        </h3>
-                    </div>
-                    <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-suporte.svg" alt="Suporte local perto de você" title="Suporte local perto de você" draggable="false"/>
-                        <h3>
-                            Suporte local perto de você
-                        </h3>
-                    </div>
-                    <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-calendar.svg" alt="Receba tudo em até 24 horas" title="Receba tudo em até 24 horas" draggable="false"/>
-                        <h3>
-                            Receba tudo em até 24 horas
-                        </h3>
-                    </div>
-                    <div class="vantagem flex center justify-center column">
-                        <img src="web-magapay/image/home/icon-taxas.svg" alt="Taxas acessíveis" title="Taxas acessíveis" draggable="false"/>
-                        <h3>
-                            Taxas acessíveis
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="calculadora flex center column">
-            <h2 class="title-default">
-                Calculadora
-            </h2>
-
-            <div class="navegacao flex space-between" id="calculadora">
-                <div class="nav-item selected" data-id="antecipacao">
-                    Com Antecipação
-                </div>
-                <div class="nav-item" data-id="sem-antecipacao">
-                    Sem Antecipação
-                </div>
-            </div>
-
-            <div class="calculo-area">
-                <h3>
-                    Simule suas vendas e descubra quanto você pode economizar com a Magapay.
-                </h3>
-                <div class="simulacao flex justify-center center column">
-                    <div class="flex justify-center simular">
-                        <div class="prefix">
-                            R$
-                        </div>
-                        <input type="text" class="valor-simulacao" value="1000,00" data-value-price="1000"/>
-                    </div>
-                    <div id="slider"></div>
-                </div>
-                <div class="lista-opcoes-pagamento">
-                    <div class="selecao-pagamento flex owl-carousel">
-                        <div class="tipo-pagto" data-type-pagto="debito">
-                            Débito
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="1x">
-                            Crédito à vista
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="2x">
-                            2X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="3x">
-                            3X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="4x">
-                            4X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="5x">
-                            5X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="6x">
-                            6X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="7x">
-                            7X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="8x">
-                            8X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="9x">
-                            9X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="10x">
-                            10X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="11x">
-                            11X
-                        </div>
-                        <div class="tipo-pagto" data-type-pagto="12x">
-                            12X
-                        </div>
-                    </div>
-                </div>
-
-                <script type="text/javascript">
-                    $(function () {
-                        'use strict';
-
-                        $('.selecao-pagamento').owlCarousel({
-                            margin: 10,
-                            autoWidth: true,
-                            startPosition: 0,
-                            nav: true,
-                            navText: [
-                                '<div class="arrow prev"><div class="icon-arrow"></div></div>',
-                                '<div class="arrow next"><div class="icon-arrow"></div></div>'
-                            ],
-                            onInitialize: selectItemOnInit
-                        });
-
-                        function selectItemOnInit() {
-                            setTimeout(function () {
-                                $('.owl-item.active .tipo-pagto').eq(0).addClass('selected');
-                            }, 1);
-                        }
-                    });
-                </script>
-
-                <div class="info-taxas">
-                    <div class="taxas flex space-between center">
-                        <div class="percent-taxa">
-                            Taxa <span class="percent">1,99</span>%
-                        </div>
-                        <div class="valor-cobrado">
-                            <span class="prefix">R$</span>
-                            <span class="value">
-                                19,90
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="cliente-recebe">
-                        <p>
-                            Você recebe em conta:
-                        </p>
-
-                        <div class="valor-cliente">
-                            <span class="prefix">
-                                R$
-                            </span>
-                            <span class="valor-total-cliente">
-                                980,10
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="conteudo-topo-home">
         </div>
 
         <script type="text/javascript">
-            $(function () {
-                'use strict';
+            /*
+             * Replace all SVG images with inline SVG
+             */
+            function applySVG() {
+                jQuery.support.cors = true;
 
-                setTimeout(function () {
-                    calculaValorVendas();
-                }, 2);
+                jQuery('img.svg').each(function () {
+                    var $img = jQuery(this);
+                    var imgID = $img.attr('id');
+                    var imgClass = $img.attr('class');
+                    var imgURL = $img.attr('src');
 
-                $('.valor-simulacao').mask('0.000,00', {
-                    reverse: true
-                });
+                    var isSvg = imgURL.split('.').pop() == 'svg' ? true : false;
 
-                $("#slider").slider({
-                    orientation: "horizontal",
-                    value: 1000,
-                    min: 1,
-                    max: 5000,
-                    slide: function (e, ui) {
-                        var valueSlider = numberFormat(ui.value, 2, ',', '.');
-                        $('.valor-simulacao').val(valueSlider);
-                        $('.valor-simulacao').attr('data-value-price', valueSlider);
-
-                        calculaValorVendas();
-                    }
-                });
-
-                $('.valor-simulacao').on('focus', function () {
-                    $(this).val('');
-                });
-
-                $('.valor-simulacao').on('blur', function () {
-                    var $this = $(this);
-                    var valueCurrent = valorInt($this.attr('data-value-price'));
-                    var valueModified = valorInt($this.val());
-
-                    if ((valueCurrent !== valueModified) && !isNaN(valueModified)) {
-                        $this.val(numberFormat(valueModified, 2, ',', '.'));
-                    } else {
-                        $this.val(numberFormat(valueCurrent, 2, ',', '.'));
-                    }
-
-                    calculaValorVendas();
-                });
-
-                $('.valor-simulacao').on('keyup', function () {
-                    var $this = $(this);
-                    var valueInput = valorInt($this.val());
-
-                    if (valueInput <= 0) {
-                        $(this).val(numberFormat(1, 2, ',', '.'));
-                    } else if (valueInput > 5000) {
-                        $(this).val(numberFormat(5000, 2, ',', '.'));
-                    }
-
-                    if (parseInt(valueInput) >= 1) {
-                        $("#slider").slider({
-                            value: valueInput
-                        });
-                    }
-
-                    calculaValorVendas();
-                });
-
-                $('.selecao-pagamento .tipo-pagto').on('click', function () {
-                    $('.tipo-pagto').removeClass('selected');
-                    $(this).addClass('selected');
-                    calculaValorVendas();
-                });
-
-                function valorInt(valor) {
-                    return parseInt(valor.split(',')[0].replace('.', ''));
-                }
-
-                function numberFormat(number, decimals, dec_point, thousands_sep) {
-                    number = (number + '')
-                            .replace(/[^0-9+\-Ee.]/g, '');
-                    var n = !isFinite(+number) ? 0 : +number,
-                            prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
-                            sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
-                            dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
-                            s = '',
-                            toFixedFix = function (n, prec) {
-                                var k = Math.pow(10, prec);
-                                return '' + (Math.round(n * k) / k)
-                                        .toFixed(prec);
-                            };
-                    // Fix for IE parseFloat(0.55).toFixed(0) = 0;
-                    s = (prec ? toFixedFix(n, prec) : '' + Math.round(n))
-                            .split('.');
-                    if (s[0].length > 3) {
-                        s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
-                    }
-                    if ((s[1] || '')
-                            .length < prec) {
-                        s[1] = s[1] || '';
-                        s[1] += new Array(prec - s[1].length + 1)
-                                .join('0');
-                    }
-                    return s.join(dec);
-                }
-
-                $('.nav-item').on('click', function () {
-                    var $this = $(this);
-                    $('.nav-item').removeClass('selected');
-                    $this.addClass('selected');
-
-                    calculaValorVendas();
-                });
-
-                function calculaValorVendas() {
-                    var tipoCalc = $('.nav-item.selected').data('id');
-                    var tipoPagto = $('.tipo-pagto.selected').data('type-pagto');
-                    var valor = $('.valor-simulacao').val();
-
-                    var taxas = {
-                        'antecipacao': {
-                            '1x': {
-                                'taxa': 0.0399
-                            },
-                            '2x': {
-                                'taxa': 0.0499
-                            },
-                            '3x': {
-                                'taxa': 0.0539
-                            },
-                            '4x': {
-                                'taxa': 0.0589
-                            },
-                            '5x': {
-                                'taxa': 0.0649
-                            },
-                            '6x': {
-                                'taxa': 0.0729
-                            },
-                            '7x': {
-                                'taxa': 0.0849
-                            },
-                            '8x': {
-                                'taxa': 0.0899
-                            },
-                            '9x': {
-                                'taxa': 0.0999
-                            },
-                            '10x': {
-                                'taxa': 0.1099
-                            },
-                            '11x': {
-                                'taxa': 0.1299
-                            },
-                            '12x': {
-                                'taxa': 0.1399
-                            },
-                            'debito': {
-                                'taxa': 0.0199
-                            }
-                        },
-                        'sem-antecipacao': {
-                            '1x': {
-                                'taxa': 0.0295
-                            },
-                            '2x': {
-                                'taxa': 0.0305
-                            },
-                            '3x': {
-                                'taxa': 0.0305
-                            },
-                            '4x': {
-                                'taxa': 0.0305
-                            },
-                            '5x': {
-                                'taxa': 0.0305
-                            },
-                            '6x': {
-                                'taxa': 0.0305
-                            },
-                            '7x': {
-                                'taxa': 0.0320
-                            },
-                            '8x': {
-                                'taxa': 0.0320
-                            },
-                            '9x': {
-                                'taxa': 0.0320
-                            },
-                            '10x': {
-                                'taxa': 0.0320
-                            },
-                            '11x': {
-                                'taxa': 0.0320
-                            },
-                            '12x': {
-                                'taxa': 0.0320
-                            },
-                            'debito': {
-                                'taxa': 0.0199
-                            }
-                        }
-                    };
-
-                    var calculoTaxa = (valorInt(valor) * taxas[tipoCalc][tipoPagto]['taxa']).toFixed(2);
-                    var valorCliente = (valorInt(valor) - calculoTaxa).toFixed(2);
-
-                    $('.percent-taxa .percent').html((taxas[tipoCalc][tipoPagto]['taxa'] * 100).toFixed(2));
-                    $('.valor-cobrado .value').html(numberFormat(calculoTaxa, 2, ',', '.'));
-                    $('.valor-total-cliente').html(numberFormat(valorCliente, 2, ',', '.'));
-                }
-            });
-        </script>
-
-        <div class="controle-vendas">
-            <img src="web-magapay/image/home/banner-alternativo.jpg" alt="O controle de suas vendas na palma da mão" title="O controle de suas vendas na palma da mão" draggable="false"/>
-        </div>
-
-        <div class="duvidas-frequentes" id="duvidas">
-            <h2 class="title-default">
-                Dúvidas frequentes
-            </h2>
-            <div class="container">
-
-                <div id="accordion">
-                    <h3><span class="text">Quais são os Benefícios de ser um cliente Magapay?</span></h3>
-                    <div>
-                        <p>
-                            Além de não pagar aluguel ou qualquer valor pela máquina, as vendas realizadas no crédito à vista é 3,59% já incluso a antecipação e recebe em 24h. Para as vendas realizadas no cartão de débito a taxa é de 1,59%. A Magapay oferece ainda chip 2G/3G com pacote de dados grátis, suporte 24 horas por dia, 7 dias por semana, segurança em todas as suas transações e Conta Digital. Tudo isso com a qualidade Magapay.
-                        </p>
-                    </div>
-
-                    <h3><span class="text">A máquina é mesmo grátis? Eu não pagarei aluguel? Preciso faturar um valor mínimo para usufruir da gratuidade?</span></h3>
-                    <div>
-                        <p>
-                            Você não precisa mais comprar ou pagar aluguel pela máquina para vender com cartão (débito e crédito). Para isso, é preciso apenas atingir o volume mínimo de vendas determinado por máquina:<br/><br/>
-                        </p>
-
-                        <ul>
-                            <li>Até R$ 3 mil aluguel de R$ 69,90;</li>
-                            <li>De R$ 3 mil a R$ 5 mil aluguel de R$ 49,90;</li>
-                            <li>De R$ 5 mil a R$ 10 mil aluguel de R$ 29,90;</li>
-                            <li>Acima de R$ 10 mil "Sem aluguel";</li>
-                        </ul>
-                    </div>
-
-                    <h3><span class="text">Como eu faço para solicitar a máquina Magapay?</span></h3>
-                    <div>
-                        <p>
-                            Para solicitar a sua Magapay, entre em contato conosco através do nosso Whatsapp, ou <a href="https://magapay.minhaconta.zoop.com.br/criar-conta"  target="_blank">clique aqui</a> e siga os seguintes passos:<br/><br/>
-                        </p>
-
-                        <ul>
-                            <li>
-                                Preencha os campos com os seus dados pessoais ou do seu negócio.
-                            </li>
-                            <li>
-                                Se você pedir a Magapay como pessoa física, preencha seus dados. Se você solicitar para uma empresa (pessoa jurídica), é necessário preencher alguns dados da empresa também.
-                            </li>
-                            <li>
-                                Após acessar o portal, adicione os documentos solicitados em "Minha Conta" - "Documentos e Dados de Recebimento"
-                            </li>
-                            <li>
-                                Pronto! Em breve um de nossos atendentes irá entrar em contato para fazer a instalação.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <h3><span class="text">A Magapay faz recarga de celular?</span></h3>
-                    <div>
-                        <p>
-                            Não. No momento, a Magapay não faz recarga de celulares.
-                        </p>
-                    </div>
-
-                    <h3><span class="text">Posso vender parcelado com a máquina? Em até quantas vezes?</span></h3>
-                    <div>
-                        <p>
-                            Sim, é possível vender no modo Crédito Parcelado com a Magapay. As vendas podem ser parceladas em até 12X respeitando o mínimo de R$5,00 por parcela.
-                        </p>
-                    </div>
-
-                    <h3><span class="text">Quais bandeiras são aceitas na Magapay?</span></h3>
-                    <div>
-                        <p>
-                            A Magapay aceita as principais bandeiras do mercado. <br/><br/>
-                            Para Crédito e Débito: Mastercard, Visa, Elo, Amex, Hipercard, Aura; 
-                        </p>
-                    </div>
-
-                    <h3><span class="text">Qual a taxa de cobrança se eu cancelar a Magapay?</span></h3>
-                    <div>
-                        <p>
-                            Caso cancele a Magapay, você não terá custos por isso! Não possui carência.
-                        </p>
-                    </div>
-                </div>
-
-                <script>
-                    $(function () {
-                        $("#accordion").accordion({
-                            active: false,
-                            collapsible: true,
-                            multiple: true,
-                            heightStyle: "content"
-                        });
-                    });
-
-                    (function (factory) {
-                        if (typeof define === 'function' && define.amd) {
-                            define(['jquery'], factory);
-                        } else if (typeof module === 'object' && module.exports) {
-                            module.exports = function (root, jQuery) {
-                                if (jQuery === undefined) {
-                                    if (typeof window !== 'undefined') {
-                                        jQuery = require('jquery');
-                                    } else {
-                                        jQuery = require('jquery')(root);
-                                    }
+                    if (isSvg) {
+                        jQuery.get({
+                            url: imgURL,
+                            crossDomain: true,
+                            dataType: 'xml',
+                            success: function (data) {
+                                var $svg = jQuery(data).find('svg');
+                                if (typeof imgID !== 'undefined') {
+                                    $svg = $svg.attr('id', imgID);
                                 }
-                                factory(jQuery);
-                                return jQuery;
-                            };
-                        } else {
-                            factory(jQuery);
-                        }
-                    }(function ($) {
-
-                        var originalToggle = $.ui.accordion.prototype._toggle;
-
-                        $.extend($.ui.accordion.prototype, {
-                            multiple: false,
-                            _toggle: function (data) {
-                                if (this.options.multiple && data.newPanel.length) {
-                                    data.oldPanel = data.oldHeader = this.prevShow = $('');
-
-                                    if (this.options.collapsible && data.newPanel.is(':visible')) {
-                                        data.oldPanel = data.newPanel;
-                                        data.newPanel = $('');
-                                    }
+                                if (typeof imgClass !== 'undefined') {
+                                    $svg = $svg.attr('class', imgClass + ' replaced-svg');
                                 }
-                                originalToggle.apply(this, arguments);
+
+                                $svg = $svg.removeAttr('xmlns:a');
+                                if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                                    $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+                                }
+
+                                $img.replaceWith($svg);
                             }
                         });
-
-                    }));
-                </script>
-            </div>
-        </div>
-
-        <footer itemscope itemtype="http://schema.org/Organization">
-            <meta itemprop="name" content="Magapay"/>
-            <meta itemprop="url" content="/"/>
-
-            <div class="container footer-middle flex">
-                <div class="dados-loja">
-                    <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false"/>
-                    <div class="horario-atendimento">
-                        <h4>
-                            Horário de atendimento
-                        </h4>
-                        <p>
-                            De segunda a sexta, das 08:00h às 18:00h.
-                        </p>
-                    </div>
-                    <p>
-                        Estrada da Madeira, 1875 - Barragem, Rio do Sul - SC - CEP: 89165-063
-                    </p>
-                </div>
-                <div class="conteudo-geral flex space-between">     
-                    <ul id="menu-footer">
-                        <li class="title">
-                            Links Úteis
-                        </li>
-                        <li>
-                            <a href="#vantagens" class="link-slide">
-                                Vantagens
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#calculadora" class="link-slide">
-                                Calculadora
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#duvidas" class="link-slide">
-                                Dúvidas frequentes
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://api.magapay.com.br/docs"  target="_blank">
-                                API Magapay
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://magapay.minhaconta.zoop.com.br/criar-conta"  target="_blank">
-                                Peça já a sua
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://magapay.minhaconta.zoop.com.br/login" class="destaque" target="_blank">
-                                Acesse sua conta
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="reconhecimentos">
-                        <ul id="nav-reconhecimentos">
-                            <li class="title">
-                                Reconhecimentos
-                            </li>
-                            <li>
-                                <a href="/magapay-premio-de-inovacao.html">
-                                    <img src="web-magapay/image/footer/premio-inovacao.svg" alt="Prêmio de Inovação" title="Prêmio de Inovação" draggable="false">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.inovativabrasil.com.br/aprovadas2020-1/" target="_blank" rel="nofollow">
-                                    <img src="web-magapay/image/footer/selo-inovativabrasil.png" alt="InovAtiva Brasil" title="InovAtiva Brasil" draggable="false">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="atendimento" id="fale-conosco">
-                        <ul id="nav-contact">
-                            <li class="title">
-                                Atendimento
-                            </li>
-                            <li>
-                                <a href="tel:+554735208058" class="flex center">
-                                    <div class="icon">
-                                        <img src="web-magapay/image/footer/icon-telefone.svg" alt="Telefone" title="Telefone" draggable="false"/>
-                                    </div>
-                                    <div class="text">
-                                        (47) 3520-8058
-                                    </div>
-                                </a>
-                                <a onclick="sendMsgWhats('Quais as taxas? E aluguel?')" class="flex center">
-                                    <div class="icon">
-                                        <img src="web-magapay/image/footer/icon-whatsapp.svg" alt="Whatsapp" title="Whatsapp" draggable="false"/>
-                                    </div>
-                                    <div class="text">
-                                        (47) 3520-8058
-                                    </div>
-                                </a>
-                                <a href="mailto:magapay@magamobi.com.br" class="flex center">
-                                    <div class="icon">
-                                        <img src="web-magapay/image/footer/icon-email.svg" alt="E-mail" title="E-mail" draggable="false"/>
-                                    </div>
-                                    <div class="text">
-                                        magapay@magamobi.com.br
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <script type="text/javascript">
-                $(function () {
-                    'use strict';
-
-                    $('.link-slide').on('click', function () {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top - 67
-                            }, 2000);
-                        }
-                        return false;
-                    });
+                    }
                 });
-            </script>
-
-            <div class="formas-pagto">
-                <div class="container flex center space-between">
-                    <img src="web-magapay/image/payment-vector/cartao-visa.svg" alt="Visa" title="Visa" draggable="false"/>
-                    <img src="web-magapay/image/payment-vector/cartao-mastercard.svg" alt="Mastercard" title="Mastercard" draggable="false"/>
-                    <img src="web-magapay/image/payment-vector/cartao-elo.svg" alt="Elo" title="Elo" draggable="false"/>
-                    <img src="web-magapay/image/payment-vector/cartao-banescard.svg" alt="Banescard" title="Banescard" draggable="false"/>
-                    <img src="web-magapay/image/payment-vector/cartao-american-express.svg" alt="American Express" title="American Express" draggable="false"/>
-                    <img src="web-magapay/image/payment-vector/cartao-hipercard.svg" alt="Hipercard" title="Hipercard" draggable="false"/>
-                    <img src="web-magapay/image/payment-vector/cartao-hiper.svg" alt="Hiper" title="Hiper" draggable="false"/>
-                    <img src="web-magapay/image/payment-vector/cartao-diners.svg" alt="Dinners" title="Dinners" draggable="false"/>
-                    <img src="web-magapay/image/payment-vector/cartao-jcb.svg" alt="JCB" title="JCB" draggable="false"/>					
-                    <img src="web-magapay/image/payment-vector/cartao-aura.svg" alt="Aura" title="Aura" draggable="false"/>
-                </div>
-            </div>
-
-            <div class="footer-bottom" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <meta itemprop="streetAddress" content="Estrada da Madeira, 1875, bairro Barragem"/> 
-                <meta itemprop="postalCode" content="891650-063">
-                <meta itemprop="addressLocality" content="Rio do Sul"/> 
-                <meta itemprop="addressRegion" content="Santa Catarina"/>
-                <meta itemprop="addressCountry" content="Brasil"/>
-                <meta itemprop="telephone" content="(47)3520-8058"/>
-
-                <div class="container">
-                    <div class="flex center space-around">
-                        <div class="dados-loja">
-                            MAGAMOBI PAGAMENTOS ELETRONICOS LTDA - 29.247.605/0001-63 &copy; Todos os direitos reservados.
-                        </div>
-
-                        <div class="empresa-grupo">
-                            <a href="http://www.magamobi.com.br/" target="_blank">
-                                <img src="web-magapay/image/footer/logo-magamobi.svg" alt="Uma empresa do grupo Magamobi" title="Uma empresa do grupo Magamobi" draggable="false"/>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <div id="popup-msg-whats">
-            <a href="javascript:sendMsgWhats('Quais as taxas? E aluguel?')">
-                <span class="icon-whats">
-                    <img src="web-magapay/image/global-icons/icon-whatsapp.svg" alt="fale conosco"/>
-                </span>
-                <span class="text">Fale conosco</span>
-            </a>                            
-        </div>
-
-        <script language=javascript type="text/javascript">
-            function sendMsgWhats(mensagem) {
-                var w = 900;
-                var h = 500;
-
-                var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : window.screenX;
-                var dualScreenTop = window.screenTop != undefined ? window.screenTop : window.screenY;
-
-                var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-                var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-
-                var left = ((width / 2) - (w / 2)) + dualScreenLeft;
-                var top = ((height / 2) - (h / 2)) + dualScreenTop;
-
-                var newWindow = window.open('https://api.whatsapp.com/send?phone=554735208058&text=' + mensagem, 'scrollbars=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
-
-                // Puts focus on the newWindow
-                if (window.focus) {
-                    newWindow.focus();
-                }
             }
+            applySVG();
         </script>
     </body>
 </html>
