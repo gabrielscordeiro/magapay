@@ -2,4 +2,136 @@
 
 footer{
     margin-top: 140px;
+
+    h4.section-title{
+        font-size: em(12);
+        color: #000;
+        font-weight: bold;
+    }
+
+    .footer-middle{
+        &:after{
+            display: none;
+        }
+        
+        p{
+            font-size: em(12);
+            line-height: 20px;
+            color: $cor-texto-secundario;
+        }
+        
+        .dados-loja{
+            width: 254px;
+
+            h4{
+                margin-top: 20px;
+            }
+
+            .horario-atendimento{
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+
+    .conteudo-footer-middle{
+        width: 660px;
+
+        a{
+            font-size: em(12);
+            line-height: 26px;
+            color: $cor-texto-secundario;
+            cursor: pointer;
+
+            &:hover{
+                color: $cor-base;
+            }
+            
+            &.destaque{
+                font-weight: bold;
+                color: $cor-base; 
+            }
+        }
+    }
+
+    .reconhecimentos{
+        img{
+            @include transition(0.2s);
+            margin-top: 15px;
+
+            &:hover{
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    .links-uteis{
+        ul{
+            margin-top: 10px;
+
+            li{
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .atendimento{
+        @include breakpoint($break-small){
+            margin-top: 20px;
+        }
+
+        ul{
+            margin-top: 10px;
+        }
+
+        .icon{
+            margin-right: 10px;
+        }
+    }
+
+
+    .formas-pagto{
+        margin: 90px 0;	
+
+        @include breakpoint($break-small){
+            margin: 40px 0;
+        }
+
+        .container{
+            max-width: 460px;
+
+            @include breakpoint($break-small){
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            img{
+                @include breakpoint($break-small){
+                    margin: 2px;
+                }
+            }
+        }
+    }
+
+    .footer-bottom{
+        border-top: 1px solid $cor-bordas;
+        padding: 10px 0;
+
+        .dados-loja{
+            font-size: em(13); 
+            color: $cor-texto-secundario;        
+        }
+
+        .flex{
+            @include breakpoint($break-medium-big){
+                flex-direction: column;
+            }
+        }
+
+        .empresa-grupo{
+            @include breakpoint($break-medium-big){
+                margin-top: 10px;
+            }
+        }
+    } 
 }
