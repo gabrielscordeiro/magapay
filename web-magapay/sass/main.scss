@@ -169,3 +169,15 @@ h2.title-default{
     z-index: 1;
     visibility: hidden;       
 }
+
+img.lazyload {
+    opacity: 0;
+    @include transform(scale(0.8));
+}
+
+img.lazyloaded {
+    opacity: 1;
+    transform: scale(1);
+    @include transition(all 700ms);
+    @include transform(scale(1));
+}

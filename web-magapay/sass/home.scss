@@ -81,11 +81,9 @@ body{
     }
 }
 
-.pagamento-splits{
-    .conteudo-pagamento-splits{
-        width: 358px;
-        margin: 0 102px;
-    }
+.conteudo-texto-padrao{
+    width: 358px;
+    margin: 0 102px;
 }
 
 .emissao-boletos{
@@ -93,16 +91,117 @@ body{
     @include box-shadow(0px 14px 24px rgba(107, 111, 122, 0.11));
     background: #fff;
     margin-top: 130px;
-    
+
     .image-emissao{
         margin: -43px 0 0 80px;
     }
-    
+
     .conteudo-emissao-boleto{
         width: 360px;
+        margin-left: 140px;
     }
-    
+
     a.ajuda-negocio{
         color: #0FD43A;
+        font-size: 13px;
+        margin-top: 30px;
+
+        &:hover{
+            color:$cor-secundaria;
+
+            .icon-arrow-right path{
+                fill: $cor-secundaria;
+            }
+        }
+
+        .text{
+            text-decoration: underline;
+        }
+
+        .icon-arrow-right{
+            margin-left: 6px;
+        }
+    }
+}
+
+.compra-recorrente{
+    margin-top: 180px;
+}
+
+.link-pagamento{
+    height: 473px;
+    margin-top: 160px;
+    background: url(../image/home/bg-link-pagamento.svg);    
+    background-position: top;
+    background-repeat: no-repeat;
+
+    @include breakpoint($break-min-big){
+        background-size: 100%;
+    }
+
+    @include breakpoint($break-medium-big){
+        background: #fff;
+    }
+
+    .conteudo-link-pagamento{
+        width: 620px;
+        margin-left: 28%;
+    }
+}
+
+.pagamento-instantaneo{
+    max-width: 900px; 
+    margin-top: 112px;
+
+    &:after{
+        display: none;
+    }
+
+    .conteudo-texto-padrao{
+        margin: 0;
+    }
+}
+
+.oferta-maquininha{
+    background: #fff;
+    @include box-shadow(0px 9px 34px rgba(0, 0, 0, 0.09));
+    border-radius: 11px;
+    margin-top: -6px;
+
+    .conteudo-maquininha{
+        width: 350px;
+        margin-left: 60px;
+
+        h2{
+            font-size: em(24);
+            font-weight: bold;
+            color: #0A2B49;
+
+            span{
+                color: $cor-base;
+            }
+        }
+    }
+
+    a.button-conheca-maquininha{
+        display: flex;
+        align-items: center;
+        padding: 17px 28px;
+        border-radius: 6px;
+        background: #0FD43A;
+        border-radius: 6px;
+        color: #fff;
+        font-size: em(13);
+        font-weight: bold;
+        margin-left: 125px;
+        
+        &:hover{
+            background: #0cb531;
+        }
+        
+        .btn-icon{
+            @include seta(8px, #fff, 'right');
+            margin-left: 10px;
+        }
     }
 }
