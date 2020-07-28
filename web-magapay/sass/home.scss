@@ -20,6 +20,31 @@ body{
     max-width: 530px;
     margin-top: 100px;
 
+    &.is-tablet-mobile{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 0;
+        
+        @include breakpoint($break-small){
+            margin-top: 30px;
+        }
+
+        h2{
+            color: $cor-base;
+            font-size: em(30);
+            line-height: 40px;
+            
+            @include breakpoint($break-small){
+                font-size: 25px;
+                padding: 0 10px;
+            }
+        }
+
+        img.solucao-perfeita{
+            margin-top: 50px;
+        }
+    }
+
     h2{
         font-weight: bold;
         font-size: em(48);
@@ -32,6 +57,10 @@ body{
         display: block;
         margin: 0 auto;
         margin-top: 34px;
+        
+        @include breakpoint($break-small){
+            display: none;
+        }
 
         img{
             margin: 0 auto;    
@@ -53,12 +82,29 @@ body{
         background: #fff;
     }
 
+
+    .default-icon img{
+        @include breakpoint($break-medium){
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
     h2.default-title{
         color: #0A2B49;
         font-size: em(33);
         font-weight: bold;
         line-height: 42px;
         margin-top: 10px;
+
+        @include breakpoint($break-medium){
+            font-size: em(25);
+            text-align: center;
+        }
+        
+        @include breakpoint($break-small){
+            font-size: em(20);
+        }
     }
 
     p.default-description{
@@ -66,24 +112,65 @@ body{
         color: $cor-texto-secundario;
         line-height: 16px;
         margin-top: 20px;
+
+        @include breakpoint($break-medium){
+            font-size: em(15);
+            line-height: 26px;
+            margin-top: 10px;
+            text-align: center;
+        }
     }
 }
 
 .gateway-pagamentos{
     margin-top: 300px;
 
+    @include breakpoint($break-medium){
+        flex-direction: column;
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+
     .gateway-content{
         width: 350px;
+
+        @include breakpoint($break-medium){   
+            width: 100%;
+            text-align: center;
+        }
     }
 
     .gateway-image{
         width: 729px;
+
+        @include breakpoint($break-medium){
+            display: none;
+        }
     }
 }
+
 
 .conteudo-texto-padrao{
     width: 358px;
     margin: 0 102px;
+
+    @include breakpoint($break-medium){
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.pagamento-splits{
+    @include breakpoint($break-medium){
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .split-pagamentos{
+        @include breakpoint($break-medium){
+            margin-top: 50px;
+        }
+    }
 }
 
 .emissao-boletos{
@@ -92,13 +179,28 @@ body{
     background: #fff;
     margin-top: 130px;
 
+    @include breakpoint($break-medium){
+        flex-direction: column;
+        margin-top: 50px;
+        @include box-shadow(none);
+    }
+
     .image-emissao{
         margin: -43px 0 0 80px;
+
+        @include breakpoint($break-medium){
+            display: none;
+        }
     }
 
     .conteudo-emissao-boleto{
         width: 360px;
         margin-left: 140px;
+
+        @include breakpoint($break-medium){
+            width: 100%;
+            margin-left: 0;
+        }
     }
 
     a.ajuda-negocio{
@@ -106,8 +208,12 @@ body{
         font-size: 13px;
         margin-top: 30px;
 
+        @include breakpoint($break-medium){
+            justify-content: center;
+        }
+
         &:hover{
-            color:$cor-secundaria;
+            color: $cor-secundaria;
 
             .icon-arrow-right path{
                 fill: $cor-secundaria;
@@ -126,6 +232,18 @@ body{
 
 .compra-recorrente{
     margin-top: 180px;
+
+    @include breakpoint($break-medium){
+        margin-top: 50px;    
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .compra-recorrente-boleto{
+        @include breakpoint($break-medium){
+            margin-top: 50px;    
+        }    
+    }
 }
 
 .link-pagamento{
@@ -141,11 +259,21 @@ body{
 
     @include breakpoint($break-medium-big){
         background: #fff;
+        height: auto;
+    }
+    @include breakpoint($break-medium){
+        margin-top: 50px;
     }
 
     .conteudo-link-pagamento{
         width: 620px;
         margin-left: 28%;
+
+        @include breakpoint($break-medium){
+            width: 100%;
+            margin-left: 0;
+            padding: 0 10px;
+        }
     }
 }
 
@@ -153,12 +281,23 @@ body{
     max-width: 900px; 
     margin-top: 112px;
 
+    @include breakpoint($break-medium){
+        margin-top: 50px;
+    }
+
     &:after{
         display: none;
     }
 
     .conteudo-texto-padrao{
         margin: 0;
+    }
+
+    .image-pagamento-instantaneo{
+        @include breakpoint($break-medium){
+            display: none;
+            padding: 0 10px;
+        }
     }
 }
 
@@ -168,9 +307,31 @@ body{
     border-radius: 11px;
     margin-top: -6px;
 
+    @include breakpoint($break-medium){
+        flex-direction: column; 
+        margin-top: 50px;
+        @include box-shadow(none);
+        border-top: 1px solid $cor-bordas;
+        border-bottom: 1px solid $cor-bordas;
+        padding: 20px 10px;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    .image-maquininha{
+        @include breakpoint($break-medium){
+            display: none;
+        }
+    }
+
     .conteudo-maquininha{
         width: 350px;
-        margin-left: 60px;
+        margin-left: 60px; 
+
+        @include breakpoint($break-medium){
+            width: 100%;
+            margin-left: 0;
+        }
 
         h2{
             font-size: em(24);
@@ -194,11 +355,16 @@ body{
         font-size: em(13);
         font-weight: bold;
         margin-left: 125px;
-        
+
+        @include breakpoint($break-medium){
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
         &:hover{
             background: #0cb531;
         }
-        
+
         .btn-icon{
             @include seta(8px, #fff, 'right');
             margin-left: 10px;
