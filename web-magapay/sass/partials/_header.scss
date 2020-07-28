@@ -16,22 +16,21 @@ header{
     }
 
     ul#nav-root{
+        position: relative;
         width: 100%; 
         margin-left: 25px;
 
         > li{
+            padding: 0 20px;
+            
             &:hover{
                 > a{
-                    text-decoration: underline;
+                    border-bottom: 1px solid #fff;
                 }   
 
                 .container-menu{
                     display: flex;
                 }
-            }
-
-            .menu-icon{
-                @include seta(8px, #fff, 'bottom')
             }
 
             &.seja-franqueado{
@@ -47,25 +46,39 @@ header{
                         background: #0FD43A;
                         border-color: #0FD43A;
                         color: #fff;
+                        text-decoration: none;
                     }
                 }
             }
 
             > a{
+                display: flex;
+                align-items: center;
                 color: #fff;
-                font-size: em(14);
-                padding: 0 20px;               
+                font-size: em(14);   
+                border-bottom: 1px solid transparent;
+
+                .icon-menu{
+                    @include seta(8px, #fff, 'bottom');
+                    margin-left: 7px;
+                }
             }
         }
 
         .container-menu{
             position: absolute;
-            display: flex;
+            top: 39px;
+            display: none;
             max-width: 1100px;
             max-height: max-content;
-            background: #fff;
             z-index: 2;
-            @include box-shadow(0px 4px 14px rgba(54, 0, 0, 0.25));
+            padding-top: 30px;
+            
+            .content-menu-area{
+                display: flex;
+                background: #fff;
+                @include box-shadow(0px 4px 14px rgba(54, 0, 0, 0.25));
+            }
         }
 
         ul.menu-level-2{

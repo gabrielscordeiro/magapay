@@ -15,3 +15,94 @@ body{
         background: #fff;
     }
 }
+
+.conteudo-topo-home{
+    max-width: 530px;
+    margin-top: 100px;
+
+    h2{
+        font-weight: bold;
+        font-size: em(48);
+        text-align: center;
+        line-height: 61px;
+        color: #fff;
+    }
+
+    .icon-scroll{
+        display: block;
+        margin: 0 auto;
+        margin-top: 34px;
+
+        img{
+            margin: 0 auto;    
+        }
+    }
+}
+
+.conteudo-home{
+    background: url(../image/home/bg-home.svg);    
+    background-position: top;
+    background-repeat: no-repeat;
+    background-position-y: 445px;
+
+    @include breakpoint($break-min-big){
+        background-size: 100%;
+    }
+
+    @include breakpoint($break-medium-big){
+        background: #fff;
+    }
+
+    h2.default-title{
+        color: #0A2B49;
+        font-size: em(33);
+        font-weight: bold;
+        line-height: 42px;
+        margin-top: 10px;
+    }
+
+    p.default-description{
+        font-size: em(13);
+        color: #898989;
+        line-height: 16px;
+        margin-top: 20px;
+    }
+}
+
+.gateway-pagamentos{
+    margin-top: 300px;
+
+    .gateway-content{
+        width: 350px;
+    }
+
+    .gateway-image{
+        width: 729px;
+    }
+}
+
+.pagamento-splits{
+    .conteudo-pagamento-splits{
+        width: 358px;
+        margin: 0 102px;
+    }
+}
+
+.emissao-boletos{
+    border-radius: 14px;
+    @include box-shadow(0px 14px 24px rgba(107, 111, 122, 0.11));
+    background: #fff;
+    margin-top: 130px;
+    
+    .image-emissao{
+        margin: -43px 0 0 80px;
+    }
+    
+    .conteudo-emissao-boleto{
+        width: 360px;
+    }
+    
+    a.ajuda-negocio{
+        color: #0FD43A;
+    }
+}
