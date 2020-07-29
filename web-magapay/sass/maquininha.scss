@@ -1,0 +1,300 @@
+@import 'partials/base';
+@import 'partials/jquery-ui';
+@import 'partials/owl-carousel';
+
+$cor-calculadora: #2FABF7;
+
+body{
+    background: url(../image/maquininha/bg-topo.svg);    
+    background-position: top;
+    background-repeat: no-repeat;
+
+    @include breakpoint($break-min-big){
+        background-size: 100%;
+    }
+
+    @include breakpoint($break-medium-big){
+        background: #fff;
+    }
+}
+
+.conteudo-topo-maquininha{
+    max-width: 528px;
+    text-align: center;
+    margin-top: 100px;
+
+    h1{
+        font-size: em(48);
+        line-height: 61px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .icon-vantagens{
+        margin-top: 30px;
+    }
+}
+
+.conteudo-maquininha{
+    background: url(../image/bg-base.svg);    
+    background-position: top;
+    background-repeat: no-repeat;
+    background-position-y: 445px;
+
+    @include breakpoint($break-min-big){
+        background-size: 100%;
+    }
+
+    @include breakpoint($break-medium-big){
+        background: #fff;
+    }
+}
+
+
+.vantagens{
+    max-width: 1267px;
+    margin-top: 370px;
+
+    &:after{
+        display: none;
+    }
+
+    .conteudo-vantagens{
+        width: 580px;
+    }
+
+    .lista-vantagens{
+        margin-top: 70px;
+    }
+
+    .vantagem-item {
+        width: 48%;
+        margin-bottom: 95px;
+
+        &.item-aluguel h3.desc-vantagem{
+            padding-right: 60px;
+        }
+    }
+
+    h3.desc-vantagem{
+        font-weight: bold;
+        font-size: em(33);
+        color: $cor-texto-secundario;
+        line-height: 42px;
+    }
+}
+
+.calculadora{
+    margin-top: 105px;
+
+    .calculadora-descricao{
+        width: 245px;
+    }
+}
+
+.navegacao{
+    .nav-item{
+        width: 198px;
+        height: 50px;
+        background: #E4E4E4;
+        border-radius: 6px 20px 0px 0px;
+        color: #595959;
+        font-size: em(13);
+        cursor: pointer;
+        font-weight: bold;
+        padding: 17px 38px;
+        
+        &.selected{
+            color: $cor-terciaria;
+            background: #fff;
+        }
+    }
+}
+
+.calculo-area{
+    width: 577px;    
+    margin: 25px 0 0 67px;
+
+    @include breakpoint($break-small){
+        width: 95%;
+        padding: 20px 0;
+        margin-top: 0;
+    }
+
+    .conteudo-calculadora{
+        @include box-shadow(0px 14px 24px rgba(107, 111, 122, 0.11));
+        border-radius: 0px 14px 14px 14px;
+        padding: 50px 0 20px 0;
+        background: #fff;
+    }
+
+    h3{
+        font-size: em(22);
+        font-weight: 700;
+        color: #085c6e;
+        text-align: center;
+        padding: 0 10px;
+
+        @include breakpoint($break-small){
+            font-size: em(17);
+        }
+    }
+
+    .simulacao{
+        margin-top: 30px;
+    }
+
+    .simular{
+        width: 500px;
+        font-size: em(36);
+        color: $cor-calculadora;
+        font-weight: 700;
+        border-bottom: 3px solid $cor-terciaria; 
+
+        @include breakpoint($break-small){
+            width: 95%;
+        }
+
+        .prefix{
+            margin-right: 10px;
+        }
+
+        input.valor-simulacao{
+            width: 445px;
+            border: 0;
+            outline: 0 none;
+
+            @include breakpoint($break-small){
+                width: 90%;
+            }            
+
+        }
+    }
+
+    #slider{
+        width: 500px;
+        margin-top: 30px;
+
+        @include breakpoint($break-small){
+            width: 95%;
+        }
+    }
+
+    .lista-opcoes-pagamento{
+        width: 500px;
+        margin: 0 auto;
+        position: relative;
+
+        @include breakpoint($break-small){
+            width: 80%;
+        }
+    }
+
+    .selecao-pagamento{
+        position: relative;
+        margin-top: 50px;
+
+        @include breakpoint($break-small){
+            margin-top: 30px;
+        }
+
+        .tipo-pagto{
+            width: max-content;
+            border: 2px solid $cor-calculadora;
+            font-size: em(14);
+            font-weight: 700;
+            padding: 5px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+
+            &:hover, &.selected{
+                background: $cor-calculadora;
+                color: #fff;
+            }
+        }
+
+        .owl-nav{
+            button{
+                position: absolute;
+                top: 12px;
+
+                &.owl-prev{
+                    left: -20px;
+                }
+
+                &.owl-next{
+                    right: -20px;
+                }
+            }
+
+            .prev{
+                @include seta(10px, #adadad, 'left');
+            }
+
+            .next{
+                @include seta(10px, #adadad, 'right');
+            }
+        }
+    }
+
+    .info-taxas{
+        width: 500px; 
+        margin: 0 auto;
+
+        @include breakpoint($break-small){
+            width: 95%;
+        }
+    }
+
+    .taxas{
+        margin-top: 60px;
+        padding-bottom: 35px;
+        border-bottom: 3px solid $cor-terciaria; 
+
+        @include breakpoint($break-small){
+            margin-top: 10px;
+            padding-bottom: 0;
+        }
+    }
+
+    .percent-taxa, p{
+        font-size: em(23);
+        font-weight: 700;
+        color: $cor-texto;
+    }
+
+    .valor-cobrado{
+        color: $cor-calculadora;
+        font-weight: 700;
+
+        .prefix{
+            font-size: em(14);
+        }
+
+        .value{
+            font-size: em(30);
+        }
+    }
+
+    .cliente-recebe{
+        text-align: center; 
+        font-weight: 700;
+        margin-top: 40px;
+
+        @include breakpoint($break-small){
+            margin-top: 20px;
+        }
+
+        .valor-cliente{
+            color: $cor-calculadora;
+        }
+
+        .prefix{
+            font-size: em(20);
+        }
+
+        .valor-total-cliente{
+            font-size: em(40);
+        }
+    }
+}

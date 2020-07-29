@@ -26,22 +26,23 @@
         <meta name="msapplication-navbutton-color" content="#a11b51"/>
 
         <meta name="robots" content="index, follow" />
-        <meta property="og:url" content="http://www.magapay.com.br" />
-        <meta property="og:title" content="Magapay - A solução perfeita para o seu negócio" />
+        <meta property="og:url" content="http://www.magapay.com.br/maquininha.html" />
+        <meta property="og:title" content="Maquininha - Magapay" />
         <meta property="og:site_name" content="Magapay" />
-        <meta property="og:description" content="A Magapay é prestadora de serviços de tecnologia relacionada a soluções de pagamento por meios eletrônicos, mediante a captura, transmissão, processamento e liquidação das TRANSAÇÕES oriundas do uso de CARTÕES e/ou CONTA DE PAGAMENTO, possibilitando que os ESTABELECIMENTOS recebam e enviem pagamentos.">        
+        <meta property="og:description" content="Vantagens infinitas para o seu negócio.">        
 
-        <meta name="description" content="A Magapay é prestadora de serviços de tecnologia relacionada a soluções de pagamento por meios eletrônicos, mediante a captura, transmissão, processamento e liquidação das TRANSAÇÕES oriundas do uso de CARTÕES e/ou CONTA DE PAGAMENTO, possibilitando que os ESTABELECIMENTOS recebam e enviem pagamentos.">
+        <meta name="description" content="Vantagens infinitas para o seu negócio.">
         <meta name="title" content="Magapay - A solução perfeita para o seu negócio">
-        <meta name="keywords" content="Pagamentos, Cartão de Credito, Cartão de Dédito, Pagamentos online, Menores Taxas, Qualidade em atendimento, Compromisso" />
+        <meta name="keywords" content="Maquininha, zero aluguel, aluguel zero, taxas acessíveis, com atencipação, sem atencipação, controle de vendas" />
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="web-magapay/css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="web-magapay/css/home.css"/>
+        <link rel="stylesheet" type="text/css" href="web-magapay/css/maquininha.css"/>
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js?v=2020-07-20"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script type="text/javascript" src="web-magapay/js/magapay.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
         <meta name="author" content="Gabriel Schmidt Cordeiro">
     </head>
 
@@ -62,11 +63,10 @@
                 <div class="menu-button">
                     <div class="icon-menu"></div>
                 </div>
-                <h1 title="Magapay">
-                    <a href="/" class="logo">
-                        <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false" class="svg"/>
-                    </a>
-                </h1>
+
+                <a href="/" class="logo">
+                    <img src="web-magapay/image/header/logo.svg" alt="Magapay" title="Magapay" draggable="false" class="svg"/>
+                </a>
 
                 <ul id="nav-root" class="flex center" itemscope itemtype="http://schema.org/SiteNavigationElement">
                     <li>
@@ -213,163 +213,397 @@
             })();
         </script>
 
-        <div class="conteudo-topo-home container">
-            <h2>
-                A Solução Perfeita para o seu negócio.
-            </h2>
-            <span class="icon-scroll">
-                <img class="lazyload" data-src="web-magapay/image/home/icon-scroll.svg" alt="Scroll" draggable="false"/>
+        <div class="conteudo-topo-maquininha container">
+            <h1>
+                Vantagens Infinitas para o seu Negócio.
+            </h1>
+            <span class="icon-vantagens flex justify-center">
+                <img class="lazyload" data-src="web-magapay/image/maquininha/icon-vantagens.svg" alt="Vantagens" draggable="false"/>
             </span>
         </div>
-        <script type="text/javascript">
-            if (window.isMobile) {
-                $('.conteudo-topo-home').prepend('<img class="solucao-perfeita" src="web-magapay/image/home/solucao-perfeita.svg" alt="Solução perfeita" draggable="false"/>').addClass('is-tablet-mobile');
-            }
-        </script>
 
+        <div class="conteudo-maquininha">
 
-        <div class="conteudo-home">
-            <div class="container">
-                <div class="gateway-pagamentos flex space-between center">
-                    <div class="gateway-content">
-                        <span class="default-icon gateway-icon">
-                            <img class="lazyload" data-src="web-magapay/image/home/icon-gateway.svg" alt="Gateway de Pagamentos" title="Gateway de Pagamentos" draggable="false"/>
-                        </span>
-                        <h2 class="default-title">
-                            Gateway de Pagamentos
-                        </h2>
-                        <p class="default-description">
-                            Simplifique a conexão de sua loja virtual diretamente com bancos e operadoras. Faça gestão de risco e financeira sem complicações, ideal para maior controle sobre seus pagamentos.
-                        </p>
-                    </div>
-                    <div class="gateway-image">
-                        <img class="lazyload" data-src="web-magapay/image/home/gateway-pagamentos.png" alt="Gateway de Pagamentos" title="Gateway de Pagamentos" draggable="false"/>
+            <div class="vantagens container flex space-between">
+                <div class="conteudo-vantagens">
+                    <h2 class="default-title">
+                        Vantagens
+                    </h2>
+
+                    <div class="lista-vantagens flex space-between wrap">
+                        <div class="vantagem-item item-aluguel">
+                            <img class="icon-vantagem lazyload" data-src="web-magapay/image/maquininha/icon-aluguel.svg" alt="Aluguel zero" title="Aluguel zero" draggable="false"/>
+                            <h3 class="desc-vantagem">
+                                Aluguel zero*
+                            </h3>
+                        </div>
+                        <div class="vantagem-item">
+                            <img class="icon-vantagem lazyload" data-src="web-magapay/image/maquininha/icon-suporte.svg" alt="Suporte Local perto de você" title="Suporte Local perto de você" draggable="false"/>
+                            <h3 class="desc-vantagem">
+                                Suporte Local perto de você
+                            </h3>
+                        </div>
+                        <div class="vantagem-item">
+                            <img class="icon-vantagem lazyload" data-src="web-magapay/image/maquininha/icon-taxas.svg" alt="Taxas Acessíveis" title="Taxas Acessíveis" draggable="false"/>
+                            <h3 class="desc-vantagem">
+                                Taxas Acessíveis
+                            </h3>
+                        </div>
+                        <div class="vantagem-item">
+                            <img class="icon-vantagem lazyload" data-src="web-magapay/image/maquininha/icon-24-horas.svg" alt="Receba tudo em até 24 horas" title="Receba tudo em até 24 horas" draggable="false"/>
+                            <h3 class="desc-vantagem">
+                                Receba tudo em até 24 horas
+                            </h3>
+                        </div>
                     </div>
                 </div>
-
-                <div class="pagamento-splits flex center justify-center">
-                    <div class="pagamento-contas conteudo-texto-padrao">
-                        <span class="default-icon pagamento-icon">
-                            <img class="lazyload" data-src="web-magapay/image/home/icon-pagamento.svg" alt="Pagamento de Contas" title="Pagamento de Contas" draggable="false"/>
-                        </span>
-                        <h2 class="default-title">
-                            Pagamento de Contas
-                        </h2>
-                        <p class="default-description">
-                            Gerencie suas contas e encaminhe cobranças de maneira mais fácil. Faça gestão na Magapay e mantenha suas contas sempre em dia.
-                        </p>
-                    </div>
-                    <div class="split-pagamentos conteudo-texto-padrao">
-                        <span class="default-icon pagamento-icon">
-                            <img class="lazyload" data-src="web-magapay/image/home/icon-split-pagamentos.svg" alt="Split de Pagamentos" title="Split de Pagamentos" draggable="false"/>
-                        </span>
-                        <h2 class="default-title">
-                            Split de Pagamentos
-                        </h2>
-                        <p class="default-description">
-                            Controle pagamentos para parceiros e revendedores. Você pode definir taxas distintas de comissão por vendedor, produto ou pedido, reduzindo riscos para o seu negócio, sempre de acordo com as regulamentações!
-                        </p>
-                    </div>
-                </div>
-
-                <div class="emissao-boletos flex center">
-                    <div class="image-emissao">
-                        <img class="lazyload" data-src="web-magapay/image/home/emissao-boletos.svg" alt="Emissão de boletos" title="Emissão de boletos" draggable="false"/>
-                    </div>
-                    <div class="conteudo-emissao-boleto">
-                        <span class="default-icon pagamento-icon">
-                            <img class="lazyload" data-src="web-magapay/image/home/icon-emissao.svg" alt="Emissão de Boletos à Vista e Parcelado" title="Emissão de Boletos à Vista e Parcelado" draggable="false"/>
-                        </span>
-                        <h2 class="default-title">
-                            Emissão de Boletos à Vista e Parcelado
-                        </h2>
-                        <p class="default-description">
-                            Através de sua conta, você pode emitir boletos á vista ou em várias vezes, abrindo mais opções de pagamento para o seu negócio.
-                        </p>
-                        <a href="" class="ajuda-negocio flex center">
-                            <span class="text">Descubra como podemos ajudar seu negócio</span>
-                            <span class="icon-arrow-right flex">
-                                <img src="web-magapay/image/home/icon-arrow-right.svg" alt="Descubra como podemos ajudar seu negócio" title="Descubra como podemos ajudar seu negócio" draggable="false" class="svg"/>    
-                            </span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="compra-recorrente flex center">
-                    <div class="compra-recorrente-cartao conteudo-texto-padrao">
-                        <span class="default-icon icon-cartao">
-                            <img class="lazyload" data-src="web-magapay/image/home/icon-boleto.svg" alt="Compra Recorrente com Cartão" title="Compra Recorrente com Cartão" draggable="false"/>
-                        </span>
-                        <h2 class="default-title">
-                            Compra Recorrente com Cartão
-                        </h2>
-                        <p class="default-description">
-                            Débito feito automaticamente no cartão de crédito do seu consumidor. Facilite o processo de pagamento para o cliente sem precisar sair de casa e sem preocupações.
-                        </p>
-                    </div>
-                    <div class="compra-recorrente-boleto conteudo-texto-padrao">
-                        <span class="default-icon icon-boleto">
-                            <img class="lazyload" data-src="web-magapay/image/home/icon-cartao.svg" alt="Compra Recorrente com Boleto" title="Compra Recorrente com Boleto" draggable="false"/>
-                        </span>
-                        <h2 class="default-title">
-                            Compra Recorrente com Boleto
-                        </h2>
-                        <p class="default-description">
-                            Elimine o tempo gasto na emissão de cada fatura de cada cliente, reduzindo preocupações escolhendo a quantidade de vezes que a fatura irá se repetir e sua data de vencimento.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="link-pagamento flex">
-                    <div class="conteudo-link-pagamento">
-                        <span class="default-icon icon-boleto">
-                            <img class="lazyload" data-src="web-magapay/image/home/icon-link-pagamento.svg" alt="Link de Pagamento" title="Link de Pagamento" draggable="false"/>
-                        </span>
-                        <h2 class="default-title">
-                            Link de Pagamento
-                        </h2>
-                        <p class="default-description">
-                            Já pensou cobrar suas faturas de forma inovadora? Com o link de pagamento da Magapay, você pode enviar sua venda para o cliente da forma que preferir, como Whatsapp, Facebook e Instagram.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="pagamento-instantaneo container flex space-between center">
-                    <div class="pagamento-conteudo conteudo-texto-padrao">
-                        <span class="default-icon icon-boleto">
-                            <img class="lazyload" data-src="web-magapay/image/home/icon-pagamento-instantaneo.svg" alt="Pagamentos Instantâneos" title="Pagamentos Instantâneos" draggable="false"/>
-                        </span>
-                        <h2 class="default-title">
-                            Pagamentos Instantâneos
-                        </h2>
-                        <p class="default-description">
-                            Liquide as transferências de valores em tempo real, mesmo fora do horário comercial, com ainda menos taxas que os serviços já disponíveis. É o controle das suas vendas nas suas mãos.
-                        </p>
-                    </div>
-                    <div class="image-pagamento-instantaneo">
-                        <img class="lazyload" data-src="web-magapay/image/home/pagamento-instantaneo.svg" alt="Pagamentos Instantâneos" title="Pagamentos Instantâneos" draggable="false"/>
-                    </div>
-                </div>
-
-                <div class="oferta-maquininha flex center">
-                    <div class="image-maquininha">
-                        <img class="lazyload" data-src="web-magapay/image/home/maquininha.jpg" alt="Maquininha da Magapay" title="Maquininha da Magapay" draggable="false"/>
-                    </div>
-                    <div class="conteudo-maquininha">
-                        <h2>
-                            Não perca <span>nenhuma venda.</span>
-                        </h2>
-                        <p class="default-description">
-                            Aproveite os benefícios do Magapay na sua loja física através da nossa maquininha. Aluguel zero, suporte local e taxas acessíveis!
-                        </p>
-                    </div>
-                    <a href="" class="button-conheca-maquininha">
-                        <span class="btn-text">Conheça nossa Maquininha</span>
-                        <span class="btn-icon"></span>
-                    </a>
+                <div class="imagem-vantagens">
+                    <img class="icon-vantagem lazyload" data-src="web-magapay/image/maquininha/banner-vantagens.png" alt="Vantagens" title="Vantagens"/>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="calculadora flex">
+                    <div class="calculadora-descricao">
+                        <h2 class="default-title">
+                            Calculadora
+                        </h2>
+                        <p class="default-description">
+                            Simule suas vendas e descubra quanto você pode economizar com a Magapay.
+                        </p>
+                    </div>
+
+                    <div class="calculo-area">
+                        <div class="navegacao flex" id="calculadora">
+                            <div class="nav-item selected" data-id="antecipacao">
+                                Com Antecipação
+                            </div>
+                            <div class="nav-item" data-id="sem-antecipacao">
+                                Sem Antecipação
+                            </div>
+                        </div>
+                        <div class="conteudo-calculadora">
+                            <div class="simulacao flex justify-center center column">
+                                <div class="flex justify-center simular">
+                                    <div class="prefix">
+                                        R$
+                                    </div>
+                                    <input type="text" class="valor-simulacao" value="1000,00" data-value-price="1000"/>
+                                </div>
+                                <div id="slider"></div>
+                            </div>
+                            <div class="lista-opcoes-pagamento">
+                                <div class="selecao-pagamento flex owl-carousel">
+                                    <div class="tipo-pagto" data-type-pagto="debito">
+                                        Débito
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="1x">
+                                        Crédito à vista
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="2x">
+                                        2X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="3x">
+                                        3X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="4x">
+                                        4X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="5x">
+                                        5X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="6x">
+                                        6X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="7x">
+                                        7X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="8x">
+                                        8X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="9x">
+                                        9X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="10x">
+                                        10X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="11x">
+                                        11X
+                                    </div>
+                                    <div class="tipo-pagto" data-type-pagto="12x">
+                                        12X
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                                $(function () {
+                                    'use strict';
+
+                                    $('.selecao-pagamento').owlCarousel({
+                                        margin: 10,
+                                        autoWidth: true,
+                                        startPosition: 0,
+                                        nav: true,
+                                        navText: [
+                                            '<div class="arrow prev"><div class="icon-arrow"></div></div>',
+                                            '<div class="arrow next"><div class="icon-arrow"></div></div>'
+                                        ],
+                                        onInitialize: selectItemOnInit
+                                    });
+
+                                    function selectItemOnInit() {
+                                        setTimeout(function () {
+                                            $('.owl-item.active .tipo-pagto').eq(0).addClass('selected');
+                                        }, 1);
+                                    }
+                                });
+                            </script>
+
+                            <div class="info-taxas">
+                                <div class="taxas flex space-between center">
+                                    <div class="percent-taxa">
+                                        Taxa <span class="percent">1,99</span>%
+                                    </div>
+                                    <div class="valor-cobrado">
+                                        <span class="prefix">R$</span>
+                                        <span class="value">
+                                            19,90
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="cliente-recebe">
+                                    <p>
+                                        Você recebe em conta:
+                                    </p>
+
+                                    <div class="valor-cliente">
+                                        <span class="prefix">
+                                            R$
+                                        </span>
+                                        <span class="valor-total-cliente">
+                                            980,10
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        'use strict';
+
+                        setTimeout(function () {
+                            calculaValorVendas();
+                        }, 2);
+
+                        $('.valor-simulacao').mask('0.000,00', {
+                            reverse: true
+                        });
+
+                        $("#slider").slider({
+                            orientation: "horizontal",
+                            value: 1000,
+                            min: 1,
+                            max: 5000,
+                            slide: function (e, ui) {
+                                var valueSlider = numberFormat(ui.value, 2, ',', '.');
+                                $('.valor-simulacao').val(valueSlider);
+                                $('.valor-simulacao').attr('data-value-price', valueSlider);
+
+                                calculaValorVendas();
+                            }
+                        });
+
+                        $('.valor-simulacao').on('focus', function () {
+                            $(this).val('');
+                        });
+
+                        $('.valor-simulacao').on('blur', function () {
+                            var $this = $(this);
+                            var valueCurrent = valorInt($this.attr('data-value-price'));
+                            var valueModified = valorInt($this.val());
+
+                            if ((valueCurrent !== valueModified) && !isNaN(valueModified)) {
+                                $this.val(numberFormat(valueModified, 2, ',', '.'));
+                            } else {
+                                $this.val(numberFormat(valueCurrent, 2, ',', '.'));
+                            }
+
+                            calculaValorVendas();
+                        });
+
+                        $('.valor-simulacao').on('keyup', function () {
+                            var $this = $(this);
+                            var valueInput = valorInt($this.val());
+
+                            if (valueInput <= 0) {
+                                $(this).val(numberFormat(1, 2, ',', '.'));
+                            } else if (valueInput > 5000) {
+                                $(this).val(numberFormat(5000, 2, ',', '.'));
+                            }
+
+                            if (parseInt(valueInput) >= 1) {
+                                $("#slider").slider({
+                                    value: valueInput
+                                });
+                            }
+
+                            calculaValorVendas();
+                        });
+
+                        $('.selecao-pagamento .tipo-pagto').on('click', function () {
+                            $('.tipo-pagto').removeClass('selected');
+                            $(this).addClass('selected');
+                            calculaValorVendas();
+                        });
+
+                        function valorInt(valor) {
+                            return parseInt(valor.split(',')[0].replace('.', ''));
+                        }
+
+                        function numberFormat(number, decimals, dec_point, thousands_sep) {
+                            number = (number + '')
+                                    .replace(/[^0-9+\-Ee.]/g, '');
+                            var n = !isFinite(+number) ? 0 : +number,
+                                    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+                                    sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+                                    dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+                                    s = '',
+                                    toFixedFix = function (n, prec) {
+                                        var k = Math.pow(10, prec);
+                                        return '' + (Math.round(n * k) / k)
+                                                .toFixed(prec);
+                                    };
+                            // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+                            s = (prec ? toFixedFix(n, prec) : '' + Math.round(n))
+                                    .split('.');
+                            if (s[0].length > 3) {
+                                s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+                            }
+                            if ((s[1] || '')
+                                    .length < prec) {
+                                s[1] = s[1] || '';
+                                s[1] += new Array(prec - s[1].length + 1)
+                                        .join('0');
+                            }
+                            return s.join(dec);
+                        }
+
+                        $('.nav-item').on('click', function () {
+                            var $this = $(this);
+                            $('.nav-item').removeClass('selected');
+                            $this.addClass('selected');
+
+                            calculaValorVendas();
+                        });
+
+                        function calculaValorVendas() {
+                            var tipoCalc = $('.nav-item.selected').data('id');
+                            var tipoPagto = $('.tipo-pagto.selected').data('type-pagto');
+                            var valor = $('.valor-simulacao').val();
+
+                            var taxas = {
+                                'antecipacao': {
+                                    '1x': {
+                                        'taxa': 0.0399
+                                    },
+                                    '2x': {
+                                        'taxa': 0.0499
+                                    },
+                                    '3x': {
+                                        'taxa': 0.0539
+                                    },
+                                    '4x': {
+                                        'taxa': 0.0589
+                                    },
+                                    '5x': {
+                                        'taxa': 0.0649
+                                    },
+                                    '6x': {
+                                        'taxa': 0.0729
+                                    },
+                                    '7x': {
+                                        'taxa': 0.0849
+                                    },
+                                    '8x': {
+                                        'taxa': 0.0899
+                                    },
+                                    '9x': {
+                                        'taxa': 0.0999
+                                    },
+                                    '10x': {
+                                        'taxa': 0.1099
+                                    },
+                                    '11x': {
+                                        'taxa': 0.1299
+                                    },
+                                    '12x': {
+                                        'taxa': 0.1399
+                                    },
+                                    'debito': {
+                                        'taxa': 0.0199
+                                    }
+                                },
+                                'sem-antecipacao': {
+                                    '1x': {
+                                        'taxa': 0.0295
+                                    },
+                                    '2x': {
+                                        'taxa': 0.0305
+                                    },
+                                    '3x': {
+                                        'taxa': 0.0305
+                                    },
+                                    '4x': {
+                                        'taxa': 0.0305
+                                    },
+                                    '5x': {
+                                        'taxa': 0.0305
+                                    },
+                                    '6x': {
+                                        'taxa': 0.0305
+                                    },
+                                    '7x': {
+                                        'taxa': 0.0320
+                                    },
+                                    '8x': {
+                                        'taxa': 0.0320
+                                    },
+                                    '9x': {
+                                        'taxa': 0.0320
+                                    },
+                                    '10x': {
+                                        'taxa': 0.0320
+                                    },
+                                    '11x': {
+                                        'taxa': 0.0320
+                                    },
+                                    '12x': {
+                                        'taxa': 0.0320
+                                    },
+                                    'debito': {
+                                        'taxa': 0.0199
+                                    }
+                                }
+                            };
+
+                            var calculoTaxa = (valorInt(valor) * taxas[tipoCalc][tipoPagto]['taxa']).toFixed(2);
+                            var valorCliente = (valorInt(valor) - calculoTaxa).toFixed(2);
+
+                            $('.percent-taxa .percent').html((taxas[tipoCalc][tipoPagto]['taxa'] * 100).toFixed(2));
+                            $('.valor-cobrado .value').html(numberFormat(calculoTaxa, 2, ',', '.'));
+                            $('.valor-total-cliente').html(numberFormat(valorCliente, 2, ',', '.'));
+                        }
+                    });
+                </script>
+
+            </div>
         </div>
+
 
         <footer itemscope itemtype="http://schema.org/Organization">
             <meta itemprop="name" content="Magapay"/>
@@ -503,7 +737,7 @@
             <script type="text/javascript">
                 (function () {
                     'use strict';
-                    if(window.isMobile){
+                    if (window.isMobile) {
                         $('.accordion').addClass('closed');
 
                         $('.arrow-ctn').parent().on('click', function () {

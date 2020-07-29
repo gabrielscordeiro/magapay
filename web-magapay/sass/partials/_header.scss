@@ -163,8 +163,8 @@ ul#nav-root{
                 border-radius: 6px;
 
                 &:hover{
-                    background: #0FD43A;
-                    border-color: #0FD43A;
+                    background: $cor-terciaria;
+                    border-color: $cor-terciaria;
                     color: #fff;
                     text-decoration: none;
                 }
@@ -206,7 +206,7 @@ ul#nav-root{
         font-size: em(14);
 
         > li > a{
-            color: #0A2B49;
+            color: $cor-texto;
             font-weight: 500
         }
     }
@@ -232,7 +232,7 @@ ul#nav-root{
 
         .title-hover{
             font-size: em(14);
-            color: #0A2B49;
+            color: $cor-texto;
             font-weight: 500
         }
 

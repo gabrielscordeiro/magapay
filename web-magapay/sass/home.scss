@@ -69,7 +69,7 @@ body{
 }
 
 .conteudo-home{
-    background: url(../image/home/bg-home.svg);    
+    background: url(../image/bg-base.svg);    
     background-position: top;
     background-repeat: no-repeat;
     background-position-y: 445px;
@@ -82,42 +82,10 @@ body{
         background: #fff;
     }
 
-
     .default-icon img{
         @include breakpoint($break-medium){
             display: block;
             margin: 0 auto;
-        }
-    }
-
-    h2.default-title{
-        color: #0A2B49;
-        font-size: em(33);
-        font-weight: bold;
-        line-height: 42px;
-        margin-top: 10px;
-
-        @include breakpoint($break-medium){
-            font-size: em(25);
-            text-align: center;
-        }
-        
-        @include breakpoint($break-small){
-            font-size: em(20);
-        }
-    }
-
-    p.default-description{
-        font-size: em(13);
-        color: $cor-texto-secundario;
-        line-height: 16px;
-        margin-top: 20px;
-
-        @include breakpoint($break-medium){
-            font-size: em(15);
-            line-height: 26px;
-            margin-top: 10px;
-            text-align: center;
         }
     }
 }
@@ -204,7 +172,7 @@ body{
     }
 
     a.ajuda-negocio{
-        color: #0FD43A;
+        color: $cor-terciaria;
         font-size: 13px;
         margin-top: 30px;
 
@@ -336,7 +304,7 @@ body{
         h2{
             font-size: em(24);
             font-weight: bold;
-            color: #0A2B49;
+            color: $cor-texto;
 
             span{
                 color: $cor-base;
@@ -349,7 +317,7 @@ body{
         align-items: center;
         padding: 17px 28px;
         border-radius: 6px;
-        background: #0FD43A;
+        background: $cor-terciaria;
         border-radius: 6px;
         color: #fff;
         font-size: em(13);

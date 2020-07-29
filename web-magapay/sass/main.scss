@@ -104,12 +104,6 @@ strong{
     flex-direction: row;
 }
 
-h2.title-default{
-    font-size: em(18);
-    font-weight: 700;
-    text-align: center;
-}
-
 #popup-msg-whats{
     position: fixed;
     bottom: 0;
@@ -118,7 +112,7 @@ h2.title-default{
     font-size: em(14);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
+
     @include breakpoint($break-medium){
         right: 10px;
         bottom: 10px;
@@ -136,7 +130,7 @@ h2.title-default{
         display: block;
         color: #fff;
         padding: 5px 30px;
-        
+
         @include breakpoint($break-medium){
             padding: 10px 11px;
         }
@@ -180,4 +174,36 @@ img.lazyloaded {
     transform: scale(1);
     @include transition(all 700ms);
     @include transform(scale(1));
+}
+
+
+h2.default-title{
+    color: $cor-texto;
+    font-size: em(33);
+    font-weight: bold;
+    line-height: 42px;
+    margin-top: 10px;
+
+    @include breakpoint($break-medium){
+        font-size: em(25);
+        text-align: center;
+    }
+
+    @include breakpoint($break-small){
+        font-size: em(20);
+    }
+}
+
+p.default-description{
+    font-size: em(13);
+    color: $cor-texto-secundario;
+    line-height: 16px;
+    margin-top: 20px;
+
+    @include breakpoint($break-medium){
+        font-size: em(15);
+        line-height: 26px;
+        margin-top: 10px;
+        text-align: center;
+    }
 }
