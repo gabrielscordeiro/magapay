@@ -3,6 +3,84 @@
 footer{
     margin-top: 140px;
 
+    &.is-tablet-mobile{
+        margin-top: 30px;
+
+        .footer-middle,
+        .footer-middle .dados-loja,
+        .conteudo-footer-middle{
+            width: 100%; 
+            flex-direction: column;
+        }
+
+        .footer-middle{
+            border-bottom: 1px solid $cor-bordas;
+
+            .dados-loja{
+                text-align: center;
+                padding-bottom: 30px;
+
+                a{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .footer-bottom .dados-loja{
+            text-align: center;
+        }
+
+        .accordion {
+            margin: 0;
+
+            h4.section-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                font-size: em(16);
+                margin: 0;
+                padding: 10px;
+                background: #fff;
+                border-top: 1px solid $cor-bordas;
+
+                &:after,
+                    &:before {
+                    display: none;
+                }
+
+                .arrow-ctn {
+                    .arrow-down {
+                        display: block;
+                        @include seta(8px, $cor-base, "bottom");
+                    }
+                    .arrow-up {
+                        display: block;
+                        @include seta(8px, $cor-base, "top");
+                    }
+                }
+            }
+
+
+            &.open {
+                h2.bg-title {
+                    border-bottom: 1px solid $cor-bordas;
+                }
+            }
+
+            &.closed {
+                .content {
+                    display: none;
+                }
+            }
+
+            .content {
+                padding: 10px;
+            }
+        }
+    }
+
     h4.section-title{
         font-size: em(12);
         color: #000;
@@ -13,13 +91,13 @@ footer{
         &:after{
             display: none;
         }
-        
+
         p{
             font-size: em(12);
             line-height: 20px;
             color: $cor-texto-secundario;
         }
-        
+
         .dados-loja{
             width: 254px;
 
@@ -46,7 +124,7 @@ footer{
             &:hover{
                 color: $cor-base;
             }
-            
+
             &.destaque{
                 font-weight: bold;
                 color: $cor-base; 
