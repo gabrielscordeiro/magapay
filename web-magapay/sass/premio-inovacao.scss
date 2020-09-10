@@ -14,7 +14,15 @@ header {
             }
 
             .icon-menu{
-                @include seta(em(14), $cor-texto, 'bottom');
+                @include seta(14px, $cor-texto, 'bottom');
+            }
+
+            .arrow-down{
+                @include seta(10px, $cor-texto, 'bottom');
+                margin-left: 10px;
+                @include breakpoint($break-medium){
+                    @include seta(10px, #FFF, 'bottom');
+                }
             }
         }
 

@@ -75,7 +75,7 @@
                         <meta itemprop="name" content="Nossas soluções"/>
                         <a href="#vantagens">
                             Nossa soluções
-                            <span class="icon-menu"></span>
+                            <span class="arrow-down"></span>
                         </a>
                         <div class="container-menu">
                             <div class="content-menu-area">
@@ -162,7 +162,7 @@
                     </li>
                     <li>
                         <meta itemprop="name" content="Simulação"/>
-                        <a href="calculadora.html#calculadora" class="link-slide">
+                        <a href="maquininha.html#calculadora" class="link-slide">
                             Simulação
                         </a>
                     </li>
@@ -180,8 +180,8 @@
                     </li>
                     <li class="seja-franqueado">
                         <meta itemprop="name" content="Seja um Franqueado"/>
-                        <a href="">
-                            Seja um Franqueado
+                        <a href="https://api.whatsapp.com/send?phone=554735208058&text=Quero%20saber%20mais!" target="_blank">
+                            Quero ser magapay
                         </a>
                     </li>
                 </ul>
@@ -212,6 +212,16 @@
                     $('ul#nav-root').remove();
 
                     $('header').append('<ul id="nav-root">' + htmlMenu + '</ul>').addClass('is-tablet-mobile');
+
+                    //AÇÃO MENU MOBILE
+                    $('.container-menu').addClass('closed');
+
+                    $('.container-menu').parent().on('click', () => {
+                        let container = $('.container-menu');
+                        container.stop(true, false).slideToggle();
+                        container.toggleClass('closed').toggleClass('open');
+                        $(container).parent().find('a').find('span').toggleClass('arrow-up').toggleClass('arrow-down');
+                    });
                 }
             })();
         </script>
@@ -290,7 +300,7 @@
                     Está pronto para ser um <span>Parceiro Magapay?</span>
                 </h2>
             </div>
-            <a href="" class="button-conheca-maquininha">
+            <a href="https://api.whatsapp.com/send?phone=554735208058&text=Quero%20saber%20mais!" class="button-conheca-maquininha" target="_blank">
                 <span class="btn-text">Seja um franqueado</span>
                 <span class="btn-icon"></span>
             </a>
@@ -524,7 +534,7 @@
                         <a href="https://www.facebook.com/magapaybrasil/" target="_blank">
                             <img src="web-magapay/image/footer/icon-facebook.svg" alt="Facebook">
                         </a>
-                        <a href="" target="_blank">
+                        <a href="https://www.instagram.com/magapaypagamentos/" target="_blank">
                             <img src="web-magapay/image/footer/icon-instagram.svg" alt="Instagram">
                         </a>
                     </div>
