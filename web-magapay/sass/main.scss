@@ -5,20 +5,20 @@
 @import 'partials/base';
 
 @import 'partials/header';
-@import 'partials/footer'; 
+@import 'partials/footer';
 
 @include border-box-sizing;
 
 html, body{
-    &.menu-active{ 
-        overflow: hidden;          
+    &.menu-active{
+        overflow: hidden;
         -webkit-overflow-scrolling: touch;
         overflow: hidden;
     }
 }
 
 html{
-    overflow-x: hidden;          
+    overflow-x: hidden;
 }
 
 body {
@@ -49,7 +49,11 @@ img {
 }
 
 .container {
-    @include container($max-width); 
+    @include container($max-width);
+
+    &:after{
+        display: none;
+    }
 }
 
 .hidden{
@@ -161,7 +165,7 @@ strong{
     height: 100%;
     position: fixed;
     z-index: 1;
-    visibility: hidden;       
+    visibility: hidden;
 }
 
 img.lazyload {

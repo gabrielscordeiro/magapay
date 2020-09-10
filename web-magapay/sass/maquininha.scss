@@ -5,9 +5,7 @@
 $cor-calculadora: #2FABF7;
 
 body{
-    background: url(../image/maquininha/bg-topo.svg);    
-    background-position: top;
-    background-repeat: no-repeat;
+    background: url(../image/maquininha/bg-topo.svg) top no-repeat;
 
     @include breakpoint($break-min-big){
         background-size: 100%;
@@ -23,20 +21,37 @@ body{
     text-align: center;
     margin-top: 100px;
 
+    @include breakpoint($break-medium){
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+
     h1{
         font-size: em(48);
         line-height: 61px;
         color: #fff;
         font-weight: bold;
+
+        @include breakpoint($break-medium){
+            color: $cor-base;
+            font-size: em(30);
+            line-height: 41px;
+        }
     }
 
     .icon-vantagens{
         margin-top: 30px;
+
+        svg path{
+            @include breakpoint($break-medium){
+                fill: $cor-base;
+            }
+        }
     }
 }
 
 .conteudo-maquininha{
-    background: url(../image/bg-base.svg);    
+    background: url(../image/bg-base.svg);
     background-position: top;
     background-repeat: no-repeat;
     background-position-y: 445px;
@@ -55,24 +70,52 @@ body{
     max-width: 1267px;
     margin-top: 370px;
 
+    @include breakpoint($break-medium){
+        margin-top: 60px;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
     &:after{
         display: none;
     }
 
     .conteudo-vantagens{
         width: 580px;
+
+        @include breakpoint($break-medium){
+            width: 100%;
+        }
     }
 
     .lista-vantagens{
         margin-top: 70px;
+
+        @include breakpoint($break-medium){
+            flex-direction: column;
+            padding: 20px 0;
+            border-bottom: 1px solid #e1e1e1;
+            margin-top: 0;
+        }
     }
 
     .vantagem-item {
         width: 48%;
         margin-bottom: 95px;
 
-        &.item-aluguel h3.desc-vantagem{
+        @include breakpoint($break-medium){
+            display: flex;
+            width: 100%;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        &.item-aluguel h3.desc-vantagem {
             padding-right: 60px;
+
+            @include breakpoint($break-medium){
+                padding-right: 0;
+            }
         }
     }
 
@@ -81,14 +124,38 @@ body{
         font-size: em(33);
         color: $cor-texto-secundario;
         line-height: 42px;
+
+        @include breakpoint($break-medium){
+            font-size: em(20);
+            margin-left: 10px;
+        }
+    }
+
+    .imagem-vantagens {
+        @include breakpoint($break-medium){
+            display: none;
+        }
     }
 }
 
 .calculadora{
-    margin-top: 105px;
+    margin-top: 130px;
+
+    @include breakpoint($break-medium) {
+        flex-direction: column;
+        padding: 20px 0;
+        border-bottom: 1px solid #e1e1e1;
+        margin-top: 0;
+    }
 
     .calculadora-descricao{
         width: 245px;
+
+        @include breakpoint($break-medium){
+            align-self: center;
+            width: 80%;
+            padding: 0 10 px;
+        }
     }
 }
 
@@ -103,7 +170,10 @@ body{
         cursor: pointer;
         font-weight: bold;
         padding: 17px 38px;
-        
+
+        @include breakpoint($break-medium){
+            padding: 17px 28px;
+        }
         &.selected{
             color: $cor-terciaria;
             background: #fff;
@@ -112,7 +182,7 @@ body{
 }
 
 .calculo-area{
-    width: 577px;    
+    width: 577px;
     margin: 25px 0 0 67px;
 
     @include breakpoint($break-small){
@@ -121,11 +191,21 @@ body{
         margin-top: 0;
     }
 
+    @include breakpoint($break-medium){
+        margin: 0;
+        align-self: center;
+    }
+
     .conteudo-calculadora{
         @include box-shadow(0px 14px 24px rgba(107, 111, 122, 0.11));
         border-radius: 0px 14px 14px 14px;
         padding: 50px 0 20px 0;
         background: #fff;
+
+        @include breakpoint($break-medium){
+            padding: 0;
+            font-size: em(13);
+        }
     }
 
     h3{
@@ -149,7 +229,7 @@ body{
         font-size: em(36);
         color: $cor-calculadora;
         font-weight: 700;
-        border-bottom: 3px solid $cor-terciaria; 
+        border-bottom: 3px solid $cor-terciaria;
 
         @include breakpoint($break-small){
             width: 95%;
@@ -166,7 +246,7 @@ body{
 
             @include breakpoint($break-small){
                 width: 90%;
-            }            
+            }
 
         }
     }
@@ -238,7 +318,7 @@ body{
     }
 
     .info-taxas{
-        width: 500px; 
+        width: 500px;
         margin: 0 auto;
 
         @include breakpoint($break-small){
@@ -247,9 +327,9 @@ body{
     }
 
     .taxas{
-        margin-top: 60px;
+        margin-top: 30px;
         padding-bottom: 35px;
-        border-bottom: 3px solid $cor-terciaria; 
+        border-bottom: 3px solid $cor-terciaria;
 
         @include breakpoint($break-small){
             margin-top: 10px;
@@ -277,7 +357,7 @@ body{
     }
 
     .cliente-recebe{
-        text-align: center; 
+        text-align: center;
         font-weight: 700;
         margin-top: 40px;
 
@@ -297,4 +377,337 @@ body{
             font-size: em(40);
         }
     }
+}
+
+.controle-vendas {
+    margin-top: em(105);
+
+    @include breakpoint($break-medium){
+        margin-top: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    .descricao-controle {
+        align-self: center;
+
+        @include breakpoint($break-medium) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: em(33);
+            font-weight: bold;
+            color: $cor-texto;
+            margin-top: 14.54px;
+
+            @include breakpoint($break-medium){
+                font-size: em(20);
+                text-align: center;
+            }
+        }
+
+        p {
+            color: #898989;
+            font-size: 13px;
+            margin-top: 24.54px;
+        }
+
+        a {
+            color: #0FD43A;
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 24.54px;
+
+            img {
+                margin-left: 6.07px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .imagem-controle {
+        @include breakpoint($break-medium){
+            display: none;
+        }
+    }
+}
+
+.reconhecimento {
+    justify-content: space-around;
+    background: url(../image/maquininha/banner-reconhecimento.svg) top no-repeat;
+    background-size: 100%;
+    margin-top: 105px;
+    height: 316px;
+    border-radius: 14px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @include breakpoint($break-medium) {
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+        padding: 20px 0;
+        border-bottom: 1px solid #e1e1e1;
+        background: initial;
+    }
+
+    .logo-reconhecimento {
+        align-self: center;
+
+        h2 {
+            font-size: em(33);
+            font-weight: bold;
+            color: $cor-texto;
+            margin-left: 31.29px;
+
+            @include breakpoint($break-medium) {
+                font-size: em(20);
+                align-self: center;
+            }
+        }
+    }
+
+    .traso {
+        border: 0.8px solid #898989;
+        height: 150px;
+        align-self: center;
+
+        @include breakpoint($break-medium) {
+            display: none;
+        }
+    }
+
+    .descricao-reconhecimento {
+        align-self: center;
+
+        p {
+            color: $cor-texto;
+            font-size: em(13);
+
+            @include breakpoint($break-medium){
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+
+        .container-buttons {
+            margin-top: 34.63px;
+
+            @include breakpoint($break-medium){
+                margin-top: 10px;
+                justify-content: center;
+            }
+
+            div {
+                color: $cor-texto;
+                font-weight: bold;
+                border: 1px solid $cor-texto;
+                box-sizing: border-box;
+                border-radius: 6px;
+                padding: 20px;
+
+                &:hover {
+                    background: $cor-terciaria;
+                    border: 1px solid $cor-terciaria;
+                }
+
+                &:hover p{
+                    color: #FFFFFF;
+                }
+
+                @include breakpoint($break-medium){
+                    padding: 10px;
+                }
+            }
+
+            a + a {
+                margin-left: 25.84px;
+
+                @include breakpoint($break-medium){
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.duvidas-frequentes{
+    padding: 45px 0;
+
+    @include breakpoint($break-medium-big){
+        padding: 45px 0 0 0;
+    }
+
+    @include breakpoint($break-medium){
+        padding: 20px 0;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    h2{
+        font-size: em(33);
+        font-weight: bold;
+        color: $cor-texto;
+
+        @include breakpoint($break-medium){
+            font-size: em(25);
+            text-align: center;
+        }
+    }
+
+    #accordion{
+        margin-top: 25px;
+    }
+
+    .ui-accordion .ui-accordion-header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 20px 30px;
+        background: $cor-primaria;
+        border: 0;
+        border-top: 2px solid #c5c3c3;
+        border-radius: 0;
+        font-size: em(16);
+        color: $cor-texto;
+        outline: 0 none;
+
+        &:first-of-type{
+            border-top: 0;
+        }
+
+        &[aria-expanded="true"]{
+            background: $cor-terciaria;
+            color: #fff;
+            border-top: 0;
+
+            .ui-accordion-header-icon{
+                @include seta(10px, #fff, 'top');
+            }
+
+            &:before,
+            &:after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: $cor-terciaria;
+            }
+
+            &:before{
+                left: 100%;
+            }
+
+            &:after{
+                right: 100%;
+            }
+        }
+
+        .ui-accordion-header-icon{
+            @include seta(10px, #c5c3c3, 'bottom');
+        }
+
+        .text{
+            @include breakpoint($break-medium-big){
+                width: calc(100% - 10px);
+            }
+        }
+    }
+
+    li{
+        padding-left: 20px;
+        margin-bottom: 5px;
+        font-size: em(14);
+
+        &:before{
+            position: relative;
+            bottom: 3px;
+            margin-right: 4px;
+            font-size: em(6);
+            content: '\002B24';
+        }
+    }
+}
+
+.nao-perca {
+    background: #FFFFFF;
+    border-radius: 11px;
+    margin-top: 105px;
+    box-shadow: 0px 9px 34px rgba(0, 0, 0, 0.09);
+    border-radius: 11px;
+
+    @include breakpoint($break-medium){
+        flex-direction: column;
+        margin-top: 0;
+        padding: 20px 0;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    img {
+        @include breakpoint($break-medium){
+            display: none;
+        }
+    }
+
+    .descricao {
+        align-self: center;
+
+        h2 {
+            color: $cor-texto;
+            font-size: em(24);
+            font-weight: bold;
+        }
+
+        h2 span {
+            color: #D93C79;
+        }
+
+        p {
+            font-size: em(13);
+            color: #898989;
+
+            @include breakpoint($break-medium){
+                font-size: em(15);
+                text-align: center;
+                line-height: 26px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    a {
+        align-self: center;
+        background: #0FD43A;
+        border-radius: 6px;
+        padding: 17px 28px;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-weight: bold;
+        transition: 0.2s background;
+        margin: 51.62px;
+
+        .btn-icon {
+            @include seta(8px, #fff, 'right');
+            margin-left: em(10);
+            align-self: center;
+        }
+
+        &:hover {
+            background: #0cb531;
+        }
+
+        @include breakpoint($break-medium){
+            font-size: em(14);
+            margin-top: 20px;
+            padding: 12px 28px;
+        }
+    }
+
 }

@@ -3,7 +3,7 @@
 @import 'partials/owl-carousel';
 
 body{
-    background: url(../image/home/bg-topo.svg);    
+    background: url(../image/home/bg-topo.svg);
     background-position: top;
     background-repeat: no-repeat;
 
@@ -24,7 +24,7 @@ body{
         display: flex;
         flex-direction: column-reverse;
         margin-top: 0;
-        
+
         @include breakpoint($break-small){
             margin-top: 30px;
         }
@@ -33,7 +33,7 @@ body{
             color: $cor-base;
             font-size: em(30);
             line-height: 40px;
-            
+
             @include breakpoint($break-small){
                 font-size: 25px;
                 padding: 0 10px;
@@ -57,19 +57,19 @@ body{
         display: block;
         margin: 0 auto;
         margin-top: 34px;
-        
+
         @include breakpoint($break-small){
             display: none;
         }
 
         img{
-            margin: 0 auto;    
+            margin: 0 auto;
         }
     }
 }
 
 .conteudo-home{
-    background: url(../image/bg-base.svg);    
+    background: url(../image/bg-base.svg);
     background-position: top;
     background-repeat: no-repeat;
     background-position-y: 445px;
@@ -102,7 +102,7 @@ body{
     .gateway-content{
         width: 350px;
 
-        @include breakpoint($break-medium){   
+        @include breakpoint($break-medium){
             width: 100%;
             text-align: center;
         }
@@ -202,22 +202,22 @@ body{
     margin-top: 180px;
 
     @include breakpoint($break-medium){
-        margin-top: 50px;    
+        margin-top: 50px;
         flex-direction: column;
         padding: 0 10px;
     }
 
     .compra-recorrente-boleto{
         @include breakpoint($break-medium){
-            margin-top: 50px;    
-        }    
+            margin-top: 50px;
+        }
     }
 }
 
 .link-pagamento{
     height: 473px;
     margin-top: 160px;
-    background: url(../image/home/bg-link-pagamento.svg);    
+    background: url(../image/home/bg-link-pagamento.svg);
     background-position: top;
     background-repeat: no-repeat;
 
@@ -246,7 +246,7 @@ body{
 }
 
 .pagamento-instantaneo{
-    max-width: 900px; 
+    max-width: 900px;
     margin-top: 112px;
 
     @include breakpoint($break-medium){
@@ -273,10 +273,10 @@ body{
     background: #fff;
     @include box-shadow(0px 9px 34px rgba(0, 0, 0, 0.09));
     border-radius: 11px;
-    margin-top: -6px;
+    margin-top: 112px;
 
     @include breakpoint($break-medium){
-        flex-direction: column; 
+        flex-direction: column;
         margin-top: 50px;
         @include box-shadow(none);
         border-top: 1px solid $cor-bordas;
@@ -294,7 +294,7 @@ body{
 
     .conteudo-maquininha{
         width: 350px;
-        margin-left: 60px; 
+        margin-left: 60px;
 
         @include breakpoint($break-medium){
             width: 100%;

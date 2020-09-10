@@ -1,18 +1,35 @@
 @import "partials/base";
-/*
+
 header {
     padding: 20px 0;
-    box-shadow: 0 0 90px 0px #9c154f29;
+    box-shadow: 1px 2px 24px rgba(10, 43, 73, 0.1);
+    margin-top: 0;
 
     ul#nav-root {
         a {
-            color: $cor-texto-secundario;
+            color: $cor-texto;
 
             @include breakpoint($break-medium) {
                 color: #fff;
             }
+
+            .icon-menu{
+                @include seta(em(14), $cor-texto, 'bottom');
+            }
         }
+
+        .seja-franqueado a {
+            border: 1px solid $cor-texto;
+        }
+
     }
+}
+
+body {
+    background: url(../image/bg-base.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-position-y: 445px;
 }
 
 .descricao-topo {
@@ -53,25 +70,21 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: $cor-secundaria;
+            background: #FFFFFF;
             padding: 10px;
             border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            @include box-shadow(0 0 20px 5px #8ad40f);
+            width: 35px;
+            height: 35px;
+            @include box-shadow(0 0 1px 5px $cor-terciaria);
 
             .arrow-down {
                 position: absolute;
-                @include seta(15px, $cor-verde-escuro, "bottom");
+                @include seta(15px, $cor-terciaria, "bottom");
             }
 
             @include breakpoint($break-medium-big) {
                 width: 35px;
                 height: 35px;
-
-                .arrow-down {
-                    @include seta(10px, $cor-verde-escuro, "bottom");
-                }
             }
         }
     }
@@ -102,11 +115,18 @@ header {
         }
 
         .vermelho {
-            color: $cor-vermelho;
+            color: red;
         }
 
+        .azul-claro {
+            color: #2FABF7;
+        }
         .azul {
-            color: $cor-azul;
+            color: blue;
+        }
+
+        .verde {
+            color: $cor-terciaria;
         }
     }
 
@@ -153,6 +173,7 @@ header {
         align-items: center;
         flex-direction: column;
         width: 100%;
+        box-shadow: 1px 2px 24px rgba(10, 43, 73, 0.1);
 
         p {
             text-align: center;
@@ -164,8 +185,13 @@ header {
 
                 span {
                     font-weight: bold;
+                    color: $cor-texto;
                 }
             }
+        }
+
+        img {
+            border-radius: 0px 100px;
         }
     }
 
@@ -173,6 +199,7 @@ header {
         color: $cor-base;
         font-weight: bold;
     }
+
 
     li {
         margin-top: 20px;
@@ -182,4 +209,72 @@ header {
         }
     }
 }
-*/
+
+.oferta-maquininha{
+    background: #fff;
+    @include box-shadow(0px 9px 34px rgba(0, 0, 0, 0.09));
+    border-radius: 11px;
+    margin-top: 100px;
+
+    @include breakpoint($break-medium){
+        flex-direction: column;
+        margin-top: 50px;
+        @include box-shadow(none);
+        padding: 20px 10px;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    .image-maquininha{
+        @include breakpoint($break-medium){
+            display: none;
+        }
+    }
+
+    .conteudo-maquininha{
+        width: 350px;
+        margin-left: 60px;
+
+        @include breakpoint($break-medium){
+            width: 100%;
+            margin-left: 0;
+        }
+
+        h2{
+            font-size: em(24);
+            font-weight: bold;
+            color: $cor-texto;
+
+            span{
+                color: $cor-base;
+            }
+        }
+    }
+
+    a.button-conheca-maquininha{
+        display: flex;
+        align-items: center;
+        padding: 17px 28px;
+        border-radius: 6px;
+        background: $cor-terciaria;
+        border-radius: 6px;
+        color: #fff;
+        font-size: em(13);
+        font-weight: bold;
+        margin-left: 125px;
+
+        @include breakpoint($break-medium){
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        &:hover{
+            background: #0cb531;
+        }
+
+        .btn-icon{
+            @include seta(8px, #fff, 'right');
+            margin-left: 10px;
+        }
+    }
+}

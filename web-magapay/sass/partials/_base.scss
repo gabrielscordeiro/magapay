@@ -5,32 +5,32 @@
 //Variáveis globais
 $max-width: 1240px;
 $break-min-big: (min-width 1900px);
-$break-big: (max-width $max-width);   
-$break-medium-big: (max-width 1024px); 
-$break-medium: (max-width 800px); 
-$break-small: (max-width 520px);
-$break-smaller: (max-width 380px); 
- 
+$break-big: (max-width $max-width);
+$break-medium-big: (max-width 1024px);
+$break-medium: (max-width 800px); // tablet
+$break-small: (max-width 520px); // celular
+$break-smaller: (max-width 380px);
+
 //Cores default, devem ser alteradas confome o projeto
 $cor-base: #D93C79; //#a11b51;
-$cor-primaria: #fff; 
-$cor-secundaria: #6E97FF;  
-$cor-terciaria: #0FD43A;  
-$cor-bordas: #e1e1e1;   
+$cor-primaria: #fff;
+$cor-secundaria: #6E97FF;
+$cor-terciaria: #0FD43A;
+$cor-bordas: #e1e1e1;
 
-$cor-texto: #0A2B49;    
-$cor-texto-secundario: #898989; 
+$cor-texto: #0A2B49;
+$cor-texto-secundario: #898989;
 
 $cor-background: #E5E5E5;
-/*
+
 $cor-azul: #00c5e9;
 $cor-azul-escuro: #005b6f;
 $cor-verde-escuro: #005f00;
-$cor-vermelho: #f72f03;*/
+$cor-vermelho: #f72f03;
 
-$cor-border-light: lighten($cor-bordas, 10); 
-$cor-base-darken: darken($cor-base, 10); 
-$cor-base-darken-strong: darken($cor-base, 20);  
+$cor-border-light: lighten($cor-bordas, 10);
+$cor-base-darken: darken($cor-base, 10);
+$cor-base-darken-strong: darken($cor-base, 20);
 
 @mixin location($top, $right: $top, $bottom: $top, $left: $right) {
     top: $top;

@@ -1,14 +1,29 @@
 @import "partials/base";
 @import "partials/jquery-ui";
 @import "partials/owl-carousel";
-/*
+
 header {
     padding: 20px 0;
-    background: #ffffff;
-    box-shadow: 0px 0px 90px rgba(156, 21, 79, 0.16);
+    box-shadow: 1px 2px 24px rgba(10,43,73,0.1);
+    margin-top: 0;
 
-    ul#nav-root a {
-        color: $cor-texto-secundario;
+    ul#nav-root {
+        a {
+            color: $cor-texto;
+
+            @include breakpoint($break-medium) {
+                color: #fff;
+            }
+
+            .icon-menu{
+                @include seta(em(14), $cor-texto, 'bottom');
+            }
+        }
+
+        .seja-franqueado a {
+            border: 1px solid $cor-texto;
+        }
+
     }
 }
 
@@ -17,6 +32,7 @@ header {
     text-align: center;
     font-size: em(40);
     font-weight: bold;
+    color: $cor-texto;
 
     @include breakpoint($break-medium-big) {
         font-size: em(35);
@@ -32,32 +48,35 @@ header {
     }
 }
 
-.arrow-down {
+.arrow-down-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    width: 22px;
-    height: 22px;
-    background: #95c11f;
-    box-shadow: 0px 0px 20px #95c11f;
-    border-radius: 50%;
+    margin: 40px 0;
 
-    @include breakpoint($break-medium-big) {
-        width: 19px;
-        height: 19px;
-    }
+    .arrow-down-background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF;
+        padding: 10px;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        @include box-shadow(0 0 1px 5px $cor-terciaria);
 
-    img {
-        width: 12px;
+        .arrow-down {
+            position: absolute;
+            @include seta(15px, $cor-terciaria, "bottom");
+        }
 
         @include breakpoint($break-medium-big) {
-            width: 10px;
+            width: 35px;
+            height: 35px;
         }
     }
 }
 
-.content {
+.content-mid {
     display: flex;
     justify-content: center;
     margin-top: 80px;
@@ -97,7 +116,7 @@ header {
         top: 290px;
         width: 40px;
         height: 100px;
-        background: $cor-secundaria;
+        background: $cor-terciaria;
         transform: skewY(-18deg);
         z-index: -1;
 
@@ -127,27 +146,36 @@ header {
         @include breakpoint($break-small) {
             padding: 30px 30px;
             margin-left: 0;
-            width: 80%;
+            width: 100%;
         }
 
         .text {
             font-size: em(18);
-            color: $cor-azul-escuro;
-
             @include breakpoint($break-small) {
                 font-size: em(16);
             }
         }
 
+        .text-valor {
+            color: $cor-texto-secundario;
+        }
+
         .text-lojista {
+            color: $cor-texto;
             margin-bottom: 40px;
+            font-weight: bold;
+            p {
+                span{
+                    color: $cor-azul;
+                }
+            }
         }
 
         .area-valor {
             display: flex;
             position: relative;
             font-weight: bold;
-            color: $cor-secundaria;
+            color: $cor-azul;
 
             &::after {
                 position: absolute;
@@ -155,7 +183,7 @@ header {
                 width: 100%;
                 height: 2px;
                 border-radius: 3px;
-                background: $cor-azul;
+                background: $cor-terciaria;
                 content: "";
 
                 @include breakpoint($break-small) {
@@ -186,7 +214,7 @@ header {
 
     .calculo-area {
         width: 22%;
-        color: $cor-azul-escuro;
+        color: $cor-texto;
 
         @include breakpoint($break-medium-big) {
             width: 60%;
@@ -194,7 +222,7 @@ header {
         }
 
         @include breakpoint($break-small) {
-            width: 75%;
+            width: 90%;
         }
 
         input {
@@ -217,7 +245,7 @@ header {
             height: 2px;
             bottom: 28px;
             overflow: hidden;
-            background: $cor-bordas;
+            background: #C4C4C4;
             z-index: 1;
 
             @include breakpoint($break-medium-big) {
@@ -227,7 +255,7 @@ header {
             .fill {
                 display: block;
                 height: 100%;
-                background: $cor-secundaria;
+                background: $cor-terciaria;
             }
         }
 
@@ -248,7 +276,7 @@ header {
                 top: 0;
                 width: 17px;
                 height: 17px;
-                border: 2px solid $cor-secundaria;
+                border: 3.5px solid $cor-terciaria;
                 border-radius: 50%;
                 background: #fff;
                 appearance: none;
@@ -266,7 +294,7 @@ header {
                 }
 
                 &.ui-state-active {
-                    background: $cor-secundaria;
+                    background: $cor-terciaria;
                 }
             }
         }
@@ -294,7 +322,6 @@ header {
 
         .valor-area {
             position: relative;
-
             .simular-valor {
                 display: flex;
 
@@ -303,6 +330,7 @@ header {
                     font-weight: bold;
                     border: 0;
                     outline: none;
+
 
                     @include breakpoint($break-small) {
                         font-size: em(28);
@@ -341,42 +369,73 @@ header {
     }
 }
 
-.area-franqueado {
-    width: 100%;
-    background: $cor-azul;
-    text-align: center;
+.oferta-maquininha{
+    background: #fff;
+    @include box-shadow(0px 9px 34px rgba(0, 0, 0, 0.09));
+    border-radius: 11px;
+    margin-top: 112px;
 
-    h3 {
-        padding-top: 70px;
-        margin-bottom: 15px;
-        font-size: em(17);
-        font-weight: bold;
-        color: #fff;
+    @include breakpoint($break-medium){
+        flex-direction: column;
+        margin-top: 50px;
+        @include box-shadow(none);
+        border-top: 1px solid $cor-bordas;
+        border-bottom: 1px solid $cor-bordas;
+        padding: 20px 10px;
+        text-align: center;
+        border-radius: 0;
+    }
 
-        @include breakpoint($break-small) {
-            font-size: em(14);
+    .image-maquininha{
+        @include breakpoint($break-medium){
+            display: none;
         }
     }
 
-    .btn-franqueado {
-        padding: 6px 22px;
-        margin-bottom: 70px;
-        font-size: em(12);
-        font-weight: bold;
-        color: $cor-azul-escuro;
-        background: #fff;
-        border-radius: 4px;
-        border: none;
-        outline: none;
+    .conteudo-maquininha{
+        width: 350px;
+        margin-left: 60px;
 
-        @include breakpoint($break-small) {
-            font-size: em(11);
+        @include breakpoint($break-medium){
+            width: 100%;
+            margin-left: 0;
         }
 
-        &:hover {
-            color: white;
-            background: #00a4c9;
+        h2{
+            font-size: em(24);
+            font-weight: bold;
+            color: $cor-texto;
+
+            span{
+                color: $cor-base;
+            }
+        }
+    }
+
+    a.button-conheca-maquininha{
+        display: flex;
+        align-items: center;
+        padding: 17px 28px;
+        border-radius: 6px;
+        background: $cor-terciaria;
+        border-radius: 6px;
+        color: #fff;
+        font-size: em(13);
+        font-weight: bold;
+        margin-left: 125px;
+
+        @include breakpoint($break-medium){
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        &:hover{
+            background: #0cb531;
+        }
+
+        .btn-icon{
+            @include seta(8px, #fff, 'right');
+            margin-left: 10px;
         }
     }
 }
-*/

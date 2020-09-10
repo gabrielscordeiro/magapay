@@ -6,7 +6,7 @@ header{
     margin-top: 45px;
 
     &.is-tablet-mobile{
-        margin-top: 0; 
+        margin-top: 0;
         padding: 10px 0;
 
         > .container{
@@ -36,7 +36,7 @@ header{
                 align-items: center;
                 height: 45px;
                 border-bottom: 1px solid $cor-base-darken;
-                
+
                 &.seja-franqueado a{
                     border:0;
                 }
@@ -58,7 +58,7 @@ header{
                 .fil1, .fil2, .fil3{
                     fill:#fff;
                 }
-            } 
+            }
         }
     }
 }
@@ -107,6 +107,8 @@ header{
         ul#nav-root {
             @include transform(translateX(0));
             @include box-shadow(0 0 15px 5px rgba(0, 0, 0, 0.75));
+            overflow-y: visible;
+            overflow-x: hidden;
         }
         .menu-button{
             @include transform(translateX($width-menu-mobile));
@@ -137,7 +139,7 @@ a.logo{
 
 ul#nav-root{
     position: relative;
-    width: 100%; 
+    width: 100%;
     margin-left: 25px;
 
     > li{
@@ -146,7 +148,7 @@ ul#nav-root{
         &:hover{
             > a{
                 border-bottom: 1px solid #fff;
-            }   
+            }
 
             .container-menu{
                 display: flex;
@@ -158,7 +160,7 @@ ul#nav-root{
 
             > a{
                 font-weight: bold;
-                padding: 17px 28px; 
+                padding: 17px 28px;
                 border: 1px solid #fff;
                 border-radius: 6px;
 
@@ -175,7 +177,7 @@ ul#nav-root{
             display: flex;
             align-items: center;
             color: #fff;
-            font-size: em(14);   
+            font-size: em(14);
             border-bottom: 1px solid transparent;
 
             .icon-menu{
@@ -198,6 +200,10 @@ ul#nav-root{
             display: flex;
             background: #fff;
             @include box-shadow(0px 4px 14px rgba(54, 0, 0, 0.25));
+
+            @include breakpoint($break-medium){
+                flex-direction: column;
+            }
         }
     }
 
@@ -213,7 +219,7 @@ ul#nav-root{
 
     ul.menu-level-3{
         li{
-            margin-top: 30px; 
+            margin-top: 30px;
         }
 
         a{
@@ -243,6 +249,10 @@ ul#nav-root{
             img{
                 display: block;
             }
+        }
+
+        @include breakpoint($break-medium){
+            padding: 58px 40px 58px 80px;
         }
     }
 }

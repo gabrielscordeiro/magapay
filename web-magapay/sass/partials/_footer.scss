@@ -9,7 +9,7 @@ footer{
         .footer-middle,
         .footer-middle .dados-loja,
         .conteudo-footer-middle{
-            width: 100%; 
+            width: 100%;
             flex-direction: column;
         }
 
@@ -108,6 +108,18 @@ footer{
             .horario-atendimento{
                 margin-bottom: 25px;
             }
+
+            .redes-sociais {
+                @include breakpoint($break-medium){
+                    justify-content: center;
+                }
+                margin-top: em(31.88);
+
+                a + a {
+                    margin-left: em(54.98);
+                }
+            }
+
         }
     }
 
@@ -127,7 +139,7 @@ footer{
 
             &.destaque{
                 font-weight: bold;
-                color: $cor-base; 
+                color: $cor-base;
             }
         }
     }
@@ -169,7 +181,7 @@ footer{
 
 
     .formas-pagto{
-        margin: 90px 0;	
+        margin: 90px 0;
 
         @include breakpoint($break-small){
             margin: 40px 0;
@@ -196,8 +208,8 @@ footer{
         padding: 10px 0;
 
         .dados-loja{
-            font-size: em(13); 
-            color: $cor-texto-secundario;        
+            font-size: em(13);
+            color: $cor-texto-secundario;
         }
 
         .flex{
@@ -211,5 +223,5 @@ footer{
                 margin-top: 10px;
             }
         }
-    } 
+    }
 }
